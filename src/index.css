@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-textDark font-sans antialiased overflow-x-hidden selection:bg-brand-magenta selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wider uppercase;
+  }
+
+  /* Thin divider lines inspired by editorial design */
+  hr, .editorial-divider {
+    @apply border-brand-textDark/10;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #130F12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5A0F55;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E52D63;
+}
+
+/* Custom styles for editorial layouts */
+.text-stroke-purple {
+  -webkit-text-stroke: 1px #5A0F55;
+  color: transparent;
+}
+
+.text-stroke-cream {
+  -webkit-text-stroke: 1px #F8F3EA;
+  color: transparent;
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px 0px #130F12;
+}
+
+.neo-shadow-purple {
+  box-shadow: 4px 4px 0px 0px #5A0F55;
+}
+
+.neo-shadow-magenta {
+  box-shadow: 4px 4px 0px 0px #E52D63;
+}
+
+.neo-shadow-teal {
+  box-shadow: 4px 4px 0px 0px #16A889;
+}
+
+/* Hide scrollbars for ticker marquees */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
