@@ -13,6 +13,7 @@ import Portfolio from './pages/Portfolio';
 import CampusLife from './pages/CampusLife';
 import IndustryConnect from './pages/IndustryConnect';
 import Contact from './pages/Contact';
+import CourseDetails from './pages/CourseDetails';
 
 // Scroll to Top behavior on route navigation
 const ScrollToTop = () => {
@@ -51,6 +52,7 @@ function App() {
             <Route path="/campus-life" element={<CampusLife />} />
             <Route path="/industry-connect" element={<IndustryConnect />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/course-details" element={<CourseDetails />} />
           </Routes>
         </main>
 

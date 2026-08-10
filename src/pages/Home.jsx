@@ -199,6 +199,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* ==================================================
           SECTION 2 — ABOUT / BRAND STATEMENT
           LIGHT CREAM
@@ -260,6 +261,60 @@ const Home = () => {
                   <div className="absolute inset-0 bg-brand-magenta/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================
+          SECTION 2.5 — SPECIALIZED TRAINING
+          ================================================== */}
+      <section className="bg-brand-cream px-6 md:px-12 py-24 border-t border-brand-textDark/10">
+        <div className="max-w-[1400px] mx-auto">
+          <SectionHeader
+            eyebrow="SPECIALIZED TRAINING"
+            title="MASTER YOUR NICHE."
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {/* Item 1 */}
+            <div className="bg-brand-purple p-8 flex flex-col items-start neo-shadow group hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="font-display text-3xl text-brand-cream mb-4 leading-tight">Event Management Masterclass</h3>
+              <p className="font-sans font-bold text-brand-teal text-xs mb-2 uppercase tracking-widest">Corporate & Social Events</p>
+              <p className="font-sans text-brand-cream/80 text-sm mb-8 leading-relaxed">Hands-on Execution, Strategic Theory</p>
+              <Link to="/course-details" className="mt-auto px-6 py-3 bg-brand-cream text-brand-purple font-display text-sm tracking-widest hover:bg-brand-teal hover:text-white transition-colors flex items-center gap-2">
+                VIEW DETAILS <ArrowRight size={14} />
+              </Link>
+            </div>
+            
+            {/* Item 2 */}
+            <div className="bg-white p-8 flex flex-col items-start border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="font-display text-3xl text-brand-purple mb-4 leading-tight">Balloon Artistry & Styling</h3>
+              <p className="font-sans font-bold text-brand-magenta text-xs mb-2 uppercase tracking-widest">Commercial & Private</p>
+              <p className="font-sans text-brand-textDark/70 text-sm mb-8 leading-relaxed">Creative Workshops, Design Principles</p>
+              <Link to="/course-details" className="mt-auto px-6 py-3 border border-brand-purple text-brand-purple font-display text-sm tracking-widest hover:bg-brand-purple hover:text-white transition-colors flex items-center gap-2">
+                VIEW DETAILS <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* Item 3 */}
+            <div className="bg-white p-8 flex flex-col items-start border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="font-display text-3xl text-brand-purple mb-4 leading-tight">Floral Architecture & Decor</h3>
+              <p className="font-sans font-bold text-brand-magenta text-xs mb-2 uppercase tracking-widest">B2B & Luxury Social</p>
+              <p className="font-sans text-brand-textDark/70 text-sm mb-8 leading-relaxed">Practical Installations, Floral Theory</p>
+              <Link to="/course-details" className="mt-auto px-6 py-3 border border-brand-purple text-brand-purple font-display text-sm tracking-widest hover:bg-brand-purple hover:text-white transition-colors flex items-center gap-2">
+                VIEW DETAILS <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* Item 4 */}
+            <div className="bg-white p-8 flex flex-col items-start border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="font-display text-3xl text-brand-purple mb-4 leading-tight">Venue Sourcing & Management</h3>
+              <p className="font-sans font-bold text-brand-magenta text-xs mb-2 uppercase tracking-widest">Corporate Bookings</p>
+              <p className="font-sans text-brand-textDark/70 text-sm mb-8 leading-relaxed">Site Logistics, Contract Negotiation</p>
+              <Link to="/course-details" className="mt-auto px-6 py-3 border border-brand-purple text-brand-purple font-display text-sm tracking-widest hover:bg-brand-purple hover:text-white transition-colors flex items-center gap-2">
+                VIEW DETAILS <ArrowRight size={14} />
+              </Link>
             </div>
           </div>
         </div>
@@ -382,6 +437,85 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================
+          SECTION 4.5 — POPULAR COURSES
+          ================================================== */}
+      <section className="bg-brand-cream px-6 md:px-12 py-24 border-b border-brand-textDark/10">
+        <div className="max-w-[1400px] mx-auto">
+          <SectionHeader
+            eyebrow="STUDENT FAVORITES"
+            title="POPULAR COURSES"
+          />
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {[
+              {
+                title: "Event Props Rent & Production",
+                img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                title: "Marketing",
+                img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                title: "Vendor Management",
+                img: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                title: "Event B2B Business",
+                img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
+              }
+            ].map((course, idx) => (
+              <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-sm border border-brand-textDark/10 group hover:-translate-y-1 transition-transform duration-300">
+                <div className="h-48 overflow-hidden relative">
+                  <img src={course.img} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0" />
+                </div>
+                <div className="p-6 text-center">
+                  <h4 className="font-display text-lg text-brand-purple">{course.title}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================
+          SECTION 4.6 — WHY CHOOSE US
+          ================================================== */}
+      <section className="bg-white px-6 md:px-12 py-24 border-b border-brand-textDark/10">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-8">
+            <h2 className="font-display text-4xl text-brand-purple mb-12">WHY CHOOSE US</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div className="text-center border-b border-brand-textDark/20 pb-4">
+                <div className="font-display text-5xl text-brand-purple mb-2">100%</div>
+                <div className="font-sans text-sm text-brand-textDark/70 uppercase tracking-widest">Placement Support</div>
+              </div>
+              <div className="text-center border-b border-brand-textDark/20 pb-4">
+                <div className="font-display text-5xl text-brand-purple mb-2">100%</div>
+                <div className="font-sans text-sm text-brand-textDark/70 uppercase tracking-widest">Practical Training</div>
+              </div>
+              <div className="text-center border-b border-brand-textDark/20 pb-4">
+                <div className="font-display text-5xl text-brand-purple mb-2">100%</div>
+                <div className="font-sans text-sm text-brand-textDark/70 uppercase tracking-widest">Industry Mentors</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-4">
+            <div className="border border-brand-purple p-10 text-center bg-brand-cream neo-shadow-purple">
+              <h3 className="font-display text-2xl text-brand-purple mb-4 leading-snug">Questions about studying with us?</h3>
+              <p className="font-sans text-sm text-brand-textDark/70 mb-8 leading-relaxed">
+                We have a team of student advisers & officers to answer any questions:
+              </p>
+              <Link to="/contact" className="inline-block px-8 py-3 border border-brand-purple text-brand-purple font-display tracking-widest hover:bg-brand-purple hover:text-white transition-colors">
+                Click here
+              </Link>
             </div>
           </div>
         </div>
