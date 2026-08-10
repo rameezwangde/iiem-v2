@@ -168,13 +168,13 @@ const Home = () => {
                 }}
               />
               {/* Cream gradient overlays for mobile blending */}
-              <div 
+              <div
                 className="absolute inset-y-0 left-0 w-1/2 pointer-events-none z-20"
                 style={{
                   background: 'linear-gradient(90deg, #F8F3EA 0%, rgba(248,243,234,0.97) 15%, rgba(248,243,234,0.82) 35%, rgba(248,243,234,0.45) 60%, rgba(248,243,234,0) 100%)'
                 }}
               />
-              <div 
+              <div
                 className="absolute inset-x-0 bottom-0 h-1/4 pointer-events-none z-20"
                 style={{
                   background: 'linear-gradient(to top, #F8F3EA 0%, rgba(248,243,234,0.8) 30%, rgba(248,243,234,0) 100%)'

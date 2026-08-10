@@ -17,13 +17,8 @@ const Footer = () => {
           {/* Main Identity */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <Link to="/" className="block tracking-tighter mb-6">
-                <span className="block font-display text-4xl md:text-5xl leading-none text-brand-cream">
-                  INDIA INSTITUTE
-                </span>
-                <span className="block font-display text-3xl md:text-4xl leading-none text-brand-magenta">
-                  OF EVENT MANAGEMENT
-                </span>
+              <Link to="/" className="inline-block mb-6 bg-brand-cream p-4 rounded-xl hover:opacity-90 transition-opacity">
+                <img src="/iiem-logo-cropped.png" alt="IIEM Logo" className="h-16 md:h-24 w-auto object-contain" />
               </Link>
               <p className="text-brand-cream/70 text-sm max-w-sm font-sans mb-8">
                 Adapting experiential marketing, stagecraft production, and wedding design into India's premium events education platform. Learn by doing.

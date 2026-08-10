@@ -51,16 +51,8 @@ const Header = () => {
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo Brand Identity */}
-          <Link to="/" className="flex flex-col tracking-tighter group">
-            <span className="font-display text-lg md:text-xl leading-none text-brand-purple group-hover:text-brand-magenta transition-colors duration-300">
-              INDIA INSTITUTE
-            </span>
-            <span className="font-display text-xs leading-none text-brand-textDark/50 group-hover:text-brand-textDark transition-colors duration-300 my-[2px]">
-              OF
-            </span>
-            <span className="font-display text-sm md:text-base leading-none text-brand-textDark group-hover:text-brand-purple transition-colors duration-300">
-              EVENT MANAGEMENT
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img src="/iiem-logo-cropped.png" alt="IIEM Logo" className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
           </Link>
 
           {/* Desktop Navigation */}
