@@ -75,11 +75,11 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tight uppercase"
             >
-              <span className="block text-brand-purple">WHERE</span>
-              <span className="block text-brand-magenta">PASSION PLANS.</span>
-              <span className="block text-brand-purple">EXPERIENCES</span>
-              <span className="block font-serif italic text-brand-teal lowercase tracking-normal font-light">
-                transform.
+              <span className="block text-black">WHERE</span>
+              <span className="block text-black">PASSION PLANS.</span>
+              <span className="block text-black">EXPERIENCES</span>
+              <span className="block text-black">
+                TRANSFORM.
               </span>
             </motion.h1>
 
