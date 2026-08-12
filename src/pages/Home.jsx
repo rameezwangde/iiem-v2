@@ -250,7 +250,7 @@ const Home = () => {
  <div className="absolute inset-0 bg-brand-purple/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
  </div>
  </div>
- <div className="space-y-4 pt-12">
+ <div className="space-y-4">
  {/* Asymmetric offset image */}
  <div className="aspect-[3/4] overflow-hidden border border-brand-textDark/10 relative group bg-brand-purple/5 neo-shadow-magenta">
  <img
@@ -775,7 +775,7 @@ const Home = () => {
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
  <div className="aspect-[4/3] overflow-hidden border border-brand-textDark/15 relative group bg-brand-purple/5">
  <img
- src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+ src="/images/campus_brainstorming.png"
  alt="Students brainstorming layouts"
  className="w-full h-full object-cover group-hover:-0 transition-all duration-500"
  />
@@ -783,9 +783,9 @@ const Home = () => {
  BRAINSTORMING & CONCEPTS
  </div>
  </div>
- <div className="aspect-[4/3] overflow-hidden border border-brand-textDark/15 relative group bg-brand-purple/5 mt-0 sm:mt-6 lg:mt-0">
+ <div className="aspect-[4/3] overflow-hidden border border-brand-textDark/15 relative group bg-brand-purple/5">
  <img
- src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=600&q=80"
+ src="/images/campus_fabrication.png"
  alt="Students preparing decor layouts"
  className="w-full h-full object-cover group-hover:-0 transition-all duration-500"
  />
@@ -793,9 +793,9 @@ const Home = () => {
  PRODUCTION FABRICATION
  </div>
  </div>
- <div className="aspect-[4/3] overflow-hidden border border-brand-textDark/15 relative group bg-brand-purple/5 mt-0 lg:mt-12 neo-shadow">
+ <div className="aspect-[4/3] overflow-hidden border border-brand-textDark/15 relative group bg-brand-purple/5 neo-shadow">
  <img
- src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80"
+ src="/images/campus_soundcheck.png"
  alt="Rehearsals stage design"
  className="w-full h-full object-cover group-hover:-0 transition-all duration-500"
  />
