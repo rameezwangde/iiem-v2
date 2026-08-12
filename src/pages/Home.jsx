@@ -243,8 +243,8 @@ const Home = () => {
  {/* Large cropped image */}
  <div className="aspect-[3/4] overflow-hidden border border-brand-textDark/10 relative group bg-brand-purple/5">
  <img
- src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80"
- alt="Students coordinating wedding floral decor"
+ src="/images/about_fabrication_setup.png"
+ alt="Students working on fabrication setup"
  className="w-full h-full object-cover group-hover:-0 transition-all duration-500 hover:scale-105"
  />
  <div className="absolute inset-0 bg-brand-purple/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -254,8 +254,8 @@ const Home = () => {
  {/* Asymmetric offset image */}
  <div className="aspect-[3/4] overflow-hidden border border-brand-textDark/10 relative group bg-brand-purple/5 neo-shadow-magenta">
  <img
- src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80"
- alt="Corporate briefing stage AV setup"
+ src="/images/about_soundcheck.png"
+ alt="Student operating soundcheck rig"
  className="w-full h-full object-cover group-hover:-0 transition-all duration-500 hover:scale-105"
  />
  <div className="absolute inset-0 bg-brand-magenta/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -454,22 +454,22 @@ const Home = () => {
  
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
  {[
- {
- title: "Event Props Rent & Production",
- img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80"
- },
- {
- title: "Marketing",
- img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80"
- },
- {
- title: "Vendor Management",
- img: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?auto=format&fit=crop&w=600&q=80"
- },
- {
- title: "Event B2B Business",
- img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
- }
+  {
+  title: "Event Props Rent & Production",
+  img: "/images/course_props_production.png"
+  },
+  {
+  title: "Marketing",
+  img: "/images/course_marketing.png"
+  },
+  {
+  title: "Vendor Management",
+  img: "/images/course_vendor_management.png"
+  },
+  {
+  title: "Event B2B Business",
+  img: "/images/course_b2b_business.png"
+  }
  ].map((course, idx) => (
  <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-sm border border-brand-textDark/10 group hover:-translate-y-1 transition-transform duration-300">
  <div className="h-48 overflow-hidden relative">
@@ -612,7 +612,7 @@ const Home = () => {
  ))}
 
  {/* Side Column Stack (Right 5-column span, 2 projects stacked) */}
- <div className="lg:col-span-5 flex flex-col justify-between gap-8">
+ <div className="lg:col-span-5 flex flex-col justify-center gap-8">
  {portfolioData.slice(1, 3).map((project) => (
  <div key={project.id} className="flex gap-4 items-center group">
  <div className="w-1/3 aspect-square overflow-hidden border border-brand-textDark/15 bg-brand-purple/5 relative">

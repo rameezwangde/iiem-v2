@@ -261,7 +261,7 @@ export const portfolioData = [
     num: "01",
     title: "Elysian Bloom: Destination Wedding",
     category: "Weddings",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80",
+    image: "https://koala.sh/api/image/v2-9ln6q-vlm73.jpg?width=1216&height=832&dream",
     description: "A three-day luxury destination wedding in Udaipur, managed from venue layout design to artist coordination and setup by IIEM students.",
     year: "2025",
     role: "Decor Layout, Artist Relations, On-ground Operations Support"
