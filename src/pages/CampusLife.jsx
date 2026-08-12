@@ -198,12 +198,12 @@ const CampusLife = () => {
 
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
  {[
- { img: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80', label: 'Creative Planning' },
- { img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80', label: 'Live Events' },
- { img: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80', label: 'Workshops' },
+ { img: '/images/about_mentor_office.png', label: 'Creative Planning' },
+ { img: '/images/campus_fabrication.png', label: 'Live Events' },
+ { img: '/images/course_props_production.png', label: 'Workshops' },
  { img: '/images/about_fabrication_setup.png', label: 'Backstage Operations' },
- { img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80', label: 'Tech Rehearsals' },
- { img: 'https://images.unsplash.com/photo-1520242739010-44e95bde329e?auto=format&fit=crop&w=600&q=80', label: 'Peer Networking' }
+ { img: '/images/campus_soundcheck.png', label: 'Tech Rehearsals' },
+ { img: '/images/campus_brainstorming.png', label: 'Peer Networking' }
  ].map((item, idx) => (
  <div key={idx} className="group relative overflow-hidden aspect-[4/3] border border-brand-textDark/15 bg-brand-purple/5">
  <img
