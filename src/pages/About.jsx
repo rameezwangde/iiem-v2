@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, CheckCircle2 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
-import { facultyData } from '../data/siteData';
 
 const About = () => {
  return (
@@ -144,42 +143,8 @@ const About = () => {
     </div>
   </section>
 
- {/* Panel 3 — Faculty & Mentors (Cream background) */}
- <section className="bg-brand-cream py-20 px-6 md:px-12">
- <div className="max-w-[1400px] mx-auto">
- <SectionHeader
- eyebrow="FACULTY & GUESTS"
- title="LEARN FROM THE PEOPLE WHO RUN THE SHOW."
- supportingText="Our academic team consists of active agency directors, venue hosts, and technical stage leaders. They bring real challenges and projects directly to the campus."
- />
-
- <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
- {facultyData.map((fac, idx) => (
- <div key={idx} className="flex flex-col group border border-brand-textDark/10 bg-brand-cream hover:border-brand-purple transition-all duration-300">
- <div className="aspect-[3/4] overflow-hidden border-b border-brand-textDark/10 relative">
- <img
- src={fac.image}
- alt={fac.name}
- className="w-full h-full object-cover group-hover:-0 transition-all duration-500"
- />
- </div>
- <div className="p-6">
- <h3 className="font-display text-2xl text-brand-purple">{fac.name}</h3>
- <div className="font-sans text-xs text-brand-magenta font-semibold tracking-wider uppercase mt-1">
- {fac.designation}
- </div>
- <p className="font-sans text-xs text-brand-textDark/70 mt-3 leading-relaxed">
- {fac.bio}
- </p>
- </div>
- </div>
- ))}
- </div>
- </div>
- </section>
-
- {/* Panel 4 — Why Choose IIEM (Dark background) */}
- <section className="bg-brand-dark text-brand-cream py-20 px-6 md:px-12">
+  {/* Panel 4 — Why Choose IIEM (Dark background) */}
+  <section className="bg-brand-dark text-brand-cream py-20 px-6 md:px-12">
  <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
  <div className="lg:col-span-7 space-y-8">
  <SectionHeader
