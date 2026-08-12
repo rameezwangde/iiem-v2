@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Calendar, Clock, ArrowRight, ChevronDown, MessageCircle, Navigation, Users, Building, HelpCircle } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
+import { programsData } from '../data/siteData';
 
 const Contact = () => {
  const [formData, setFormData] = useState({
@@ -20,6 +21,8 @@ const Contact = () => {
 
  const handleSubmit = (e) => {
  e.preventDefault();
+ const text = `Hi, I am ${formData.name}. Email: ${formData.email}. Phone: ${formData.phone}. Interested in: ${formData.course}. Message: ${formData.message}`;
+ window.open(`https://wa.me/919019876442?text=${encodeURIComponent(text)}`, '_blank');
  setSubmitted(true);
  };
 
@@ -66,9 +69,7 @@ const Contact = () => {
  <div>
  <div className="font-display text-xl text-brand-purple">CAMPUS ADDRESS</div>
  <p className="text-brand-textDark/70 mt-1 leading-relaxed">
- IIEM Campus, 3rd Floor, Creative Arts District,
- Senapati Bapat Marg, Lower Parel,
- Mumbai - 400013, India
+ Ullal Main Rd, Annapurneshwari Layout, Muneshwara Nagar, Muneshwaranagar, Jnana Ganga Nagar, Bengaluru, Karnataka 560056
  </p>
  </div>
  </div>
@@ -78,7 +79,7 @@ const Contact = () => {
  <div>
  <div className="font-display text-xl text-brand-purple">PHONE NUMBER</div>
  <div className="text-brand-textDark/70 mt-1">
- <a href="tel:+919876543210" className="hover:text-brand-teal font-semibold underline">+91 98765 43210</a>
+ <a href="tel:+919019876442" className="hover:text-brand-teal font-semibold underline">+91 9019876442</a>
  </div>
  </div>
  </div>
@@ -192,9 +193,9 @@ const Contact = () => {
  className="w-full p-3 border border-brand-textDark/15 bg-brand-cream focus:outline-none focus:border-brand-magenta"
  >
  <option value="admissions">Course Admissions / Counselling</option>
- <option value="advanced-diploma">Advanced Diploma in Event Management</option>
- <option value="wedding">Wedding & Social Event Management</option>
- <option value="corporate">Corporate Event Management</option>
+ {programsData.map((prog) => (
+ <option key={prog.id} value={prog.id}>{prog.title}</option>
+ ))}
  <option value="other">Other Enquiry</option>
  </select>
  </div>
@@ -282,7 +283,7 @@ const Contact = () => {
  </div>
  <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-purple transition-colors">
  <div className="font-display text-xl text-brand-purple mb-1">Dedicated Counselling</div>
- <div className="text-brand-textDark/70 font-sans text-sm">Speak directly to our Lead Counsellor: +91 98765 43210</div>
+ <div className="text-brand-textDark/70 font-sans text-sm">Speak directly to our Lead Counsellor: +91 9019876442</div>
  </div>
  </div>
  </div>
@@ -343,13 +344,13 @@ const Contact = () => {
  
  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
  <a
- href="tel:+919876543210"
+ href="tel:+919019876442"
  className="w-full sm:w-auto px-6 py-4 bg-white text-brand-purple hover:bg-brand-magenta hover:text-white transition-all duration-300 font-display text-sm tracking-wider inline-flex items-center justify-center gap-2 neo-shadow"
  >
  <Phone size={18} /> CALL NOW
  </a>
  <a
- href="#"
+ href="https://wa.me/919019876442" target="_blank" rel="noreferrer"
  className="w-full sm:w-auto px-6 py-4 bg-[#25D366] text-white hover:bg-brand-dark transition-all duration-300 font-display text-sm tracking-wider inline-flex items-center justify-center gap-2 neo-shadow"
  >
  <MessageCircle size={18} /> WHATSAPP

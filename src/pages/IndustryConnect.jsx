@@ -49,7 +49,7 @@ const IndustryConnect = () => {
  Institutional collaborations, MoUs, and strategic partnerships with top event management companies, media houses, and production agencies.
  </p>
  
- <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+ <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
  {industryPartners.map((partner, idx) => (
  <div key={idx} className="p-4 border border-brand-textDark/10 bg-brand-cream text-center hover:border-brand-purple transition-colors neo-shadow flex items-center justify-center min-h-[100px]">
  <div>

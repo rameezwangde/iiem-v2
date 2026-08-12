@@ -125,14 +125,12 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <div className="font-display text-lg text-brand-magenta mb-4 tracking-wider">HEAD OFFICE</div>
             <p className="text-sm text-brand-cream/80 mb-4 font-sans leading-relaxed">
-              IIEM Campus, 3rd Floor, Creative Arts District,
-              Senapati Bapat Marg, Lower Parel,
-              Mumbai - 400013, India
+              Ullal Main Rd, Annapurneshwari Layout, Muneshwara Nagar, Muneshwaranagar, Jnana Ganga Nagar, Bengaluru, Karnataka 560056
             </p>
             <div className="space-y-1 text-sm text-brand-cream/80 font-sans">
               <div>
                 <strong>Phone: </strong>
-                <a href="tel:+919876543210" className="hover:text-brand-teal transition-colors">+91 98765 43210</a>
+                <a href="tel:+919019876442" className="hover:text-brand-teal transition-colors">+91 9019876442</a>
               </div>
               <div>
                 <strong>Email: </strong>
