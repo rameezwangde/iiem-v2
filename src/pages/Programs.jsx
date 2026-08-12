@@ -72,7 +72,7 @@ const Programs = () => {
           <div id={selectedProgram.id} className="grid grid-cols-1 lg:grid-cols-12 gap-12 scroll-mt-36">
             
             {/* Left overview & stats */}
-            <div className="lg:col-span-7 space-y-8">
+            <div className="lg:col-span-7 space-y-8 lg:sticky lg:top-[180px] self-start">
               <div>
                 <span className="text-xs font-bold text-brand-magenta uppercase tracking-widest font-sans block mb-2">
                   COURSE ID // {selectedProgram.num}
@@ -136,7 +136,18 @@ const Programs = () => {
                   {selectedProgram.curriculum.map((module, idx) => (
                     <li key={idx} className="flex gap-3 pb-3 border-b border-brand-cream/10">
                       <span className="font-semibold text-brand-magenta">{String(idx + 1).padStart(2, '0')}.</span>
-                      <span>{module}</span>
+                      {typeof module === 'string' ? (
+                        <span>{module}</span>
+                      ) : (
+                        <div>
+                          <span className="block font-bold text-white mb-2">{module.topic}</span>
+                          <ul className="list-disc pl-4 space-y-1 text-brand-cream/70">
+                            {module.details.map((detail, dIdx) => (
+                              <li key={dIdx}>{detail}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ol>

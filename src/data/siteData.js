@@ -100,6 +100,155 @@ export const programsData = [
     practicalExperience: "Conducting actual technical load-in and load-out on live stages. Heavy exposure to fabrication workshops.",
     careerOpportunities: "Production Manager, Technical Director, AV Supervisor, Stage Coordinator, Site Superintendent.",
     industryExposure: "Apprenticeship with top-tier fabrication workshops and AV companies in major metros."
+  },
+  {
+    id: "sound-technician",
+    num: "06",
+    title: "Sound Technician Program",
+    shortDesc: "Professional Audio & Live Sound Training",
+    duration: "3 Months (Certification)",
+    eligibility: "10+2 or equivalent with basic understanding of audio equipment or music production.",
+    overview: "The Sound Technician Program at IIEM (Indian Institute of Event Management) is designed for students who want to build a career in live sound, event production, concerts, weddings, corporate events, and entertainment shows. The program provides hands-on practical training with professional audio equipment used in the event industry.",
+    curriculum: [
+      {
+        topic: "Fundamentals of Sound",
+        details: [
+          "Basics of sound and audio signals",
+          "Frequency, pitch, gain, and decibels",
+          "Analog vs digital audio",
+          "Signal flow understanding"
+        ]
+      },
+      {
+        topic: "Audio Equipment",
+        details: [
+          "Speakers and subwoofers",
+          "Power amplifiers",
+          "Audio mixers",
+          "Wireless microphone systems",
+          "DI boxes and audio interfaces",
+          "Cables and connectors (XLR, TRS, Speakon, RCA)"
+        ]
+      },
+      {
+        topic: "Mixer Operation",
+        details: [
+          "Channel setup",
+          "Gain structure",
+          "Equalization (EQ)",
+          "Auxiliary sends",
+          "Effects and reverb",
+          "Group and master output control"
+        ]
+      },
+      {
+        topic: "Live Sound Setup",
+        details: [
+          "Speaker placement",
+          "Stage monitor setup",
+          "FOH (Front of House) mixing",
+          "Wedding and reception sound setup",
+          "Corporate conference audio setup",
+          "DJ and live band sound management"
+        ]
+      },
+      {
+        topic: "Sound Check Procedures",
+        details: [
+          "Microphone testing",
+          "Feedback control",
+          "Monitor balancing",
+          "Vocal clarity adjustment",
+          "Instrument level balancing"
+        ]
+      },
+      {
+        topic: "Troubleshooting & Maintenance",
+        details: [
+          "Identifying cable faults",
+          "Eliminating hum and noise",
+          "Preventing feedback",
+          "Basic speaker and amplifier troubleshooting",
+          "Safe equipment handling and storage"
+        ]
+      }
+    ],
+    practicalExperience: "Practical audio training, live event sound setup, hands-on mixer operation (JBL, Yamaha, Allen & Heath), stage monitoring, mic setup, and real event production exposure.",
+    careerOpportunities: "Live Sound Engineer, Audio Technician, FOH (Front of House) Engineer, Monitor Engineer, System Tech.",
+    industryExposure: "Workshops with leading acoustic brands and mentorship from touring sound engineers."
+  },
+  {
+    id: "lighting-technician",
+    num: "07",
+    title: "Lighting Technician Program",
+    shortDesc: "Stage illumination, DMX programming, intelligent lighting, and visual effects.",
+    duration: "3 Months (Certification)",
+    eligibility: "Open to individuals passionate about visual arts, electronics, and technical production.",
+    overview: "Dive into the visual side of events. This program trains you in designing, rigging, and operating complex lighting systems. From corporate stage washes to dynamic concert light shows, learn the art and science of event illumination.",
+    curriculum: [
+      "Outdoor and indoor event setup",
+      {
+        topic: "Skills Students Will Gain",
+        details: [
+          "Professional lighting setup",
+          "Console programming",
+          "Event production coordination",
+          "Troubleshooting and maintenance",
+          "Teamwork during live productions",
+          "Creative lighting design"
+        ]
+      }
+    ],
+    practicalExperience: "Programming light sequences on actual industry-standard consoles and rigging fixtures for stage setups.",
+    careerOpportunities: "Lighting Designer, Console Operator, Rigging Technician, Visual Director, Laser Operator.",
+    industryExposure: "Site visits to major equipment rental companies and shadowing lighting directors at live events."
+  },
+  {
+    id: "fabrication-decor",
+    num: "08",
+    title: "Fabrication & Event Decor",
+    shortDesc: "Create Stunning Event Experiences",
+    duration: "6 Months (Diploma)",
+    eligibility: "10+2 or equivalent with an aptitude for design, crafts, and structural aesthetics.",
+    overview: "Create Stunning Event Experiences. The Fabrication & Event Décor module at IIEM focuses on designing and building attractive event environments for weddings, corporate events, exhibitions, stage shows, and social celebrations. Students learn both creative décor concepts and practical fabrication techniques used in the event industry.",
+    curriculum: [
+      "Design Principles & Thematic Conceptualization",
+      "Materials, Carpentry & Structural Fabrication",
+      "Floral Design, Draping & Upholstery",
+      "Set Design & 3D Visualization",
+      "Vendor Sourcing & Inventory Management",
+      "On-site Execution & Setup Logistics"
+    ],
+    practicalExperience: "Building custom props in workshops and styling mock wedding/corporate event venues.",
+    careerOpportunities: "Event Stylist, Set Designer, Fabrication Manager, Floral Designer, Prop Builder.",
+    industryExposure: "Collaborations with top decor vendors and hands-on work in professional fabrication units."
+  },
+  {
+    id: "exhibition-management",
+    num: "09",
+    title: "Exhibition & Trade Show Management",
+    shortDesc: "Planning and executing large-scale expos, stall design, and exhibitor relations.",
+    duration: "6 Months (Certification)",
+    eligibility: "Graduates or professionals seeking specialization in the B2B exhibition sector.",
+    overview: "The Exhibition & Trade Show Management program at IIEM (Indian Institute of Event Management) is designed to provide practical and industry-oriented training in planning, organizing, and managing exhibitions, expos, trade fairs, and business events. Students gain hands-on knowledge of event operations, vendor coordination, stall management, and visitor engagement.",
+    curriculum: [
+      {
+        topic: "Program Highlights",
+        details: [
+          "Industry-focused practical training",
+          "Live exhibition and expo exposure",
+          "Stall and pavilion planning",
+          "Vendor and exhibitor coordination",
+          "Trade fair operations management",
+          "Marketing and visitor promotion strategies",
+          "Certification from IIEM",
+          "Internship and placement assistance"
+        ]
+      }
+    ],
+    practicalExperience: "Coordinating exhibitor load-ins, managing registration desks, and assisting floor managers at major trade expos.",
+    careerOpportunities: "Exhibition Manager, Floor Manager, Space Sales Executive, Operations Head (Exhibitions), Registration Manager.",
+    industryExposure: "Internships at major exhibition centers (like Bombay Exhibition Centre) and interacting with leading expo organizers."
   }
 ];
 
