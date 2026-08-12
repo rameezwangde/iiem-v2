@@ -210,11 +210,11 @@ const Home = () => {
  
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-12">
  {/* Item 1 */}
- <div className="bg-brand-purple p-8 flex flex-col items-start neo-shadow group hover:-translate-y-2 transition-transform duration-300">
- <h3 className="font-display text-3xl text-brand-cream mb-4 leading-tight">Event Management Masterclass</h3>
- <p className="font-sans font-bold text-brand-teal text-xs mb-2 uppercase tracking-widest">Corporate & Social Events</p>
- <p className="font-sans text-brand-cream/80 text-sm mb-8 leading-relaxed">Hands-on Execution, Strategic Theory</p>
- <Link to="/course-details" className="mt-auto px-6 py-3 bg-brand-cream text-brand-purple font-display text-sm tracking-widest hover:bg-brand-teal hover:text-white transition-colors flex items-center gap-2">
+ <div className="bg-white p-8 flex flex-col items-start border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-2 transition-transform duration-300">
+ <h3 className="font-display text-3xl text-brand-purple mb-4 leading-tight">Event Management Masterclass</h3>
+ <p className="font-sans font-bold text-brand-magenta text-xs mb-2 uppercase tracking-widest">Corporate & Social Events</p>
+ <p className="font-sans text-brand-textDark/70 text-sm mb-8 leading-relaxed">Hands-on Execution, Strategic Theory</p>
+ <Link to="/course-details" className="mt-auto px-6 py-3 border border-brand-purple text-brand-purple font-display text-sm tracking-widest hover:bg-brand-purple hover:text-white transition-colors flex items-center gap-2">
  VIEW DETAILS <ArrowRight size={14} />
  </Link>
  </div>
