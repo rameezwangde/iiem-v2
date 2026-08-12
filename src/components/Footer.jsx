@@ -144,7 +144,7 @@ const Footer = () => {
 
         {/* Giant Footer Statement */}
         <div className="py-12 select-none pointer-events-none">
-          <div className="font-display text-5xl sm:text-7xl md:text-9xl leading-none text-center tracking-tighter text-brand-purple/20 whitespace-nowrap overflow-hidden">
+          <div className="font-display text-5xl sm:text-7xl md:text-9xl leading-none text-center tracking-tighter text-white whitespace-nowrap overflow-hidden">
             CREATE EXPERIENCES. BUILD A CAREER.
           </div>
         </div>

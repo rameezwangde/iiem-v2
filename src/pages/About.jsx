@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, CheckCircle2 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import { facultyData } from '../data/siteData';
 
@@ -84,6 +84,54 @@ const About = () => {
  </div>
  </div>
  </section>
+
+  {/* Core Commitments Checklist */}
+  <section className="bg-brand-cream py-16 px-6 md:px-12 border-b border-brand-textDark/10">
+    <div className="max-w-[1400px] mx-auto">
+      <div className="mb-12">
+        <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-2">
+          // OUR COMMITMENT
+        </span>
+        <h2 className="font-display text-4xl sm:text-5xl text-brand-purple uppercase">
+          THE IIEM STANDARD.
+        </h2>
+      </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        {/* Column 1 */}
+        <div className="space-y-4">
+          {['100% Hospitality', '100% Trusted Event Company', 'In-Housework'].map(item => (
+            <div key={item} className="flex items-center gap-4 bg-white p-4 border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-1 transition-transform">
+              <CheckCircle2 size={24} className="text-brand-teal shrink-0 group-hover:text-brand-magenta transition-colors" />
+              <span className="font-display text-brand-textDark text-lg tracking-wider uppercase">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Column 2 */}
+        <div className="space-y-4">
+          {['Quality Work', 'Event Storyteller', 'On-Time Work'].map(item => (
+            <div key={item} className="flex items-center gap-4 bg-white p-4 border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-1 transition-transform">
+              <CheckCircle2 size={24} className="text-brand-teal shrink-0 group-hover:text-brand-magenta transition-colors" />
+              <span className="font-display text-brand-textDark text-lg tracking-wider uppercase">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Column 3 */}
+        <div className="space-y-4">
+          {['Good Team', 'Client Satisfaction', 'Experience'].map(item => (
+            <div key={item} className="flex items-center gap-4 bg-white p-4 border border-brand-textDark/10 neo-shadow-teal group hover:-translate-y-1 transition-transform">
+              <CheckCircle2 size={24} className="text-brand-teal shrink-0 group-hover:text-brand-magenta transition-colors" />
+              <span className="font-display text-brand-textDark text-lg tracking-wider uppercase">{item}</span>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
 
  {/* Panel 3 — Faculty & Mentors (Cream background) */}
  <section className="bg-brand-cream py-20 px-6 md:px-12">

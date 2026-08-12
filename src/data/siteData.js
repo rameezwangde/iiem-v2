@@ -3,7 +3,7 @@
 export const programsData = [
   {
     id: "wedding-social",
-    num: "02",
+    num: "01",
     title: "Wedding & Social Events",
     shortDesc: "Creative planning for high-impact celebrations and custom experiential social design.",
     duration: "6 Months (Professional Certification)",
@@ -23,7 +23,7 @@ export const programsData = [
   },
   {
     id: "corporate-events",
-    num: "03",
+    num: "02",
     title: "Corporate Event Management",
     shortDesc: "Conferences, product launches, global exhibitions, and branded corporate environments.",
     duration: "6 Months (Professional Certification)",
@@ -43,7 +43,7 @@ export const programsData = [
   },
   {
     id: "live-entertainment",
-    num: "04",
+    num: "03",
     title: "Live Events & Entertainment",
     shortDesc: "Stage production, international artist coordination, music festivals, and stadium audience design.",
     duration: "6 Months (Professional Certification)",
@@ -63,7 +63,7 @@ export const programsData = [
   },
   {
     id: "production-operations",
-    num: "05",
+    num: "04",
     title: "Event Production & Operations",
     shortDesc: "Technical rigging coordination, on-site logistics, vendor systems, and backstage execution.",
     duration: "3 Months (Intensive Bootcamp)",
@@ -83,7 +83,7 @@ export const programsData = [
   },
   {
     id: "sound-technician",
-    num: "06",
+    num: "05",
     title: "Sound Technician Program",
     shortDesc: "Professional Audio & Live Sound Training",
     duration: "3 Months (Certification)",
