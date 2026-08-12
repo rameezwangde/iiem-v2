@@ -49,14 +49,14 @@ const Header = () => {
             : 'bg-brand-cream/40 backdrop-blur-sm border-transparent py-5'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
+        <div className="w-full max-w-none px-6 lg:px-12 xl:px-16 flex justify-between items-center gap-4">
           {/* Logo Brand Identity */}
           <Link to="/" className="flex items-center group">
             <img src="/iiem-logo-cropped.png" alt="IIEM Logo" className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center gap-1 2xl:gap-4">
             {navLinks.map((link) => {
               if (link.isDropdown) {
                 return (
@@ -67,7 +67,7 @@ const Header = () => {
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <button
-                      className={`px-3 py-1 flex items-center gap-1 font-medium text-sm transition-colors duration-300 hover:text-brand-magenta ${
+                      className={`px-2 py-1 flex items-center gap-1 font-medium text-sm transition-colors duration-300 hover:text-brand-magenta whitespace-nowrap ${
                         location.pathname.startsWith('/programs') ? 'text-brand-purple font-semibold' : 'text-brand-textDark/80'
                       }`}
                     >
@@ -88,7 +88,7 @@ const Header = () => {
                           <div className="flex flex-col space-y-1">
                             <Link
                               to="/programs"
-                              className="font-display text-lg text-brand-purple hover:text-brand-magenta mb-2 pb-1 border-b border-brand-textDark/10 block"
+                              className="font-display text-lg text-brand-purple hover:text-brand-magenta mb-2 pb-1 border-b border-brand-textDark/10 block whitespace-normal"
                             >
                               ALL PROGRAMS VIEW
                             </Link>
@@ -96,7 +96,7 @@ const Header = () => {
                               <Link
                                 key={prog.id}
                                 to={`/programs#${prog.id}`}
-                                className="group flex items-center justify-between p-2 rounded hover:bg-brand-purple/5 transition-colors"
+                                className="group flex items-center justify-between p-2 rounded hover:bg-brand-purple/5 transition-colors whitespace-normal"
                               >
                                 <div>
                                   <div className="font-semibold text-xs text-brand-textDark/90 group-hover:text-brand-purple">
@@ -123,7 +123,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`relative px-3 py-1 font-medium text-sm transition-all duration-300 hover:text-brand-magenta ${
+                  className={`relative px-2 py-1 font-medium text-sm transition-all duration-300 hover:text-brand-magenta whitespace-nowrap ${
                     isActive ? 'text-brand-purple font-semibold' : 'text-brand-textDark/85'
                   }`}
                 >
@@ -131,7 +131,7 @@ const Header = () => {
                   {isActive && (
                     <motion.span
                       layoutId="activeNavLine"
-                      className="absolute bottom-0 left-3 right-3 h-[2px] bg-brand-magenta"
+                      className="absolute bottom-0 left-2 right-2 h-[2px] bg-brand-magenta"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
