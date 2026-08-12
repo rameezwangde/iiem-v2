@@ -2,26 +2,6 @@
 
 export const programsData = [
   {
-    id: "advanced-diploma",
-    num: "01",
-    title: "Advanced Diploma in Event Management",
-    shortDesc: "Advanced planning, experiential design, leadership and industry execution.",
-    duration: "1 Year (Full-Time)",
-    eligibility: "10+2 or equivalent from any recognized board. Creative mindset is preferred.",
-    overview: "This is our flagship comprehensive program designed to groom future leaders in the global event management industry. The curriculum covers strategic design, vendor bidding, safety guidelines, production technology, and venue logistics.",
-    curriculum: [
-      "Introduction to Event Management & Planning Process",
-      "Experiential Marketing & Brand Activations",
-      "Technical Production, AV & Stage Design",
-      "Budgeting, Financial Planning & Licensing",
-      "Crisis Management, Risk & Operations Safety",
-      "Final Live Project Execution & Portfolio Defense"
-    ],
-    practicalExperience: "100 hours of mandatory supervised live event execution. Opportunities to shadow senior crew at major national festivals and corporate launches.",
-    careerOpportunities: "Event Director, Senior Producer, Event Operations Manager, Brand Activation Lead, Festival Curator.",
-    industryExposure: "Direct interaction with leaders from top event agencies in India, backstage passes to major concerts, and production house site visits."
-  },
-  {
     id: "wedding-social",
     num: "02",
     title: "Wedding & Social Events",
