@@ -60,7 +60,7 @@ const Portfolio = () => {
  <div>
  <div className="text-[10px] font-bold text-brand-teal tracking-widest uppercase mb-2">The Execution</div>
  <div className="aspect-[4/3] bg-brand-purple/10 overflow-hidden border border-brand-textDark/10">
- <img src="https://images.unsplash.com/photo-1540039155732-68b0e8b15d97?auto=format&fit=crop&w=600&q=80" alt="Live Event" className="w-full h-full object-cover group-hover:-0 transition-all duration-500" />
+ <img src="/images/portfolio_music_festival.png" alt="Live Event" className="w-full h-full object-cover group-hover:-0 transition-all duration-500" />
  </div>
  </div>
  </div>
