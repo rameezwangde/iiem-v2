@@ -7,21 +7,32 @@ import { facultyData } from '../data/siteData';
 const About = () => {
  return (
  <div className="w-full">
- {/* Hero Header */}
- <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10">
- <div className="max-w-[1400px] mx-auto">
- <div className="max-w-4xl">
- <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
- // MEET IIEM
- </span>
- <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
- MORE THAN AN INSTITUTE.<br />
- <span className="text-brand-magenta">A PLACE TO CREATE</span><br />
- <span className="text-brand-textDark">EXPERIENCES.</span>
- </h1>
- </div>
- </div>
- </section>
+  {/* Hero Header */}
+  <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10 relative overflow-hidden">
+    <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-2xl">
+        <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
+          // MEET IIEM
+        </span>
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple mb-6">
+          MORE THAN AN INSTITUTE.<br />
+          <span className="text-brand-magenta">A PLACE TO CREATE</span><br />
+          <span className="text-brand-textDark">EXPERIENCES.</span>
+        </h1>
+        <p className="text-brand-textDark/80 font-sans text-lg md:text-xl leading-relaxed max-w-xl">
+          We believe event management isn't just learned in a classroom; it's forged through hands-on experience, late-night planning, and real-world execution. Welcome to the future of event education.
+        </p>
+      </div>
+      <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square group overflow-hidden bg-brand-purple/5">
+        <img 
+          src="/images/about_hero.png" 
+          alt="IIEM Campus Experience"
+          className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-in-out filter contrast-125 saturate-150"
+        />
+        <div className="absolute inset-0 bg-brand-magenta/10 mix-blend-overlay"></div>
+      </div>
+    </div>
+  </section>
 
  {/* Panel 1 — Who We Are & Our Story (Cream background) */}
  <section className="bg-brand-cream py-20 px-6 md:px-12">
@@ -40,16 +51,16 @@ const About = () => {
  </div>
 
  <div className="lg:col-span-6">
- <div className="relative p-4 border border-brand-textDark/15 bg-brand-cream neo-shadow-purple">
- <img
- src="/images/about_mentor_office.png"
- alt="Active event briefing sessions with student and mentor"
- className="w-full h-auto filter hover:-0 transition-all duration-500"
- />
- <div className="absolute top-8 left-8 bg-brand-teal text-brand-cream px-3 py-1 font-display text-sm">
- IIEM MENTOR OFFICE
- </div>
- </div>
+  <div className="relative p-4 border border-brand-textDark/15 bg-brand-cream neo-shadow-purple">
+  <img
+  src="/images/about.jpeg"
+  alt="Professionals reviewing event plans and logistics"
+  className="w-full h-auto filter hover:-0 transition-all duration-500"
+  />
+  <div className="absolute top-8 left-8 bg-brand-teal text-brand-cream px-3 py-1 font-display text-sm">
+  EVENT PLANNING & LOGISTICS
+  </div>
+  </div>
  </div>
  </div>
  </section>
