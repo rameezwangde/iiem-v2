@@ -140,23 +140,61 @@ const Placements = () => {
 
       {/* Career Pathways (Dark background) */}
       <section className="bg-brand-dark text-brand-cream py-20 px-6 md:px-12">
-        <div className="max-w-[1400px] mx-auto">
-          <SectionHeader
-            eyebrow="POSITIONS"
-            title="WHERE OUR GRADUATES WORK."
-            darkBg={true}
-          />
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          {/* Career Opportunities */}
+          <div className="lg:col-span-8">
+            <SectionHeader
+              eyebrow="CAREER OPPORTUNITIES AFTER IIEM"
+              title="GRADUATES CAN WORK AS:"
+              darkBg={true}
+            />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            {careerPaths.map((path, idx) => (
-              <div key={idx} className="p-6 border border-brand-cream/10 bg-brand-dark hover:border-brand-teal transition-all duration-300">
-                <h3 className="font-display text-2xl text-brand-teal">{path.title}</h3>
-                <p className="text-xs text-brand-cream/70 font-sans mt-2 leading-relaxed">
-                  {path.desc}
-                </p>
-              </div>
-            ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+              {[
+                "Event Coordinator",
+                "Event Executive",
+                "Wedding Planner",
+                "Corporate Event Executive",
+                "Exhibition & Trade Show Coordinator",
+                "Event Production Executive",
+                "Stage & Production Coordinator",
+                "Artist & Celebrity Management Executive",
+                "Event Operations Manager",
+                "Venue & Banquet Coordinator",
+                "Sound, Lighting & LED Wall Coordinator",
+                "Freelance Event Planner",
+                "Event Entrepreneur / Agency Owner"
+              ].map((role, idx) => (
+                <div key={idx} className="flex gap-3 items-center border border-brand-cream/10 p-4 bg-brand-dark hover:bg-brand-purple/20 hover:border-brand-magenta transition-colors group">
+                  <ArrowRight size={16} className="text-brand-magenta shrink-0 group-hover:translate-x-1 transition-transform" />
+                  <span className="font-sans font-bold text-xs uppercase tracking-wide text-brand-cream group-hover:text-brand-magenta transition-colors">{role}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Placement Network */}
+          <div className="lg:col-span-4">
+            <SectionHeader
+              eyebrow="INDUSTRY CONNECT"
+              title="PLACEMENT NETWORK."
+              darkBg={true}
+            />
+            
+            <div className="flex flex-col gap-4 mt-8">
+              {[
+                "Event management companies",
+                "Wedding planning firms"
+              ].map((network, idx) => (
+                <div key={idx} className="p-6 border border-brand-cream/10 bg-brand-cream/5 hover:border-brand-magenta transition-all duration-300 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-brand-magenta/10 rounded-bl-full group-hover:scale-150 transition-transform pointer-events-none"></div>
+                  <h3 className="font-display text-2xl text-brand-teal relative z-10 group-hover:text-brand-cream transition-colors uppercase">{network}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
