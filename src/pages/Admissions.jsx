@@ -25,22 +25,34 @@ const Admissions = () => {
  return (
  <div className="w-full">
  {/* Hero Header */}
- <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10">
- <div className="max-w-[1400px] mx-auto">
- <div className="max-w-4xl">
- <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
- // IIEM ADMISSIONS OPEN
- </span>
- <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
- START YOUR <br />
- <span className="text-brand-magenta">CAREER</span> IN EVENT MANAGEMENT.
- </h1>
- <p className="font-sans text-brand-textDark/80 text-lg mt-6 max-w-2xl">
- Admissions are now open for the upcoming batch at IIEM – Indian Institute of Event Management. Join a career-focused program designed for students who are passionate about events, weddings, corporate shows, live productions, exhibitions, and entertainment management.
- </p>
- </div>
- </div>
- </section>
+  <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10 relative overflow-hidden">
+    <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-xl">
+        <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
+          // IIEM ADMISSIONS OPEN
+        </span>
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
+          START YOUR <br />
+          <span className="text-brand-magenta">CAREER</span> IN EVENT MANAGEMENT.
+        </h1>
+        <p className="font-sans text-brand-textDark/80 text-lg mt-6 leading-relaxed">
+          Admissions are now open for the upcoming batch at IIEM – Indian Institute of Event Management. Join a career-focused program designed for students who are passionate about events, weddings, corporate shows, live productions, exhibitions, and entertainment management.
+        </p>
+      </div>
+
+      <div className="relative w-full aspect-square sm:aspect-video lg:aspect-[4/3] bg-brand-purple/5 neo-shadow-magenta border border-brand-textDark/15 overflow-hidden group lg:ml-auto max-w-xl">
+        <img 
+          src="/images/campus_brainstorming.png" 
+          alt="Indian Students at IIEM Admissions" 
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-brand-magenta/10 pointer-events-none"></div>
+        <div className="absolute bottom-4 left-4 bg-brand-purple text-brand-cream px-3 py-1 font-display text-sm tracking-wider uppercase">
+          Join The Next Batch
+        </div>
+      </div>
+    </div>
+  </section>
 
  {/* Programs Offered & Why Choose Us */}
  <section className="bg-brand-dark text-brand-cream py-20 px-6 md:px-12">

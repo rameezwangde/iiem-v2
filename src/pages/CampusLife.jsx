@@ -6,21 +6,36 @@ import SectionHeader from '../components/SectionHeader';
 const CampusLife = () => {
  return (
  <div className="w-full">
- {/* Hero Header */}
- <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10">
- <div className="max-w-[1400px] mx-auto">
- <div className="max-w-4xl">
- <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
- // ON CAMPUS STORY
- </span>
- <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
- THIS IS WHERE<br />
- <span className="text-brand-magenta">IDEAS COME</span><br />
- <span className="text-brand-textDark">ALIVE.</span>
- </h1>
- </div>
- </div>
- </section>
+  {/* Hero Header */}
+  <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10 relative overflow-hidden">
+    <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-2xl">
+        <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
+          // ON CAMPUS STORY
+        </span>
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
+          THIS IS WHERE<br />
+          <span className="text-brand-magenta">IDEAS COME</span><br />
+          <span className="text-brand-textDark">ALIVE.</span>
+        </h1>
+        <p className="font-sans text-brand-textDark/80 text-lg mt-6 leading-relaxed">
+          Experience the energy of a campus built for creators. From hands-on workshops to vibrant student communities, every corner of IIEM is designed to inspire your next big event.
+        </p>
+      </div>
+
+      <div className="relative w-full aspect-video lg:aspect-[4/3] bg-brand-purple/5 neo-shadow-teal border border-brand-textDark/15 overflow-hidden group lg:ml-auto max-w-xl">
+        <img 
+          src="/images/hero_students_bright.png" 
+          alt="Vibrant sunny day at IIEM campus" 
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-brand-teal/10 pointer-events-none"></div>
+        <div className="absolute bottom-4 left-4 bg-brand-magenta text-brand-cream px-3 py-1 font-display text-sm tracking-wider uppercase">
+          Campus Energy
+        </div>
+      </div>
+    </div>
+  </section>
 
  {/* The Foundation Grid */}
  <section className="bg-white py-20 px-6 md:px-12 border-b border-brand-textDark/10">
@@ -186,7 +201,7 @@ const CampusLife = () => {
  { img: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80', label: 'Creative Planning' },
  { img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80', label: 'Live Events' },
  { img: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80', label: 'Workshops' },
- { img: 'https://images.unsplash.com/photo-1505232458627-a72726f5b712?auto=format&fit=crop&w=600&q=80', label: 'Backstage Operations' },
+ { img: '/images/about_fabrication_setup.png', label: 'Backstage Operations' },
  { img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80', label: 'Tech Rehearsals' },
  { img: 'https://images.unsplash.com/photo-1520242739010-44e95bde329e?auto=format&fit=crop&w=600&q=80', label: 'Peer Networking' }
  ].map((item, idx) => (
