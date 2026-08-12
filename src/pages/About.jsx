@@ -42,8 +42,8 @@ const About = () => {
  <div className="lg:col-span-6">
  <div className="relative p-4 border border-brand-textDark/15 bg-brand-cream neo-shadow-purple">
  <img
- src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
- alt="Active event briefing sessions"
+ src="/images/about_mentor_office.png"
+ alt="Active event briefing sessions with student and mentor"
  className="w-full h-auto filter hover:-0 transition-all duration-500"
  />
  <div className="absolute top-8 left-8 bg-brand-teal text-brand-cream px-3 py-1 font-display text-sm">
