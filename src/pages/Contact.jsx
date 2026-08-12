@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Calendar, Clock, ArrowRight, Instagram, Linkedin, Facebook, PlaySquare, ChevronDown, MessageCircle, Navigation, Users, Building, HelpCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, Clock, ArrowRight, ChevronDown, MessageCircle, Navigation, Users, Building, HelpCircle } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 
 const Contact = () => {
@@ -294,22 +294,6 @@ const Contact = () => {
  title="CONNECT SOCIALLY."
  />
  <div className="grid grid-cols-2 gap-4 mt-8">
- <a href="#" className="flex flex-col items-center justify-center p-8 border border-brand-textDark/15 bg-white hover:bg-[#E1306C] hover:text-white transition-colors group neo-shadow">
- <Instagram size={32} className="mb-2 text-[#E1306C] group-hover:text-white" />
- <span className="font-display text-lg uppercase">Instagram</span>
- </a>
- <a href="#" className="flex flex-col items-center justify-center p-8 border border-brand-textDark/15 bg-white hover:bg-[#0077B5] hover:text-white transition-colors group neo-shadow">
- <Linkedin size={32} className="mb-2 text-[#0077B5] group-hover:text-white" />
- <span className="font-display text-lg uppercase">LinkedIn</span>
- </a>
- <a href="#" className="flex flex-col items-center justify-center p-8 border border-brand-textDark/15 bg-white hover:bg-[#1877F2] hover:text-white transition-colors group neo-shadow">
- <Facebook size={32} className="mb-2 text-[#1877F2] group-hover:text-white" />
- <span className="font-display text-lg uppercase">Facebook</span>
- </a>
- <a href="#" className="flex flex-col items-center justify-center p-8 border border-brand-textDark/15 bg-white hover:bg-[#FF0000] hover:text-white transition-colors group neo-shadow">
- <PlaySquare size={32} className="mb-2 text-[#FF0000] group-hover:text-white" />
- <span className="font-display text-lg uppercase">YouTube</span>
- </a>
  </div>
  </div>
 
