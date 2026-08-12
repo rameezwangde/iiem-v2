@@ -14,7 +14,7 @@ const IndustryConnect = () => {
             <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
               // RECRUITER & PARTNER INTERACTION
             </span>
-            <h1 className="font-display text-5xl sm:text-7xl md:text-9xl leading-[0.85] tracking-tight uppercase text-brand-purple">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
               CONNECTED TO<br />
               <span className="text-brand-magenta">THE REAL</span><br />
               <span className="text-brand-textDark">EVENT WORLD.</span>

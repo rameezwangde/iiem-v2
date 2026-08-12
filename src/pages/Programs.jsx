@@ -34,7 +34,7 @@ const Programs = () => {
             <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
               // IIEM CURRICULUM
             </span>
-            <h1 className="font-display text-5xl sm:text-7xl md:text-9xl leading-[0.85] tracking-tight uppercase text-brand-purple">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
               FIND YOUR<br />
               <span className="text-brand-magenta">PLACE IN</span><br />
               <span className="text-brand-textDark">THE INDUSTRY.</span>
