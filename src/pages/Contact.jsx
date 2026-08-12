@@ -36,21 +36,32 @@ const Contact = () => {
 
  return (
  <div className="w-full">
- {/* 1. Hero Header */}
- <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10">
- <div className="max-w-[1400px] mx-auto">
- <div className="max-w-4xl">
- <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
- // REACH OUT
- </span>
- <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
- LET’S TALK<br />
- <span className="text-brand-magenta">ABOUT YOUR</span><br />
- <span className="text-brand-textDark">FUTURE.</span>
- </h1>
- </div>
- </div>
- </section>
+  {/* 1. Hero Header */}
+  <section className="bg-brand-cream py-20 px-6 md:px-12 border-b border-brand-textDark/10 relative overflow-hidden">
+    <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-2xl">
+        <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
+          // REACH OUT
+        </span>
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple mb-6">
+          LET’S TALK<br />
+          <span className="text-brand-magenta">ABOUT YOUR</span><br />
+          <span className="text-brand-textDark">FUTURE.</span>
+        </h1>
+        <p className="text-brand-textDark/80 font-sans text-lg md:text-xl leading-relaxed max-w-xl">
+          Whether you’re curious about our courses, looking for career guidance, or ready to submit your application, our counselling team is here to help you navigate your journey into event management.
+        </p>
+      </div>
+      <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square group overflow-hidden bg-brand-purple/5">
+        <img 
+          src="/images/contact_hero.png" 
+          alt="Friendly IIEM Counsellor"
+          className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-in-out filter contrast-125 saturate-150"
+        />
+        <div className="absolute inset-0 bg-brand-magenta/10 mix-blend-overlay"></div>
+      </div>
+    </div>
+  </section>
 
  {/* 2 & 3. Contact Details & Enquiry Form */}
  <section className="bg-brand-cream py-20 px-6 md:px-12">
