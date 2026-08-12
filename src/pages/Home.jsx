@@ -37,167 +37,99 @@ const Home = () => {
  SECTION 1 — HERO
  LIGHT CREAM
  ================================================== */}
- <section className="min-h-[calc(100vh-84px)] md:min-h-[calc(100vh-96px)] flex flex-col justify-center bg-brand-cream relative overflow-hidden px-6 md:px-12 py-12">
- {/* New Wide Integrated Hero Image in Background (Desktop) */}
- <div className="absolute right-0 top-0 h-full w-[65%] pointer-events-none z-0 overflow-hidden hidden lg:block">
- <img
- src="/new-hero-image.png"
- alt="IIEM Event Live Production"
- className="w-full h-full object-cover object-right"
- />
- {/* Subtle Cream Gradient Overlay to blend the left side of the image */}
- <div
- className="absolute inset-0 pointer-events-none"
- style={{
- background: 'linear-gradient(90deg, #F8F3EA 0%, rgba(248,243,234,0.95) 10%, rgba(248,243,234,0.70) 25%, rgba(248,243,234,0.30) 40%, transparent 58%)'
- }}
- />
- {/* Bottom blending gradient overlay */}
- <div
- className="absolute inset-0 pointer-events-none"
- style={{
- background: 'linear-gradient(to top, #F8F3EA 0%, rgba(248,243,234,0.5) 15%, transparent 35%)'
- }}
- />
- </div>
+  <section className="min-h-[calc(100vh-84px)] md:min-h-[calc(100vh-96px)] flex flex-col justify-center bg-brand-dark relative overflow-hidden px-6 md:px-12 py-12">
+    {/* Full Screen Background Image */}
+    <div className="absolute inset-0 z-0">
+      <img
+        src="/images/hero_students_formal.png"
+        alt="IIEM Students at Campus in Formals"
+        className="w-full h-full object-cover object-center"
+      />
+      {/* Dark overlay to make text readable mostly on the left */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/70 to-brand-dark/10 pointer-events-none" />
+    </div>
 
- {/* Background Details */}
- <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full border border-brand-purple/10 pointer-events-none animate-pulse"></div>
- <div className="absolute bottom-12 right-1/3 w-4 h-4 bg-brand-teal/30 rounded-full pointer-events-none"></div>
+    <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:items-center relative z-10 lg:-mt-6">
+      {/* Left Text Column */}
+      <div className="lg:col-span-8 flex flex-col justify-center">
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tight uppercase text-brand-cream"
+        >
+          <span className="block">WHERE</span>
+          <span className="block">PASSION PLANS.</span>
+          <span className="block">EXPERIENCES</span>
+          <span className="block text-brand-teal">
+            TRANSFORM.
+          </span>
+        </motion.h1>
 
- <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:items-start items-center lg:-mt-6">
- {/* Left Text Column */}
- <div className="lg:col-span-7 flex flex-col justify-center z-10 lg:mt-0">
- {/* Main Headline */}
- <motion.h1
- initial={{ opacity: 0, y: 40 }}
- animate={{ opacity: 1, y: 0 }}
- transition={{ duration: 0.8 }}
- className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.85] tracking-tight uppercase"
- >
- <span className="block text-black">WHERE</span>
- <span className="block text-black">PASSION PLANS.</span>
- <span className="block text-black">EXPERIENCES</span>
- <span className="block text-black">
- TRANSFORM.
- </span>
- </motion.h1>
+        {/* Sub-intro */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="mt-8"
+        >
+          <div className="font-sans font-bold text-xs uppercase tracking-widest text-brand-magenta mb-2">
+            // Learn. Create. Execute.
+          </div>
+          <p className="font-sans text-brand-cream/80 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+            Turn ideas into unforgettable experiences through hands-on learning, real events, and direct industry exposure at IIEM.
+          </p>
+        </motion.div>
 
- {/* Sub-intro */}
- <motion.div
- initial={{ opacity: 0 }}
- animate={{ opacity: 1 }}
- transition={{ delay: 0.3, duration: 0.6 }}
- className="mt-8"
- >
- <div className="font-sans font-bold text-xs uppercase tracking-widest text-brand-magenta mb-2">
- // Learn. Create. Execute.
- </div>
- <p className="font-sans text-brand-textDark text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
- Turn ideas into unforgettable experiences through hands-on learning, real events, and direct industry exposure at IIEM.
- </p>
- </motion.div>
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mt-8 flex flex-wrap gap-4"
+        >
+          <Link
+            to="/programs"
+            className="px-6 py-4 bg-brand-teal text-brand-dark hover:bg-brand-cream transition-all duration-300 font-display text-lg tracking-wider flex items-center gap-2 neo-shadow"
+          >
+            EXPLORE PROGRAMS <ArrowRight size={18} />
+          </Link>
+          <Link
+            to="/contact"
+            className="px-6 py-4 border-2 border-brand-cream text-brand-cream hover:bg-brand-cream hover:text-brand-dark transition-all duration-300 font-display text-lg tracking-wider neo-shadow"
+          >
+            BOOK A CAMPUS VISIT
+          </Link>
+        </motion.div>
 
- {/* CTAs */}
- <motion.div
- initial={{ opacity: 0, y: 20 }}
- animate={{ opacity: 1, y: 0 }}
- transition={{ delay: 0.5, duration: 0.6 }}
- className="mt-8 flex flex-wrap gap-4"
- >
- <Link
- to="/programs"
- className="px-6 py-4 bg-brand-purple text-brand-cream hover:bg-brand-magenta transition-all duration-300 font-display text-lg tracking-wider flex items-center gap-2 neo-shadow"
- >
- EXPLORE PROGRAMS <ArrowRight size={18} />
- </Link>
- <Link
- to="/contact"
- className="px-6 py-4 border-2 border-brand-textDark text-brand-textDark hover:bg-brand-textDark hover:text-brand-cream transition-all duration-300 font-display text-lg tracking-wider neo-shadow"
- >
- BOOK A CAMPUS VISIT
- </Link>
- </motion.div>
-
- {/* Compact Benefits */}
- <motion.div
- initial={{ opacity: 0 }}
- animate={{ opacity: 1 }}
- transition={{ delay: 0.7, duration: 0.8 }}
- className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-brand-textDark/10 pt-8"
- >
- <div>
- <div className="font-display text-brand-purple text-base">Expert Faculty</div>
- <div className="text-xs text-brand-textDark/70 font-sans mt-1">Learn from lead curators.</div>
- </div>
- <div>
- <div className="font-display text-brand-magenta text-base">Hands-on Work</div>
- <div className="text-xs text-brand-textDark/70 font-sans mt-1">Live classroom model.</div>
- </div>
- <div>
- <div className="font-display text-brand-teal text-base">Real Projects</div>
- <div className="text-xs text-brand-textDark/70 font-sans mt-1">Backstage opportunities.</div>
- </div>
- <div>
- <div className="font-display text-brand-purple text-base">100% Placements</div>
- <div className="text-xs text-brand-textDark/70 font-sans mt-1">95% placement support.</div>
- </div>
- </motion.div>
- </div>
-
- {/* Right Image/Geometry Column */}
- <div className="lg:col-span-5 relative flex items-start justify-between gap-4 lg:mt-0 z-10 w-full">
- {/* Abstract Geometry Elements */}
- <div className="absolute -top-12 -left-6 w-32 h-32 bg-brand-purple/10 rounded-full blur-2xl z-0 pointer-events-none"></div>
- <div className="absolute right-0 bottom-4 w-40 h-40 bg-brand-magenta/5 rounded-full blur-2xl z-0 pointer-events-none"></div>
-
- {/* Mobile/Tablet image frame (hidden on desktop because the absolute background is used instead) */}
- <motion.div
- initial={{ opacity: 0 }}
- animate={{ opacity: 1 }}
- transition={{ delay: 0.2, duration: 0.8 }}
- className="relative flex-grow max-w-[360px] sm:max-w-[380px] aspect-[3/4] overflow-hidden z-10 lg:hidden"
- >
- <img
- src="/new-hero-image.png"
- alt="IIEM Event Live Production"
- className="w-full h-full object-cover object-right"
- style={{
- WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.05) 5%, rgba(0,0,0,0.2) 12%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0.8) 32%, black 45%)',
- maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.05) 5%, rgba(0,0,0,0.2) 12%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0.8) 32%, black 45%)'
- }}
- />
- {/* Cream gradient overlays for mobile blending */}
- <div
- className="absolute inset-y-0 left-0 w-1/2 pointer-events-none z-20"
- style={{
- background: 'linear-gradient(90deg, #F8F3EA 0%, rgba(248,243,234,0.97) 15%, rgba(248,243,234,0.82) 35%, rgba(248,243,234,0.45) 60%, rgba(248,243,234,0) 100%)'
- }}
- />
- <div
- className="absolute inset-x-0 bottom-0 h-1/4 pointer-events-none z-20"
- style={{
- background: 'linear-gradient(to top, #F8F3EA 0%, rgba(248,243,234,0.8) 30%, rgba(248,243,234,0) 100%)'
- }}
- />
- </motion.div>
-
- {/* Brand Design Column next to the portrait - visible on both mobile & desktop */}
- <motion.div
- initial={{ opacity: 0, x: 20 }}
- animate={{ opacity: 1, x: 0 }}
- transition={{ delay: 0.3, duration: 0.8 }}
- className="w-20 sm:w-24 md:w-28 shrink-0 h-[480px] lg:h-[500px] z-10 lg:ml-auto"
- >
- <img
- src="/design.png"
- alt="IIEM Brand Geometry Accent"
- className="w-full h-full object-cover object-left border border-brand-textDark/10"
- />
- </motion.div>
- </div>
- </div>
- </section>
+        {/* Compact Benefits */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-brand-cream/20 pt-8"
+        >
+          <div>
+            <div className="font-display text-brand-teal text-base">Expert Faculty</div>
+            <div className="text-xs text-brand-cream/70 font-sans mt-1">Learn from lead curators.</div>
+          </div>
+          <div>
+            <div className="font-display text-brand-magenta text-base">Hands-on Work</div>
+            <div className="text-xs text-brand-cream/70 font-sans mt-1">Live classroom model.</div>
+          </div>
+          <div>
+            <div className="font-display text-brand-cream text-base">Real Projects</div>
+            <div className="text-xs text-brand-cream/70 font-sans mt-1">Backstage opportunities.</div>
+          </div>
+          <div>
+            <div className="font-display text-brand-teal text-base">100% Placements</div>
+            <div className="text-xs text-brand-cream/70 font-sans mt-1">95% placement support.</div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  </section>
 
 
  {/* ==================================================
