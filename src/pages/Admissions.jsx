@@ -258,7 +258,7 @@ const Admissions = () => {
  <div className="w-10 h-10 rounded-full bg-brand-magenta/20 flex items-center justify-center shrink-0">
  <Mail size={18} className="text-brand-magenta" />
  </div>
- <span>Email: <strong className="text-white ml-1">admissions@iiem.in</strong></span>
+ <span>Email: <strong className="text-white ml-1">infotiiemblr@gmail.com</strong></span>
  </div>
  <div className="flex items-center gap-4">
  <div className="w-10 h-10 rounded-full bg-brand-magenta/20 flex items-center justify-center shrink-0">

@@ -100,7 +100,7 @@ const Contact = () => {
  <div>
  <div className="font-display text-xl text-brand-purple">EMAIL & WEBSITE</div>
  <div className="text-brand-textDark/70 mt-1">
- <a href="mailto:info@iiem.edu.in" className="hover:text-brand-magenta font-semibold underline">info@iiem.edu.in</a>
+ <a href="mailto:infotiiemblr@gmail.com" className="hover:text-brand-magenta font-semibold underline">infotiiemblr@gmail.com</a>
  </div>
  <div className="text-brand-textDark/70 mt-0.5">
  <a href="https://www.iiem.edu.in" target="_blank" rel="noreferrer" className="hover:text-brand-magenta font-semibold underline">www.iiem.edu.in</a>
@@ -124,10 +124,7 @@ const Contact = () => {
  <div>
  <div className="font-display text-xl text-brand-purple">DEPARTMENT CONTACTS</div>
  <ul className="text-brand-textDark/70 mt-1 space-y-1">
- <li><strong>Admissions:</strong> admissions@iiem.edu.in</li>
- <li><strong>Student Support:</strong> students@iiem.edu.in</li>
- <li><strong>Placement Cell:</strong> careers@iiem.edu.in</li>
- <li><strong>Administration:</strong> admin@iiem.edu.in</li>
+ <li><strong>General Enquiries:</strong> infotiiemblr@gmail.com</li>
  </ul>
  </div>
  </div>

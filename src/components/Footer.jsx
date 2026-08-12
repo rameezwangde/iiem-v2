@@ -134,7 +134,7 @@ const Footer = () => {
               </div>
               <div>
                 <strong>Email: </strong>
-                <a href="mailto:admissions@iiem.edu.in" className="hover:text-brand-teal transition-colors">admissions@iiem.edu.in</a>
+                <a href="mailto:infotiiemblr@gmail.com" className="hover:text-brand-teal transition-colors">infotiiemblr@gmail.com</a>
               </div>
             </div>
           </div>
