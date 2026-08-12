@@ -234,30 +234,32 @@ const Contact = () => {
  />
  
  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
- <div className="lg:col-span-8">
- {/* Interactive Google Map Placeholder */}
- <div className="w-full aspect-video border border-brand-cream/15 relative bg-brand-purple/5 flex flex-col items-center justify-center text-center p-8 neo-shadow-teal">
- <div className="absolute inset-0 bg-[radial-gradient(#5a0f55_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
- <div className="relative z-10">
- <MapPin size={48} className="text-brand-magenta mx-auto mb-4" />
- <h3 className="font-display text-2xl text-brand-cream mb-4">[ INTERACTIVE GOOGLE MAP ]</h3>
- <button className="px-6 py-3 bg-brand-teal text-brand-dark font-display text-sm tracking-wider hover:bg-white transition-colors flex items-center gap-2 mx-auto">
- <Navigation size={16} /> GET DIRECTIONS
- </button>
- </div>
- </div>
- </div>
- 
- <div className="lg:col-span-4 flex flex-col justify-center space-y-6">
- <div className="p-6 bg-brand-cream/5 border border-brand-cream/10">
- <h4 className="font-display text-xl text-brand-teal mb-2">NEARBY LANDMARKS</h4>
- <ul className="text-brand-cream/70 font-sans text-sm space-y-2">
- <li>• 5 mins from Lower Parel Railway Station</li>
- <li>• Opposite High Street Phoenix Mall</li>
- <li>• 10 mins from the upcoming Metro Line 3</li>
- </ul>
- </div>
- </div>
+  <div className="lg:col-span-8">
+  {/* Interactive Google Map */}
+  <div className="w-full aspect-video border border-brand-cream/15 relative bg-brand-purple/5 flex flex-col items-center justify-center neo-shadow-teal overflow-hidden">
+  <iframe
+    title="IIEM Campus Map"
+    src="https://maps.google.com/maps?q=Ullal%20Main%20Rd,%20Annapurneshwari%20Layout,%20Muneshwara%20Nagar,%20Muneshwaranagar,%20Jnana%20Ganga%20Nagar,%20Bengaluru,%20Karnataka%20560056&t=&z=14&ie=UTF8&iwloc=&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+  </div>
+  </div>
+  
+  <div className="lg:col-span-4 flex flex-col justify-center space-y-6">
+  <div className="p-6 bg-brand-cream/5 border border-brand-cream/10">
+  <h4 className="font-display text-xl text-brand-teal mb-2">NEARBY LANDMARKS</h4>
+  <ul className="text-brand-cream/70 font-sans text-sm space-y-2">
+  <li>• Near Bangalore University Campus</li>
+  <li>• Easy access from Mysore Road</li>
+  <li>• Close to Jnana Ganga Nagar</li>
+  </ul>
+  </div>
+  </div>
  </div>
  </div>
  </section>
@@ -267,35 +269,55 @@ const Contact = () => {
  <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
  
  {/* Admissions Support */}
- <div>
+ <div className="flex flex-col h-full">
  <SectionHeader
  eyebrow="GUIDANCE"
- title="ADMISSIONS SUPPORT."
+ title={<>ADMISSIONS<br />SUPPORT.</>}
  />
- <div className="space-y-4 mt-8">
- <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-magenta transition-colors">
+ <div className="flex flex-col gap-4 mt-8 flex-1">
+ <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-magenta transition-colors flex-1 flex flex-col justify-center">
  <div className="font-display text-xl text-brand-purple mb-1">Admissions Enquiry</div>
  <div className="text-brand-textDark/70 font-sans text-sm">For all preliminary questions about courses and batches.</div>
  </div>
- <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-teal transition-colors">
+ <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-teal transition-colors flex-1 flex flex-col justify-center">
  <div className="font-display text-xl text-brand-purple mb-1">Application Support</div>
  <div className="text-brand-textDark/70 font-sans text-sm">Facing issues with your application form? We can help.</div>
  </div>
- <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-purple transition-colors">
- <div className="font-display text-xl text-brand-purple mb-1">Dedicated Counselling</div>
- <div className="text-brand-textDark/70 font-sans text-sm">Speak directly to our Lead Counsellor: +91 9019876442</div>
- </div>
+ <div className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-purple transition-colors flex-1 flex flex-col justify-center">
+  <div className="font-display text-xl text-brand-purple mb-1">Dedicated Counselling</div>
+  <div className="text-brand-textDark/70 font-sans text-sm">Speak directly to our Lead Counsellor: +91 9019876442</div>
+  </div>
  </div>
  </div>
 
  {/* Social Media */}
- <div>
+ <div className="flex flex-col h-full">
  <SectionHeader
  eyebrow="COMMUNITY"
- title="CONNECT SOCIALLY."
+ title={<>CONNECT<br />SOCIALLY.</>}
  />
  <div className="grid grid-cols-2 gap-4 mt-8">
+ <a href="https://instagram.com" target="_blank" rel="noreferrer" className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-magenta transition-all group">
+ <div className="font-display text-xl text-brand-purple mb-1 group-hover:text-brand-magenta transition-colors">Instagram</div>
+ <div className="text-brand-textDark/70 font-sans text-sm">Follow our campus stories & event highlights.</div>
+ </a>
+ <a href="https://youtube.com" target="_blank" rel="noreferrer" className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-magenta transition-all group">
+ <div className="font-display text-xl text-brand-purple mb-1 group-hover:text-brand-magenta transition-colors">YouTube</div>
+ <div className="text-brand-textDark/70 font-sans text-sm">Watch student projects, campus tours & interviews.</div>
+ </a>
+ <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-purple transition-all group">
+ <div className="font-display text-xl text-brand-purple mb-1 group-hover:text-brand-teal transition-colors">LinkedIn</div>
+ <div className="text-brand-textDark/70 font-sans text-sm">Connect with our alumni & industry network.</div>
+ </a>
+ <a href="https://facebook.com" target="_blank" rel="noreferrer" className="p-6 border border-brand-textDark/15 bg-brand-cream hover:border-brand-teal transition-all group">
+ <div className="font-display text-xl text-brand-purple mb-1 group-hover:text-brand-teal transition-colors">Facebook</div>
+ <div className="text-brand-textDark/70 font-sans text-sm">Join our community page for updates & events.</div>
+ </a>
  </div>
+ <a href="https://wa.me/919019876442" target="_blank" rel="noreferrer" className="mt-4 block w-full p-6 bg-[#25D366] text-white border border-[#25D366] hover:bg-[#128C7E] transition-all text-center">
+ <div className="font-display text-xl mb-1">WhatsApp Us Directly</div>
+ <div className="font-sans text-sm text-white/80">Tap to start a conversation on +91 9019876442</div>
+ </a>
  </div>
 
  </div>
