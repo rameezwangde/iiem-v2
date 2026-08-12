@@ -99,6 +99,45 @@ const Placements = () => {
         </div>
       </section>
 
+      {/* Career Support Highlights */}
+      <section className="bg-brand-cream py-24 px-6 md:px-12 border-t border-b border-brand-textDark/10 relative overflow-hidden">
+        {/* Decorative background element */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-magenta/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <div className="mb-12 text-center max-w-2xl mx-auto">
+            <h2 className="font-display text-4xl sm:text-5xl text-brand-purple">BEYOND THE CURRICULUM</h2>
+            <p className="font-sans text-sm text-brand-textDark/70 mt-4">We provide comprehensive support to ensure you are market-ready and positioned for success.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Placement Assistance",
+              "Internship Opportunities",
+              "Live Event Exposure",
+              "Resume & Interview Support",
+              "Industry Expert Training",
+              "Corporate & Wedding Event Careers",
+              "Exhibition & Trade Show Opportunities",
+              "Event Production & Operations Careers",
+              "Entrepreneurship & Freelancing Guidance"
+            ].map((feature, idx) => (
+              <div 
+                key={idx} 
+                className="group relative p-8 bg-white border border-brand-textDark/15 hover:border-brand-purple transition-all duration-300 hover:-translate-y-1 neo-shadow flex flex-col min-h-[160px] overflow-hidden justify-center"
+              >
+                <div className="relative z-10">
+                  <div className="w-8 h-1 bg-brand-teal mb-4 group-hover:w-16 group-hover:bg-brand-magenta transition-all duration-500"></div>
+                  <h3 className="font-display text-xl sm:text-2xl text-brand-purple leading-tight group-hover:text-brand-magenta transition-colors">
+                    {feature}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Career Pathways (Dark background) */}
       <section className="bg-brand-dark text-brand-cream py-20 px-6 md:px-12">
         <div className="max-w-[1400px] mx-auto">
