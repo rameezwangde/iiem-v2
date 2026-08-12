@@ -23,7 +23,7 @@ const About = () => {
           We believe event management isn't just learned in a classroom; it's forged through hands-on experience, late-night planning, and real-world execution. Welcome to the future of event education.
         </p>
       </div>
-      <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square group overflow-hidden bg-brand-purple/5">
+      <div className="relative w-full aspect-video group overflow-hidden bg-brand-purple/5">
         <img 
           src="/images/about_hero.png" 
           alt="IIEM Campus Experience"
