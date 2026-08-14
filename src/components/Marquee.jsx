@@ -23,8 +23,8 @@ const Marquee = ({ items, reverse = false, speed = 'normal' }) => {
               <span>{item}</span>
             ) : (
               <div className="flex flex-col items-start px-8 py-3 border border-brand-cream/15 bg-brand-dark/50 min-w-[200px]">
-                <span className="text-sm tracking-wider font-semibold text-brand-cream/90">{item.name}</span>
-                <span className="text-[10px] text-brand-magenta tracking-widest font-sans">{item.type}</span>
+                <span className="text-base tracking-wider font-semibold text-brand-cream/90">{item.name}</span>
+                <span className="text-xs text-brand-magenta tracking-widest font-sans">{item.type}</span>
               </div>
             )}
             <span className="text-brand-magenta select-none">•</span>

@@ -64,7 +64,7 @@ const Placements = () => {
  {/* Recruiter Logos Ticker Marquee (Dark background) */}
  <section className="bg-brand-dark text-brand-cream py-16">
  <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center mb-8">
- <div className="font-display text-xs text-brand-teal tracking-[0.25em] uppercase">
+ <div className="font-display text-sm text-brand-teal tracking-[0.25em] uppercase">
  RECRUITMENT AND INTERNSHIP PIPELINES
  </div>
  </div>
