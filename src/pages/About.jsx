@@ -61,7 +61,7 @@ const About = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-brand-border bg-white shadow-card p-3">
               <img
-                src="/images/about.jpeg"
+                src="/images/event_planning_logistics_2.jpg"
                 alt="Professionals reviewing event plans and logistics"
                 className="w-full h-auto rounded-xl object-cover"
               />
@@ -203,8 +203,8 @@ const About = () => {
             <div className="academic-card p-3 shadow-card bg-white">
               <div className="aspect-[4/5] rounded-xl relative overflow-hidden bg-brand-stone">
                 <img
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
-                  alt="Large scale stage control panel"
+                  src="/images/Audio focus live set up practical.jpg"
+                  alt="Audio focus live set up practical"
                   className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                 />
                 <div className="absolute bottom-4 right-4 bg-brand-purple/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider">
