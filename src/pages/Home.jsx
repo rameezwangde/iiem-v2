@@ -645,7 +645,7 @@ const Home = () => {
               },
               {
                 title: "Vendor Management",
-                img: "/images/Vendor Management.jpeg",
+                img: "/images/Vendor_Management_Upscaled.jpeg",
                 objectPos: "object-[center_15%]"
               },
               {
