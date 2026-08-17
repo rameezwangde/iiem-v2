@@ -34,7 +34,7 @@ const Header = () => {
     { name: 'Programs', path: '/programs', isDropdown: true },
     { name: 'Admissions', path: '/admissions' },
     { name: 'Placements & Careers', path: '/placements' },
-    { name: 'Portfolio & Showcase', path: '/portfolio' },
+    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Campus Life', path: '/campus-life' },
     { name: 'Industry Connect', path: '/industry-connect' },
     { name: 'Contact Us', path: '/contact' },
