@@ -1,33 +1,30 @@
 import React from 'react';
 
-const Marquee = ({ items, reverse = false, speed = 'normal' }) => {
-  // Speed options
-  const durationClass = speed === 'fast' ? 'duration-15s' : speed === 'slow' ? 'duration-45s' : 'duration-30s';
-
+const Marquee = ({ items, reverse = false }) => {
   // Duplicate items array to make sure it covers the screen width for seamless loop
   const repeatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="relative w-full overflow-hidden flex select-none no-scrollbar py-6">
+    <div className="relative w-full overflow-hidden flex select-none no-scrollbar py-3">
       <div
-        className={`flex whitespace-nowrap min-w-full shrink-0 items-center justify-around gap-16 ${
+        className={`flex whitespace-nowrap min-w-full shrink-0 items-center justify-around gap-8 ${
           reverse ? 'animate-marquee-reverse' : 'animate-marquee'
         }`}
       >
         {repeatedItems.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-4 text-brand-cream/80 text-lg md:text-2xl font-display uppercase tracking-widest font-semibold"
+            className="flex items-center gap-6 text-sm md:text-base font-semibold uppercase tracking-wider text-brand-textDark"
           >
             {typeof item === 'string' ? (
-              <span>{item}</span>
+              <span className="font-bold text-brand-purple">{item}</span>
             ) : (
-              <div className="flex flex-col items-start px-8 py-3 border border-brand-cream/15 bg-brand-dark/50 min-w-[200px]">
-                <span className="text-base tracking-wider font-semibold text-brand-cream/90">{item.name}</span>
-                <span className="text-xs text-brand-magenta tracking-widest font-sans">{item.type}</span>
+              <div className="flex items-center gap-2.5 px-4 py-2 rounded-xl border border-brand-border bg-white shadow-subtle">
+                <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-wide">{item.name}</span>
+                <span className="text-[10px] font-bold text-brand-teal uppercase px-2 py-0.5 bg-brand-tealLight rounded-md border border-brand-teal/20">{item.type}</span>
               </div>
             )}
-            <span className="text-brand-magenta select-none">•</span>
+            <span className="text-brand-magenta select-none text-xs">◆</span>
           </div>
         ))}
       </div>
@@ -36,3 +33,5 @@ const Marquee = ({ items, reverse = false, speed = 'normal' }) => {
 };
 
 export default Marquee;
+
+

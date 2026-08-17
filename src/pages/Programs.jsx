@@ -1,229 +1,259 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { ArrowRight, Clock, Award, BookOpen, GraduationCap, Compass, HelpCircle } from 'lucide-react';
+import { ArrowRight, Clock, Award, BookOpen, GraduationCap, Compass, HelpCircle, CheckCircle2, ChevronRight } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import { programsData } from '../data/siteData';
 
 const Programs = () => {
- const { hash } = useLocation();
- const [activeTab, setActiveTab] = useState(programsData[0].id);
+  const { hash } = useLocation();
+  const [activeTab, setActiveTab] = useState(programsData[0].id);
 
- // Set active program based on URL hash if provided
- useEffect(() => {
- if (hash) {
- const cleanHash = hash.replace('#', '');
- const programExists = programsData.some((p) => p.id === cleanHash);
- if (programExists) {
- setActiveTab(cleanHash);
- const element = document.getElementById(cleanHash);
- if (element) {
- element.scrollIntoView({ behavior: 'smooth' });
- }
- }
- }
- }, [hash]);
+  // Set active program based on URL hash if provided
+  useEffect(() => {
+    if (hash) {
+      const cleanHash = hash.replace('#', '');
+      const programExists = programsData.some((p) => p.id === cleanHash);
+      if (programExists) {
+        setActiveTab(cleanHash);
+        const element = document.getElementById(cleanHash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  }, [hash]);
 
- const selectedProgram = programsData.find((p) => p.id === activeTab) || programsData[0];
+  const selectedProgram = programsData.find((p) => p.id === activeTab) || programsData[0];
 
- return (
- <div className="w-full">
- {/* Hero Header */}
-  <section className="bg-brand-cream relative py-20 px-6 md:px-12 border-b border-brand-textDark/10 overflow-hidden">
-    <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-      <div className="max-w-2xl">
-        <span className="font-sans text-xs md:text-sm font-bold tracking-[0.25em] text-brand-magenta uppercase block mb-4">
-          // IIEM CURRICULUM
-        </span>
-        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.85] tracking-tight uppercase text-brand-purple">
-          FIND YOUR<br />
-          <span className="text-brand-magenta">PLACE IN</span><br />
-          <span className="text-brand-textDark">THE INDUSTRY.</span>
-        </h1>
-        <p className="font-sans text-brand-textDark/80 mt-6 text-lg max-w-xl leading-relaxed">
-          Explore specialized programs designed by active industry professionals. From live entertainment to technical stage production, your career starts here.
-        </p>
-      </div>
+  return (
+    <div className="w-full bg-brand-cream">
+      {/* Hero Header (Light) */}
+      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
+        <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-      <div className="relative w-full aspect-video sm:aspect-[4/3] lg:aspect-auto lg:h-[400px] bg-brand-purple/10 neo-shadow-teal border border-brand-textDark/15 overflow-hidden group">
-        <img 
-          src="/images/campus_soundcheck.png" 
-          alt="Live Event Production Training" 
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-brand-purple/10 pointer-events-none"></div>
-        <div className="absolute bottom-4 left-4 bg-brand-teal text-brand-cream px-3 py-1 font-display text-sm tracking-wider uppercase">
-          Master the Craft
+        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          <div className="lg:col-span-7">
+            <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
+              // IIEM CURRICULUM
+            </span>
+            <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
+              FIND YOUR <span className="text-brand-teal">PLACE IN</span><br />
+              <span className="text-brand-textDark">THE INDUSTRY.</span>
+            </h1>
+            <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
+              Explore specialized programs designed by active industry professionals. From live entertainment to technical stage production, your career starts here.
+            </p>
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border shadow-card bg-white p-3 group">
+              <div className="w-full h-full rounded-xl overflow-hidden relative bg-brand-stone">
+                <img 
+                  src="/images/campus_soundcheck.png" 
+                  alt="Live Event Production Training" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-3 left-3 bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider">
+                  Master the Craft
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Program Selector Tabs - Sticky Institutional Navigation */}
+      <section className="bg-white/95 backdrop-blur-md py-4 px-6 md:px-12 border-b border-brand-border sticky top-[72px] md:top-[80px] z-30 shadow-subtle">
+        <div className="max-w-[1400px] mx-auto overflow-x-auto no-scrollbar flex gap-2">
+          {programsData.map((prog) => {
+            const isSelected = activeTab === prog.id;
+            return (
+              <button
+                key={prog.id}
+                onClick={() => {
+                  setActiveTab(prog.id);
+                  window.history.pushState(null, '', `#${prog.id}`);
+                }}
+                className={`px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 flex items-center gap-2 shrink-0 ${
+                  isSelected
+                    ? 'bg-brand-purple text-white shadow-sm'
+                    : 'bg-brand-stone/60 text-brand-textDark/80 hover:bg-brand-stone hover:text-brand-purple'
+                }`}
+              >
+                <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                  isSelected ? 'bg-white/20 text-white' : 'bg-black/5 text-brand-purple'
+                }`}>
+                  {prog.num}
+                </span>
+                <span>{prog.title}</span>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Main Program Details View */}
+      <section className="bg-brand-cream py-16 lg:py-24 px-6 md:px-12 border-b border-brand-border">
+        <div className="max-w-[1400px] mx-auto">
+          <div id={selectedProgram.id} className="grid grid-cols-1 lg:grid-cols-12 gap-12 scroll-mt-36">
+            
+            {/* Left overview & details */}
+            <div className="lg:col-span-7 space-y-8">
+              <div className="bg-white p-8 rounded-2xl border border-brand-border shadow-card">
+                <span className="badge-pill bg-brand-purpleMuted text-brand-purple text-[11px] font-mono font-bold mb-3">
+                  COURSE ID // {selectedProgram.num}
+                </span>
+                <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-brand-purple leading-tight tracking-tight">
+                  {selectedProgram.title}
+                </h2>
+                <p className="font-sans text-brand-textMuted text-sm sm:text-base leading-relaxed mt-4">
+                  {selectedProgram.overview}
+                </p>
+
+                {/* Stats Block (Duration & Eligibility) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 mt-6 border-t border-brand-border">
+                  <div className="flex gap-3.5 items-start p-4 rounded-xl border border-brand-border bg-brand-cream/60">
+                    <Clock size={20} className="text-brand-purple mt-0.5 shrink-0" />
+                    <div>
+                      <div className="font-display font-bold text-sm text-brand-purple uppercase tracking-wide">DURATION</div>
+                      <div className="text-xs text-brand-textMuted font-sans mt-0.5">{selectedProgram.duration}</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-3.5 items-start p-4 rounded-xl border border-brand-border bg-brand-cream/60">
+                    <Award size={20} className="text-brand-teal mt-0.5 shrink-0" />
+                    <div>
+                      <div className="font-display font-bold text-sm text-brand-purple uppercase tracking-wide">ELIGIBILITY</div>
+                      <div className="text-xs text-brand-textMuted font-sans mt-0.5">{selectedProgram.eligibility}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Practical Components Card */}
+              <div className="bg-white p-8 rounded-2xl border border-brand-border shadow-card space-y-3">
+                <div className="flex items-center gap-2 text-brand-purple font-display font-bold text-xl uppercase tracking-tight">
+                  <Compass size={22} className="text-brand-teal" />
+                  <span>PRACTICAL EXPERIENCE & HOURS</span>
+                </div>
+                <p className="text-xs sm:text-sm text-brand-textDark/85 font-sans leading-relaxed">
+                  {selectedProgram.practicalExperience}
+                </p>
+              </div>
+
+              {/* Career Opportunities Card */}
+              <div className="bg-white p-8 rounded-2xl border border-brand-border shadow-card space-y-3">
+                <div className="flex items-center gap-2 text-brand-purple font-display font-bold text-xl uppercase tracking-tight">
+                  <GraduationCap size={22} className="text-brand-purple" />
+                  <span>CAREER ROLES & PATHWAYS</span>
+                </div>
+                <p className="text-xs sm:text-sm text-brand-textDark/90 font-sans leading-relaxed font-semibold">
+                  {selectedProgram.careerOpportunities}
+                </p>
+              </div>
+            </div>
+
+            {/* Right curriculum block (Light) */}
+            <div className="lg:col-span-5">
+              <div className="bg-white text-brand-textDark p-8 rounded-2xl border border-brand-border shadow-card sticky top-[160px]">
+                <div className="flex items-center justify-between pb-4 border-b border-brand-border mb-6">
+                  <div className="flex items-center gap-2.5">
+                    <BookOpen size={20} className="text-brand-purple" />
+                    <span className="font-display font-bold text-xl tracking-wide uppercase text-brand-purple">MODULE CURRICULUM</span>
+                  </div>
+                  <span className="text-xs font-mono text-brand-teal font-bold px-2 py-0.5 bg-brand-tealLight rounded">{selectedProgram.num}</span>
+                </div>
+
+                <div className="space-y-4 max-h-[460px] overflow-y-auto pr-2">
+                  {selectedProgram.curriculum.map((module, idx) => (
+                    <div key={idx} className="pb-3 border-b border-brand-border/60 text-xs sm:text-sm font-sans">
+                      <div className="flex gap-2.5 items-start">
+                        <span className="font-mono font-bold text-brand-purple shrink-0 mt-0.5">
+                          {String(idx + 1).padStart(2, '0')}.
+                        </span>
+                        {typeof module === 'string' ? (
+                          <span className="text-brand-textDark font-medium leading-snug">{module}</span>
+                        ) : (
+                          <div className="w-full">
+                            <span className="block font-bold text-brand-purple mb-2 leading-snug">{module.topic}</span>
+                            <ul className="list-disc pl-4 space-y-1 text-xs text-brand-textMuted">
+                              {module.details.map((detail, dIdx) => (
+                                <li key={dIdx}>{detail}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Industry Exposure */}
+                <div className="mt-6 pt-4 border-t border-brand-border">
+                  <div className="text-[11px] font-bold text-brand-teal tracking-wider uppercase mb-1.5">
+                    INDUSTRY EXPOSURE
+                  </div>
+                  <p className="text-xs text-brand-textMuted leading-relaxed font-sans">
+                    {selectedProgram.industryExposure}
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-2">
+                  <Link
+                    to="/admissions"
+                    className="w-full text-center py-3.5 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-xl font-bold text-xs uppercase tracking-wider transition-colors block shadow-sm"
+                  >
+                    APPLY FOR THIS PROGRAM →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison View */}
+      <section className="bg-white py-20 lg:py-28 px-6 md:px-12">
+        <div className="max-w-[1400px] mx-auto">
+          <SectionHeader
+            eyebrow="AT A GLANCE"
+            title="COMPARE ALL SPECIFICATIONS."
+            supportingText="Comprehensive academic parameters across our diploma and certification catalog."
+          />
+
+          <div className="overflow-x-auto mt-10 rounded-2xl border border-brand-border shadow-card bg-white">
+            <table className="w-full text-left font-sans text-xs sm:text-sm min-w-[750px]">
+              <thead>
+                <tr className="bg-brand-purple text-white font-display text-sm tracking-wider uppercase">
+                  <th className="p-4 rounded-tl-2xl">PROGRAM</th>
+                  <th className="p-4">DURATION</th>
+                  <th className="p-4">PRACTICAL FOCUS</th>
+                  <th className="p-4 rounded-tr-2xl">KEY OUTCOME</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-brand-border text-brand-textDark">
+                {programsData.map((prog, index) => (
+                  <tr key={prog.id} className={index % 2 === 0 ? 'bg-white' : 'bg-brand-cream/40'}>
+                    <td className="p-4 font-bold text-brand-purple">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-[10px] bg-brand-purpleMuted px-1.5 py-0.5 rounded text-brand-purple font-bold">
+                          {prog.num}
+                        </span>
+                        <span>{prog.title}</span>
+                      </div>
+                    </td>
+                    <td className="p-4 text-brand-textMuted font-medium">{prog.duration}</td>
+                    <td className="p-4 text-xs text-brand-textMuted max-w-xs leading-relaxed">{prog.practicalExperience}</td>
+                    <td className="p-4 text-xs font-bold text-brand-teal">{prog.careerOpportunities.split(',')[0]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-
- {/* Program Selector Tabs - Editorial Layout */}
- <section className="bg-brand-cream py-12 px-6 md:px-12 border-b border-brand-textDark/10 sticky top-[84px] md:top-[96px] z-30 shadow-sm bg-brand-cream/95 backdrop-blur-md">
- <div className="max-w-[1400px] mx-auto overflow-x-auto no-scrollbar flex border-b border-brand-textDark/10">
- {programsData.map((prog) => (
- <button
- key={prog.id}
- onClick={() => {
- setActiveTab(prog.id);
- // Update URL hash without reload
- window.history.pushState(null, '', `#${prog.id}`);
- }}
- className={`px-6 py-4 font-display text-xl sm:text-2xl whitespace-nowrap border-b-4 transition-all duration-300 ${
- activeTab === prog.id
- ? 'border-brand-magenta text-brand-purple'
- : 'border-transparent text-brand-textDark/60 hover:text-brand-textDark'
- }`}
- >
- {prog.title}
- </button>
- ))}
- </div>
- </section>
-
- {/* Main Details View */}
- <section className="bg-brand-cream py-20 px-6 md:px-12">
- <div className="max-w-[1400px] mx-auto">
- <div id={selectedProgram.id} className="grid grid-cols-1 lg:grid-cols-12 gap-12 scroll-mt-36">
- 
- {/* Left overview & stats */}
- <div className="lg:col-span-7 space-y-8 lg:sticky lg:top-[180px] self-start">
- <div>
- <span className="text-xs font-bold text-brand-magenta uppercase tracking-widest font-sans block mb-2">
- COURSE ID // {selectedProgram.num}
- </span>
- <h2 className="font-display text-4xl sm:text-6xl text-brand-purple leading-tight">
- {selectedProgram.title}
- </h2>
- <p className="font-sans text-brand-textDark/80 text-sm sm:text-base md:text-lg leading-relaxed mt-4">
- {selectedProgram.overview}
- </p>
- </div>
-
- {/* Stats Block (Duration & Eligibility) */}
- <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-brand-textDark/10">
- <div className="flex gap-4 items-start p-4 border border-brand-textDark/10 bg-brand-cream/50">
- <Clock size={20} className="text-brand-magenta mt-1 shrink-0" />
- <div>
- <div className="font-display text-lg text-brand-purple">DURATION</div>
- <div className="text-xs text-brand-textDark/70 font-sans mt-0.5">{selectedProgram.duration}</div>
- </div>
- </div>
- <div className="flex gap-4 items-start p-4 border border-brand-textDark/10 bg-brand-cream/50">
- <Award size={20} className="text-brand-teal mt-1 shrink-0" />
- <div>
- <div className="font-display text-lg text-brand-purple">ELIGIBILITY</div>
- <div className="text-xs text-brand-textDark/70 font-sans mt-0.5">{selectedProgram.eligibility}</div>
- </div>
- </div>
- </div>
-
- {/* Practical Components */}
- <div className="space-y-4 pt-6 border-t border-brand-textDark/10">
- <div className="flex gap-2 items-center text-brand-purple font-display text-2xl uppercase tracking-wide">
- <Compass size={20} className="text-brand-teal" /> PRACTICAL EXPERIENCE & HOURS
- </div>
- <p className="text-xs sm:text-sm text-brand-textDark/80 font-sans leading-relaxed">
- {selectedProgram.practicalExperience}
- </p>
- </div>
-
- {/* Career Opportunities */}
- <div className="space-y-4 pt-6 border-t border-brand-textDark/10">
- <div className="flex gap-2 items-center text-brand-purple font-display text-2xl uppercase tracking-wide">
- <GraduationCap size={20} className="text-brand-magenta" /> CAREER ROLES & PATHWAYS
- </div>
- <p className="text-xs sm:text-sm text-brand-textDark/85 font-sans leading-relaxed font-semibold">
- {selectedProgram.careerOpportunities}
- </p>
- </div>
- </div>
-
- {/* Right curriculum block */}
- <div className="lg:col-span-5">
- <div className="p-8 border border-brand-textDark/15 bg-brand-dark text-brand-cream neo-shadow-purple">
- <div className="flex gap-2 items-center mb-6">
- <BookOpen size={20} className="text-brand-teal" />
- <span className="font-display text-2xl tracking-wider">MODULE CURRICULUM</span>
- </div>
-
- <ol className="space-y-4 text-brand-cream/80 text-xs sm:text-sm font-sans">
- {selectedProgram.curriculum.map((module, idx) => (
- <li key={idx} className="flex gap-3 pb-3 border-b border-brand-cream/10">
- <span className="font-semibold text-brand-magenta">{String(idx + 1).padStart(2, '0')}.</span>
- {typeof module === 'string' ? (
- <span>{module}</span>
- ) : (
- <div>
- <span className="block font-bold text-white mb-2">{module.topic}</span>
- <ul className="list-disc pl-4 space-y-1 text-brand-cream/70">
- {module.details.map((detail, dIdx) => (
- <li key={dIdx}>{detail}</li>
- ))}
- </ul>
- </div>
- )}
- </li>
- ))}
- </ol>
-
- <div className="mt-8 pt-6 border-t border-brand-cream/10">
- <div className="font-display text-xs text-brand-teal tracking-widest uppercase mb-2">INDUSTRY EXPOSURE</div>
- <p className="text-[11px] text-brand-cream/60 leading-relaxed font-sans">
- {selectedProgram.industryExposure}
- </p>
- </div>
-
- <div className="mt-8">
- <Link
- to="/admissions"
- className="w-full text-center py-4 bg-brand-magenta text-white font-display text-lg hover:bg-brand-purple transition-all duration-300 block"
- >
- APPLY FOR THIS PROGRAM →
- </Link>
- </div>
- </div>
- </div>
-
- </div>
- </div>
- </section>
-
- {/* Reusable comparison view (Dark background) */}
- <section className="bg-brand-dark text-brand-cream py-20 px-6 md:px-12">
- <div className="max-w-[1400px] mx-auto">
- <SectionHeader
- eyebrow="AT A GLANCE"
- title="COMPARE ALL SPECIFICATIONS."
- darkBg={true}
- />
-
- <div className="overflow-x-auto mt-12 border border-brand-cream/15">
- <table className="w-full text-left font-sans text-sm min-w-[700px]">
- <thead>
- <tr className="bg-brand-purple/20 border-b border-brand-cream/15 text-brand-teal font-display text-lg tracking-wider">
- <th className="p-4">PROGRAM</th>
- <th className="p-4">DURATION</th>
- <th className="p-4">PRACTICAL FOCUS</th>
- <th className="p-4">KEY OUTCOME</th>
- </tr>
- </thead>
- <tbody className="divide-y divide-brand-cream/10 text-brand-cream/80">
- {programsData.map((prog) => (
- <tr key={prog.id} className="hover:bg-brand-cream/5 transition-colors">
- <td className="p-4 font-semibold text-brand-cream">{prog.title}</td>
- <td className="p-4">{prog.duration}</td>
- <td className="p-4 text-xs max-w-xs">{prog.practicalExperience}</td>
- <td className="p-4 text-xs font-semibold text-brand-magenta">{prog.careerOpportunities.split(',')[0]}</td>
- </tr>
- ))}
- </tbody>
- </table>
- </div>
- </div>
- </section>
- </div>
- );
+  );
 };
 
 export default Programs;

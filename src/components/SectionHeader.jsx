@@ -5,40 +5,50 @@ const SectionHeader = ({ eyebrow, title, darkBg = false, align = 'left', support
   const isCenter = align === 'center';
 
   return (
-    <div className={`mb-12 md:mb-16 max-w-4xl ${isCenter ? 'mx-auto text-center' : 'text-left'}`}>
-      {/* Eyebrow */}
-      <motion.span
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.5 }}
-        className={`inline-block font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-4 ${
-          darkBg ? 'text-brand-teal' : 'text-brand-magenta'
-        }`}
-      >
-        // {eyebrow}
-      </motion.span>
+    <div className={`mb-10 md:mb-14 max-w-4xl ${isCenter ? 'mx-auto text-center' : 'text-left'}`}>
+      {/* Eyebrow Pill */}
+      {eyebrow && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.4 }}
+          className={`mb-3.5 ${isCenter ? 'flex justify-center' : ''}`}
+        >
+          <span
+            className={`badge-pill text-[11px] font-bold tracking-wider ${
+              darkBg 
+                ? 'bg-brand-teal/20 text-brand-teal border border-brand-teal/30' 
+                : 'bg-brand-purpleMuted text-brand-purple border border-brand-purple/20'
+            }`}
+          >
+            {eyebrow}
+          </span>
+        </motion.div>
+      )}
 
       {/* Header title */}
       <motion.h2
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className={`font-display text-4xl sm:text-5xl md:text-7xl leading-[0.9] tracking-tight ${
-          darkBg ? 'text-brand-cream' : 'text-brand-purple'
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.5, delay: 0.05 }}
+        className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] uppercase ${
+          darkBg ? 'text-white' : 'text-brand-purple'
         }`}
       >
         {title}
       </motion.h2>
 
-      {/* Thin line spacer */}
+      {/* Subtle line spacer */}
       <motion.div
         initial={{ width: 0 }}
-        whileInView={{ width: '100%' }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className={`h-[1px] my-6 ${darkBg ? 'bg-brand-cream/15' : 'bg-brand-textDark/15'}`}
+        whileInView={{ width: isCenter ? '80px' : '60px' }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.6, delay: 0.15 }}
+        className={`h-[3px] rounded-full my-4 ${isCenter ? 'mx-auto' : ''} ${
+          darkBg ? 'bg-brand-teal' : 'bg-brand-magenta'
+        }`}
       />
 
       {/* Optional supporting copy */}
@@ -46,10 +56,10 @@ const SectionHeader = ({ eyebrow, title, darkBg = false, align = 'left', support
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className={`text-sm md:text-base max-w-2xl leading-relaxed ${
-            darkBg ? 'text-brand-cream/70' : 'text-brand-textDark/80'
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className={`text-sm sm:text-base max-w-2xl leading-relaxed font-sans ${
+            darkBg ? 'text-brand-cream/80' : 'text-brand-textMuted'
           } ${isCenter ? 'mx-auto' : ''}`}
         >
           {supportingText}
@@ -60,3 +70,4 @@ const SectionHeader = ({ eyebrow, title, darkBg = false, align = 'left', support
 };
 
 export default SectionHeader;
+

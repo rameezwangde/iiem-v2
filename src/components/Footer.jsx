@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, MapPin, Phone, Mail, GraduationCap, ShieldCheck } from 'lucide-react';
+import { programsData } from '../data/siteData';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -8,30 +9,30 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-brand-dark text-brand-cream border-t border-brand-cream/10 pt-16 pb-8 px-6 md:px-12 relative overflow-hidden">
-      {/* Background Graphic Lines */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-purple/10 blur-3xl rounded-full -mr-20 -mt-20 pointer-events-none"></div>
-
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-brand-cream/10">
-          {/* Main Identity */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+    <footer className="bg-white text-brand-textDark border-t border-brand-border pt-16 pb-8 px-6 md:px-12 relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-brand-border">
+          {/* Main Institutional Identity */}
+          <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <Link to="/" className="inline-block mb-6 bg-brand-cream p-4 rounded-xl hover:opacity-90 transition-opacity">
-                <img src="/iiem-logo-cropped.png" alt="IIEM Logo" className="h-16 md:h-24 w-auto object-contain" />
+              <Link to="/" className="inline-block mb-5">
+                <img src="/iiem-logo-cropped.png" alt="IIEM Logo" className="h-12 md:h-14 w-auto object-contain" />
               </Link>
-              <p className="text-brand-cream/70 text-sm max-w-sm font-sans mb-8">
-                Adapting experiential marketing, stagecraft production, and wedding design into India's premium events education platform. Learn by doing.
+              <p className="text-brand-textMuted text-xs sm:text-sm max-w-sm leading-relaxed mb-6 font-sans">
+                India Institute of Event Management (IIEM) - Adapting experiential marketing, stagecraft production, and wedding design into India's premier events education platform. Learn by doing.
               </p>
+              <div className="flex items-center gap-2 text-xs font-semibold text-brand-teal bg-brand-tealLight px-3 py-1.5 rounded-lg w-fit border border-brand-teal/20">
+                <ShieldCheck size={14} /> Certified Event Management Programs
+              </div>
             </div>
 
-            {/* Social Icons - SVGs for compatibility */}
-            <div className="flex gap-4">
+            {/* Social Links */}
+            <div className="flex gap-2.5 mt-6">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 border border-brand-cream/20 flex items-center justify-center hover:bg-brand-magenta hover:border-brand-magenta hover:text-white transition-all duration-300 rounded-none text-brand-cream"
+                className="w-9 h-9 rounded-lg bg-brand-cream border border-brand-border flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple hover:text-white transition-all text-brand-textDark/80"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -44,7 +45,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 border border-brand-cream/20 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple hover:text-white transition-all duration-300 rounded-none text-brand-cream"
+                className="w-9 h-9 rounded-lg bg-brand-cream border border-brand-border flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple hover:text-white transition-all text-brand-textDark/80"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -57,7 +58,7 @@ const Footer = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 border border-brand-cream/20 flex items-center justify-center hover:bg-brand-magenta hover:border-brand-magenta hover:text-white transition-all duration-300 rounded-none text-brand-cream"
+                className="w-9 h-9 rounded-lg bg-brand-cream border border-brand-border flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple hover:text-white transition-all text-brand-textDark/80"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -69,7 +70,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 border border-brand-cream/20 flex items-center justify-center hover:bg-brand-teal hover:border-brand-teal hover:text-white transition-all duration-300 rounded-none text-brand-cream"
+                className="w-9 h-9 rounded-lg bg-brand-cream border border-brand-border flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple hover:text-white transition-all text-brand-textDark/80"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -79,87 +80,113 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links Column Group */}
-          <div className="lg:col-span-4 grid grid-cols-2 gap-8">
-            <div>
-              <div className="font-display text-lg text-brand-teal mb-4 tracking-wider">NAVIGATION</div>
-              <ul className="space-y-2 text-sm text-brand-cream/80 font-sans">
-                <li>
-                  <Link to="/" className="hover:text-brand-magenta transition-colors">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about" className="hover:text-brand-magenta transition-colors">About IIEM</Link>
-                </li>
-                <li>
-                  <Link to="/programs" className="hover:text-brand-magenta transition-colors">Programs</Link>
-                </li>
-                <li>
-                  <Link to="/admissions" className="hover:text-brand-magenta transition-colors">Admissions</Link>
-                </li>
-                <li>
-                  <Link to="/portfolio" className="hover:text-brand-magenta transition-colors">Portfolio & Showcase</Link>
-                </li>
-              </ul>
+          {/* Academic Programs Column */}
+          <div className="lg:col-span-3">
+            <div className="text-xs font-bold uppercase tracking-wider text-brand-purple mb-4">
+              Academic Programs
             </div>
+            <ul className="space-y-2.5 text-xs text-brand-textMuted font-sans">
+              {programsData.slice(0, 6).map((prog) => (
+                <li key={prog.id}>
+                  <Link to={`/programs#${prog.id}`} className="hover:text-brand-purple transition-colors flex items-center gap-1.5">
+                    <span className="text-brand-magenta font-bold">›</span> {prog.title}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/programs" className="text-brand-purple hover:underline text-xs font-bold pt-1 inline-block">
+                  View All Programs →
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div>
-              <div className="font-display text-lg text-brand-teal mb-4 tracking-wider">RESOURCES</div>
-              <ul className="space-y-2 text-sm text-brand-cream/80 font-sans">
-                <li>
-                  <Link to="/placements" className="hover:text-brand-magenta transition-colors">Careers & Placements</Link>
-                </li>
-                <li>
-                  <Link to="/campus-life" className="hover:text-brand-magenta transition-colors">Campus Life</Link>
-                </li>
-                <li>
-                  <Link to="/industry-connect" className="hover:text-brand-magenta transition-colors">Industry Connect</Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-brand-magenta transition-colors">Contact Us</Link>
-                </li>
-              </ul>
+          {/* Navigation & Resources */}
+          <div className="lg:col-span-2">
+            <div className="text-xs font-bold uppercase tracking-wider text-brand-purple mb-4">
+              Quick Links
             </div>
+            <ul className="space-y-2.5 text-xs text-brand-textMuted font-sans">
+              <li>
+                <Link to="/" className="hover:text-brand-purple transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-brand-purple transition-colors">About IIEM</Link>
+              </li>
+              <li>
+                <Link to="/admissions" className="hover:text-brand-purple transition-colors">Admissions</Link>
+              </li>
+              <li>
+                <Link to="/placements" className="hover:text-brand-purple transition-colors">Careers & Placements</Link>
+              </li>
+              <li>
+                <Link to="/portfolio" className="hover:text-brand-purple transition-colors">Portfolio & Showcase</Link>
+              </li>
+              <li>
+                <Link to="/campus-life" className="hover:text-brand-purple transition-colors">Campus Life</Link>
+              </li>
+              <li>
+                <Link to="/industry-connect" className="hover:text-brand-purple transition-colors">Industry Connect</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-brand-purple transition-colors">Contact Us</Link>
+              </li>
+            </ul>
           </div>
 
           {/* Contact Details */}
           <div className="lg:col-span-3">
-            <div className="font-display text-lg text-brand-magenta mb-4 tracking-wider">HEAD OFFICE</div>
-            <p className="text-sm text-brand-cream/80 mb-4 font-sans leading-relaxed">
-              Ullal Main Rd, Annapurneshwari Layout, Muneshwara Nagar, Muneshwaranagar, Jnana Ganga Nagar, Bengaluru, Karnataka 560056
-            </p>
-            <div className="space-y-1 text-sm text-brand-cream/80 font-sans">
-              <div>
-                <strong>Phone: </strong>
-                <a href="tel:+919019876442" className="hover:text-brand-teal transition-colors">+91 9019876442</a>
+            <div className="text-xs font-bold uppercase tracking-wider text-brand-purple mb-4">
+              Campus & Admissions Office
+            </div>
+            <div className="space-y-3 text-xs text-brand-textMuted font-sans">
+              <div className="flex items-start gap-2.5">
+                <MapPin size={15} className="text-brand-purple shrink-0 mt-0.5" />
+                <p className="leading-relaxed text-brand-textMuted">
+                  Ullal Main Rd, Annapurneshwari Layout, Muneshwara Nagar, Muneshwaranagar, Jnana Ganga Nagar, Bengaluru, Karnataka 560056
+                </p>
               </div>
-              <div>
-                <strong>Email: </strong>
-                <a href="mailto:infotiiemblr@gmail.com" className="hover:text-brand-teal transition-colors">infotiiemblr@gmail.com</a>
+              <div className="flex items-center gap-2.5 pt-1">
+                <Phone size={14} className="text-brand-purple shrink-0" />
+                <a href="tel:+919019876442" className="hover:text-brand-purple transition-colors font-bold text-brand-textDark">+91 9019876442</a>
               </div>
+              <div className="flex items-center gap-2.5">
+                <Mail size={14} className="text-brand-purple shrink-0" />
+                <a href="mailto:infotiiemblr@gmail.com" className="hover:text-brand-purple transition-colors font-medium">infotiiemblr@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-brand-border">
+              <Link 
+                to="/admissions"
+                className="inline-flex items-center justify-center w-full px-4 py-2.5 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-lg text-xs font-bold tracking-wider uppercase transition-colors shadow-sm"
+              >
+                Enroll for Next Batch
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Giant Footer Statement */}
-        <div className="py-12 select-none pointer-events-none">
-          <div className="font-display text-3xl sm:text-5xl md:text-7xl leading-none text-center tracking-tight text-white whitespace-nowrap overflow-hidden">
+        {/* Institutional Statement Banner */}
+        <div className="py-8 select-none border-b border-brand-border text-center">
+          <div className="font-display text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-brand-purple/20">
             CREATE EXPERIENCES. BUILD A CAREER.
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-brand-cream/10 text-xs text-brand-cream/50 gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-6 text-xs text-brand-textMuted gap-4">
           <div>
             © {new Date().getFullYear()} India Institute of Event Management. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span>Designed for Premium Event Agencies</span>
+            <span>Professional Event Management Institute</span>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1 hover:text-brand-magenta transition-colors group cursor-pointer"
+              className="flex items-center gap-1.5 hover:text-brand-purple transition-colors group cursor-pointer font-bold text-brand-textDark"
             >
               Back to Top
-              <ArrowUp size={12} className="group-hover:-translate-y-1 transition-transform" />
+              <ArrowUp size={12} className="group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
         </div>
@@ -169,3 +196,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

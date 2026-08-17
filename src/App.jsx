@@ -37,11 +37,11 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-brand-cream text-brand-textDark selection:bg-brand-magenta selection:text-white">
+      <div className="flex flex-col min-h-screen bg-brand-cream text-brand-textDark selection:bg-brand-purple selection:text-white">
         <Header />
         
         {/* Main Content Area */}
-        <main className="flex-grow pt-[84px] md:pt-[96px]">
+        <main className="flex-grow pt-[72px] md:pt-[80px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -63,3 +63,4 @@ function App() {
 }
 
 export default App;
+

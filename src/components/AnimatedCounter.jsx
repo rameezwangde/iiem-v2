@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-const AnimatedCounter = ({ value, label }) => {
+const AnimatedCounter = ({ value, label, lightMode = false }) => {
   const [count, setCount] = useState(0);
   const counterRef = useRef(null);
 
@@ -39,7 +39,7 @@ const AnimatedCounter = ({ value, label }) => {
 
     observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        if (entries[0] && entries[0].isIntersecting) {
           startCount();
           observer.disconnect(); // Count only once when visible
         }
@@ -61,11 +61,22 @@ const AnimatedCounter = ({ value, label }) => {
   const displayValue = count.toLocaleString() + suffix;
 
   return (
-    <div ref={counterRef} className="flex flex-col items-center justify-center p-6 text-center border border-brand-cream/10 bg-brand-dark hover:border-brand-magenta/40 transition-colors duration-500 group neo-shadow-purple">
-      <div className="font-display text-5xl md:text-7xl text-brand-magenta group-hover:scale-105 transition-transform duration-300">
+    <div 
+      ref={counterRef} 
+      className={`flex flex-col items-center justify-center p-6 md:p-8 text-center rounded-xl transition-all duration-300 ${
+        lightMode 
+          ? 'bg-white border border-brand-border shadow-card hover:shadow-card-hover' 
+          : 'bg-white/5 border border-white/10 hover:border-white/20 shadow-subtle'
+      }`}
+    >
+      <div className={`font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-2 ${
+        lightMode ? 'text-brand-purple' : 'text-brand-tealLight'
+      }`}>
         {displayValue}
       </div>
-      <div className="mt-2 text-xs md:text-sm uppercase tracking-widest text-brand-cream/80 max-w-[180px] font-sans">
+      <div className={`text-xs sm:text-sm font-semibold uppercase tracking-wider font-sans max-w-[200px] leading-snug ${
+        lightMode ? 'text-brand-textMuted' : 'text-brand-cream/70'
+      }`}>
         {label}
       </div>
     </div>
@@ -73,3 +84,4 @@ const AnimatedCounter = ({ value, label }) => {
 };
 
 export default AnimatedCounter;
+

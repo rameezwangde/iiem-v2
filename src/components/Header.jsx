@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight, Sparkles, GraduationCap } from 'lucide-react';
 import { programsData } from '../data/siteData';
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 30) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -43,20 +43,24 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-brand-cream/90 backdrop-blur-md border-brand-textDark/15 py-3 shadow-md'
-            : 'bg-brand-cream/40 backdrop-blur-sm border-transparent py-5'
+            ? 'bg-white/95 backdrop-blur-md border-b border-brand-border py-3 shadow-subtle'
+            : 'bg-brand-cream/80 backdrop-blur-sm border-b border-brand-border/60 py-4'
         }`}
       >
-        <div className="w-full max-w-none px-6 lg:px-12 xl:px-16 flex justify-between items-center gap-4">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center gap-4">
           {/* Logo Brand Identity */}
-          <Link to="/" className="flex items-center group">
-            <img src="/iiem-logo-cropped.png" alt="IIEM Logo" className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src="/iiem-logo-cropped.png" 
+              alt="IIEM Logo" 
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 2xl:gap-4">
+          <nav className="hidden xl:flex items-center gap-1 2xl:gap-2">
             {navLinks.map((link) => {
               if (link.isDropdown) {
                 return (
@@ -67,46 +71,57 @@ const Header = () => {
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <button
-                      className={`px-2 py-1 flex items-center gap-1 font-medium text-sm transition-colors duration-300 hover:text-brand-magenta whitespace-nowrap ${
-                        location.pathname.startsWith('/programs') ? 'text-brand-purple font-semibold' : 'text-brand-textDark/80'
+                      className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider transition-colors duration-200 ${
+                        location.pathname.startsWith('/programs') 
+                          ? 'text-brand-purple bg-brand-purpleMuted' 
+                          : 'text-brand-textDark/85 hover:text-brand-purple hover:bg-black/5'
                       }`}
                     >
                       {link.name}
-                      <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                      <ChevronDown size={13} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180 text-brand-purple' : ''}`} />
                     </button>
 
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {dropdownOpen && (
                         <motion.div
-                          initial={{ opacity: 0, y: 15 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 15 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute left-0 mt-2 w-80 bg-brand-cream border border-brand-textDark/15 shadow-xl p-4 neo-shadow-purple"
+                          initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                          transition={{ duration: 0.18 }}
+                          className="absolute left-0 mt-1.5 w-96 bg-white border border-brand-border rounded-xl shadow-dropdown p-3 z-50"
                         >
-                          <div className="flex flex-col space-y-1">
+                          <div className="flex items-center justify-between px-3 py-2 border-b border-brand-border/60 mb-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-brand-purple flex items-center gap-1.5">
+                              <GraduationCap size={14} className="text-brand-purple" /> Academic Programs
+                            </span>
                             <Link
                               to="/programs"
-                              className="font-display text-lg text-brand-purple hover:text-brand-magenta mb-2 pb-1 border-b border-brand-textDark/10 block whitespace-normal"
+                              className="text-[11px] font-semibold text-brand-magenta hover:underline flex items-center gap-1"
                             >
-                              ALL PROGRAMS VIEW
+                              All Programs <ArrowRight size={11} />
                             </Link>
+                          </div>
+                          
+                          <div className="flex flex-col space-y-1 max-h-[380px] overflow-y-auto">
                             {programsData.map((prog) => (
                               <Link
                                 key={prog.id}
                                 to={`/programs#${prog.id}`}
-                                className="group flex items-center justify-between p-2 rounded hover:bg-brand-purple/5 transition-colors whitespace-normal"
+                                className="group flex items-start justify-between p-2.5 rounded-lg hover:bg-brand-purpleMuted/60 transition-colors"
                               >
-                                <div>
-                                  <div className="font-semibold text-xs text-brand-textDark/90 group-hover:text-brand-purple">
+                                <div className="pr-3">
+                                  <div className="font-semibold text-xs text-brand-textDark group-hover:text-brand-purple flex items-center gap-2">
+                                    <span className="text-[10px] font-mono text-brand-purple/60 bg-brand-purple/5 px-1.5 py-0.5 rounded">
+                                      {prog.num}
+                                    </span>
                                     {prog.title}
                                   </div>
-                                  <div className="text-[10px] text-brand-textDark/60 truncate max-w-[220px]">
+                                  <div className="text-[11px] text-brand-textMuted line-clamp-1 mt-0.5">
                                     {prog.shortDesc}
                                   </div>
                                 </div>
-                                <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 text-brand-magenta transition-all" />
+                                <ArrowRight size={13} className="text-brand-purple opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all mt-1 shrink-0" />
                               </Link>
                             ))}
                           </div>
@@ -123,65 +138,36 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`relative px-2 py-1 font-medium text-sm transition-all duration-300 hover:text-brand-magenta whitespace-nowrap ${
-                    isActive ? 'text-brand-purple font-semibold' : 'text-brand-textDark/85'
+                  className={`relative px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                    isActive 
+                      ? 'text-brand-purple bg-brand-purpleMuted' 
+                      : 'text-brand-textDark/85 hover:text-brand-purple hover:bg-black/5'
                   }`}
                 >
                   {link.name}
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNavLine"
-                      className="absolute bottom-0 left-2 right-2 h-[2px] bg-brand-magenta"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right side CTA Button (Desktop) - Fixed Neo-Brutalist Grid Monogram */}
-          <div className="hidden xl:block">
+          {/* Right side CTA Button (Desktop) */}
+          <div className="hidden xl:flex items-center gap-3">
             <Link
               to="/admissions"
-              className="relative block font-display text-brand-textDark group hover:text-brand-magenta transition-all duration-300"
+              className="px-5 py-2.5 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-subtle hover:shadow-card transition-all duration-200 flex items-center gap-2 group"
             >
-              <div className="relative border-2 border-brand-textDark bg-brand-cream px-3 py-1 flex flex-col items-stretch overflow-visible min-w-[110px]">
-                {/* Top extending line (to the left) */}
-                <div className="absolute top-0 right-full w-3 h-[2px] bg-brand-textDark"></div>
-                {/* Middle extending line (to the right) */}
-                <div className="absolute bottom-1/2 left-full w-3 h-[2px] bg-brand-textDark"></div>
-                {/* Bottom extending line (to the left) */}
-                <div className="absolute bottom-0 right-full w-3 h-[2px] bg-brand-textDark"></div>
-                
-                {/* Top Row: APPLY NOW */}
-                <span className="text-center text-xs tracking-wider font-bold text-brand-textDark">
-                  APPLY NOW
-                </span>
-                
-                {/* Middle Divider */}
-                <div className="h-[2px] bg-brand-textDark w-full my-1"></div>
-                
-                {/* Bottom Row: Split grid */}
-                <div className="grid grid-cols-3 divide-x-2 divide-brand-textDark h-4">
-                  {/* Left Column: Arrow */}
-                  <div className="col-span-1 flex items-center justify-center font-bold text-xs group-hover:translate-x-1 transition-transform">
-                    →
-                  </div>
-                  {/* Right Column: Accent background */}
-                  <div className="col-span-2 bg-brand-purple/10 group-hover:bg-brand-purple/20 transition-colors"></div>
-                </div>
-              </div>
+              <span>Apply for Admissions</span>
+              <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
 
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2 text-brand-textDark hover:text-brand-magenta transition-colors focus:outline-none"
+            className="xl:hidden p-2 rounded-lg text-brand-textDark hover:bg-black/5 transition-colors focus:outline-none"
             aria-label="Toggle navigation menu"
           >
-            {isOpen ? <X size={26} /> : <Menu size={26} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </header>
@@ -190,36 +176,38 @@ const Header = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: '-100%' }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: '-100%' }}
-            transition={{ type: 'tween', duration: 0.4 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25 }}
             className="fixed inset-0 w-full h-screen bg-brand-cream z-40 flex flex-col justify-between p-6 pt-24 overflow-y-auto"
           >
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-3">
               {navLinks.map((link) => {
                 if (link.isDropdown) {
                   return (
-                    <div key={link.name} className="flex flex-col">
-                      <div className="font-display text-3xl text-brand-purple border-b border-brand-textDark/10 pb-2">
-                        {link.name}
+                    <div key={link.name} className="flex flex-col border-b border-brand-border/60 pb-3">
+                      <div className="font-display text-lg font-bold text-brand-purple py-1 flex items-center justify-between">
+                        <span>{link.name}</span>
+                        <span className="text-xs text-brand-textMuted font-sans">({programsData.length} Courses)</span>
                       </div>
-                      <div className="flex flex-col pl-4 mt-2 space-y-2 border-l border-brand-purple/20">
+                      <div className="flex flex-col pl-3 mt-2 space-y-2 border-l-2 border-brand-purple/20">
                         <Link
                           to="/programs"
                           onClick={() => setIsOpen(false)}
-                          className="font-medium text-sm text-brand-magenta"
+                          className="text-xs font-bold text-brand-magenta py-1"
                         >
-                          View All Programs
+                          → View All Programs Overview
                         </Link>
                         {programsData.map((prog) => (
                           <Link
                             key={prog.id}
                             to={`/programs#${prog.id}`}
                             onClick={() => setIsOpen(false)}
-                            className="text-sm text-brand-textDark/80 hover:text-brand-purple py-1"
+                            className="text-xs text-brand-textDark/80 hover:text-brand-purple py-1"
                           >
-                            • {prog.title}
+                            <span className="text-brand-purple font-mono font-bold mr-1.5">{prog.num}.</span>
+                            {prog.title}
                           </Link>
                         ))}
                       </div>
@@ -234,8 +222,8 @@ const Header = () => {
                     key={link.name}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`font-display text-3xl border-b border-brand-textDark/10 pb-2 transition-colors ${
-                      isActive ? 'text-brand-magenta' : 'text-brand-textDark hover:text-brand-purple'
+                    className={`font-display text-lg font-bold py-2 border-b border-brand-border/60 transition-colors ${
+                      isActive ? 'text-brand-purple' : 'text-brand-textDark hover:text-brand-purple'
                     }`}
                   >
                     {link.name}
@@ -248,13 +236,14 @@ const Header = () => {
               <Link
                 to="/admissions"
                 onClick={() => setIsOpen(false)}
-                className="w-full text-center px-6 py-4 bg-brand-purple text-brand-cream font-display text-xl hover:bg-brand-magenta transition-all duration-300 neo-shadow"
+                className="w-full text-center px-6 py-3.5 bg-brand-purple text-white font-bold text-sm tracking-wider uppercase rounded-xl hover:bg-brand-purpleLight transition-all duration-200 flex items-center justify-center gap-2 shadow-card"
               >
-                APPLY FOR ADMISSIONS →
+                <span>Apply for Admissions</span>
+                <ArrowRight size={16} />
               </Link>
-              <div className="flex justify-between items-center text-xs text-brand-textDark/60">
+              <div className="flex justify-between items-center text-xs text-brand-textMuted">
                 <span>© {new Date().getFullYear()} IIEM INDIA</span>
-                <span>editorial + event education</span>
+                <span>Premier Event Education</span>
               </div>
             </div>
           </motion.div>
@@ -265,3 +254,4 @@ const Header = () => {
 };
 
 export default Header;
+
