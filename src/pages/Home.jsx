@@ -671,31 +671,16 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-      SECTION 4.6 — WHY CHOOSE US
+      SECTION 5 — WHY CHOOSE US / AT A GLANCE
       ================================================== */}
       <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-8">
             <SectionHeader
-              eyebrow="INSTITUTIONAL TRUST"
+              eyebrow="IIEM AT A GLANCE"
               title="WHY CHOOSE US"
-              supportingText="A benchmark approach to experiential education founded upon real industry metrics."
+              supportingText="Proven academic and field outcomes across our certified event management cohorts."
             />
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-              <div className="bg-white p-6 rounded-xl border border-brand-border shadow-subtle text-center">
-                <div className="font-display font-black text-4xl sm:text-5xl text-brand-purple mb-2">100%</div>
-                <div className="font-sans text-xs font-bold text-brand-textMuted uppercase tracking-wider">Placement Support</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl border border-brand-border shadow-subtle text-center">
-                <div className="font-display font-black text-4xl sm:text-5xl text-brand-purple mb-2">100%</div>
-                <div className="font-sans text-xs font-bold text-brand-textMuted uppercase tracking-wider">Practical Training</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl border border-brand-border shadow-subtle text-center">
-                <div className="font-display font-black text-4xl sm:text-5xl text-brand-purple mb-2">100%</div>
-                <div className="font-sans text-xs font-bold text-brand-textMuted uppercase tracking-wider">Industry Mentors</div>
-              </div>
-            </div>
           </div>
           
           <div className="lg:col-span-4">
@@ -715,39 +700,26 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* ==================================================
-      SECTION 5 — NUMBERS / PROOF (Light Theme)
-      ================================================== */}
-      <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <SectionHeader
-            eyebrow="IIEM AT A GLANCE"
-            title="THE NUMBERS SPEAK FOR US."
-            supportingText="Proven academic and field outcomes across our certified event management cohorts."
-          />
+        <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 mt-12">
+          {statisticsData.map((stat, idx) => (
+            <AnimatedCounter
+              key={idx}
+              value={stat.value}
+              label={stat.label}
+              lightMode={true}
+            />
+          ))}
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 mt-12">
-            {statisticsData.map((stat, idx) => (
-              <AnimatedCounter
-                key={idx}
-                value={stat.value}
-                label={stat.label}
-                lightMode={true}
-              />
-            ))}
-          </div>
-
-          {/* Horizontal Text Banner */}
-          <div className="mt-16 py-6 border-t border-b border-brand-border text-center overflow-hidden bg-brand-cream/50 rounded-xl">
-            <div className="font-display font-bold text-xl sm:text-3xl tracking-widest text-brand-purple flex justify-center items-center gap-6 flex-wrap leading-none uppercase">
-              <span>REAL LEARNING</span>
-              <span className="text-brand-magenta">•</span>
-              <span>REAL EVENTS</span>
-              <span className="text-brand-magenta">•</span>
-              <span>REAL EXPERIENCE</span>
-            </div>
+        {/* Horizontal Text Banner */}
+        <div className="max-w-[1400px] mx-auto mt-16 py-6 border-t border-b border-brand-border text-center overflow-hidden bg-white/50 rounded-xl shadow-subtle">
+          <div className="font-display font-bold text-xl sm:text-3xl tracking-widest text-brand-purple flex justify-center items-center gap-6 flex-wrap leading-none uppercase">
+            <span>REAL LEARNING</span>
+            <span className="text-brand-magenta">•</span>
+            <span>REAL EVENTS</span>
+            <span className="text-brand-magenta">•</span>
+            <span>REAL EXPERIENCE</span>
           </div>
         </div>
       </section>
