@@ -60,9 +60,10 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 2xl:gap-2">
+          <nav className="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0">
             {navLinks.map((link) => {
               if (link.isDropdown) {
+                const isDropdownActive = location.pathname.startsWith('/programs') || location.pathname.startsWith('/course');
                 return (
                   <div
                     key={link.name}
@@ -71,14 +72,17 @@ const Header = () => {
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <button
-                      className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider transition-colors duration-200 ${
-                        location.pathname.startsWith('/programs') 
-                          ? 'text-brand-purple bg-brand-purpleMuted' 
-                          : 'text-brand-textDark/85 hover:text-brand-purple hover:bg-black/5'
+                      className={`relative py-2 px-1 flex items-center gap-1.5 text-[11.5px] 2xl:text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors duration-200 ${
+                        isDropdownActive 
+                          ? 'text-brand-purple' 
+                          : 'text-brand-textDark/80 hover:text-brand-purple'
                       }`}
                     >
-                      {link.name}
+                      <span>{link.name}</span>
                       <ChevronDown size={13} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180 text-brand-purple' : ''}`} />
+                      {isDropdownActive && (
+                        <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-brand-purple rounded-full" />
+                      )}
                     </button>
 
                     {/* Dropdown Menu */}
@@ -97,7 +101,7 @@ const Header = () => {
                             </span>
                             <Link
                               to="/programs"
-                              className="text-[11px] font-semibold text-brand-magenta hover:underline flex items-center gap-1"
+                              className="text-[11px] font-semibold text-brand-purple hover:underline flex items-center gap-1"
                             >
                               All Programs <ArrowRight size={11} />
                             </Link>
@@ -112,7 +116,7 @@ const Header = () => {
                               >
                                 <div className="pr-3">
                                   <div className="font-semibold text-xs text-brand-textDark group-hover:text-brand-purple flex items-center gap-2">
-                                    <span className="text-[10px] font-mono text-brand-purple/60 bg-brand-purple/5 px-1.5 py-0.5 rounded">
+                                    <span className="text-[10px] font-mono text-brand-purple font-bold bg-brand-purpleMuted px-1.5 py-0.5 rounded">
                                       {prog.num}
                                     </span>
                                     {prog.title}
@@ -138,13 +142,16 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`relative px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                  className={`relative py-2 px-1 text-[11.5px] 2xl:text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors duration-200 ${
                     isActive 
-                      ? 'text-brand-purple bg-brand-purpleMuted' 
-                      : 'text-brand-textDark/85 hover:text-brand-purple hover:bg-black/5'
+                      ? 'text-brand-purple' 
+                      : 'text-brand-textDark/80 hover:text-brand-purple'
                   }`}
                 >
                   {link.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-brand-purple rounded-full" />
+                  )}
                 </Link>
               );
             })}
@@ -222,11 +229,14 @@ const Header = () => {
                     key={link.name}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`font-display text-lg font-bold py-2 border-b border-brand-border/60 transition-colors ${
-                      isActive ? 'text-brand-purple' : 'text-brand-textDark hover:text-brand-purple'
+                    className={`font-display text-lg font-bold py-2.5 px-3 rounded-xl transition-all flex items-center justify-between border-b border-brand-border/60 ${
+                      isActive 
+                        ? 'text-brand-purple bg-brand-purple/10 border-l-4 border-l-brand-purple font-extrabold' 
+                        : 'text-brand-textDark hover:text-brand-purple hover:bg-brand-purple/5'
                     }`}
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    {isActive && <span className="w-2 h-2 rounded-full bg-brand-purple"></span>}
                   </Link>
                 );
               })}
