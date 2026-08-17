@@ -351,60 +351,158 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-      SECTION 3 — PROGRAMS (Light Theme)
+      SECTION 3 — PROGRAMS (Text-Only Academic Course Prospectus)
       ================================================== */}
       <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
-            eyebrow="PROGRAMS"
-            title="CHOOSE YOUR STAGE."
-            supportingText="Explore programs designed around the technical skills, logistics, and real-world execution demanded by the modern global events industry."
+            eyebrow="ACADEMIC PROGRAMS"
+            title="EXPLORE OUR FLAGSHIP COURSES."
+            supportingText="Industry-aligned diploma and certification programs designed around technical skills, on-ground logistics, and real-world execution."
           />
 
-          {/* Structured Program Rows */}
-          <div className="mt-12 border-t border-brand-border divide-y divide-brand-border">
-            {programsData.map((prog) => (
-              <Link
+          {/* Text-Only Academic Prospectus 2x2 Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+            {[
+              {
+                ...programsData[0],
+                category: "Social & Luxury Events",
+                focus: "Destination Weddings, Theme Conceptualization & Vendor Curation",
+                careers: "Wedding Planner, Destination Wedding Consultant, Luxury Decor Stylist"
+              },
+              {
+                ...programsData[1],
+                category: "Corporate & MICE Management",
+                focus: "Conferences, Summits, Product Launches & Trade Show Logistics",
+                careers: "Corporate Event Planner, MICE Manager, Brand Activation Officer"
+              },
+              {
+                ...programsData[2],
+                category: "Live Entertainment & Festivals",
+                focus: "Stadium Concerts, Music Festivals, Artist Logistics & Stage Rigging",
+                careers: "Stage Manager, Artist Coordinator, Festival Technical Director"
+              },
+              {
+                ...programsData[3],
+                category: "Technical Production & Operations",
+                focus: "AV Rigging, Sound Engineering, Power Distribution & Crowd Safety",
+                careers: "Event Production Head, Rigging Supervisor, Operations Manager"
+              }
+            ].map((prog) => (
+              <div 
                 key={prog.id}
-                to={`/programs#${prog.id}`}
-                className="group block py-6 sm:py-7 transition-all duration-300 hover:bg-brand-cream/60 px-4 rounded-xl -mx-4"
+                className="academic-card bg-brand-cream/30 border border-brand-border rounded-2xl p-8 flex flex-col justify-between group hover:border-brand-purple/40 hover:bg-white hover:shadow-card-hover transition-all duration-300"
               >
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-                  {/* Number */}
-                  <div className="md:col-span-1 font-mono font-bold text-base text-brand-teal group-hover:text-brand-purple transition-colors">
-                    {prog.num}
+                <div>
+                  {/* Top Academic Badges */}
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-4 border-b border-brand-border/60">
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-xs font-bold text-brand-purple bg-brand-purpleMuted px-2.5 py-1 rounded-md border border-brand-purple/20">
+                        PROGRAM {prog.num}
+                      </span>
+                      <span className="text-xs font-bold text-brand-purple tracking-wide">
+                        {prog.category}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-sans font-semibold text-brand-textMuted bg-white px-2.5 py-1 rounded-md border border-brand-border shadow-xs">
+                      ⏱ {prog.duration}
+                    </span>
                   </div>
 
                   {/* Program Title */}
-                  <div className="md:col-span-5">
-                    <h3 className="font-display font-bold text-xl sm:text-2xl text-brand-purple group-hover:text-brand-magenta transition-colors duration-200">
-                      {prog.title}
-                    </h3>
+                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-brand-purple mb-3">
+                    {prog.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-sans text-xs sm:text-sm text-brand-textMuted leading-relaxed mb-6">
+                    {prog.overview}
+                  </p>
+
+                  {/* Institutional Specs Table */}
+                  <div className="bg-white p-5 rounded-xl border border-brand-border space-y-3 mb-6">
+                    <div>
+                      <div className="text-[11px] font-bold text-brand-purple uppercase tracking-wider mb-1">
+                        Curriculum Focus
+                      </div>
+                      <div className="text-xs text-brand-textDark font-sans leading-relaxed">
+                        {prog.focus}
+                      </div>
+                    </div>
+                    <div className="pt-2.5 border-t border-brand-border/60">
+                      <div className="text-[11px] font-bold text-brand-purple uppercase tracking-wider mb-1">
+                        Career Pathways
+                      </div>
+                      <div className="text-xs text-brand-textDark font-sans leading-relaxed">
+                        {prog.careers}
+                      </div>
+                    </div>
+                    <div className="pt-2.5 border-t border-brand-border/60 flex items-center justify-between text-xs font-sans">
+                      <span className="text-brand-textMuted">Eligibility:</span>
+                      <span className="font-bold text-brand-textDark text-[11px]">{prog.eligibility.split('.')[0]}</span>
+                    </div>
                   </div>
 
-                  {/* Short Description */}
-                  <div className="md:col-span-5 font-sans text-xs sm:text-sm text-brand-textMuted group-hover:text-brand-textDark transition-colors pr-4">
-                    {prog.shortDesc}
-                  </div>
-
-                  {/* Arrow Indicator */}
-                  <div className="md:col-span-1 flex justify-start md:justify-end">
-                    <div className="w-9 h-9 rounded-full border border-brand-border bg-white flex items-center justify-center group-hover:bg-brand-purple group-hover:border-brand-purple text-brand-purple group-hover:text-white transition-all duration-200 shadow-subtle">
-                      <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
+                  {/* Core Syllabus Modules Checklist */}
+                  <div className="mb-6">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-brand-purple mb-2.5">
+                      Key Syllabus Modules:
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {prog.curriculum.slice(0, 4).map((mod, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs font-sans text-brand-textMuted">
+                          <CheckCircle2 size={13} className="text-brand-purple shrink-0 mt-0.5" />
+                          <span className="line-clamp-1">{mod}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </Link>
+
+                {/* Footer Actions */}
+                <div className="pt-4 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-4">
+                  <Link
+                    to={`/programs#${prog.id}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:underline transition-all"
+                  >
+                    View Full Syllabus & Modules <ArrowRight size={13} />
+                  </Link>
+
+                  <Link
+                    to="/admissions"
+                    className="px-4 py-2 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-lg text-xs font-bold uppercase tracking-wider transition-colors shadow-subtle"
+                  >
+                    Apply for Batch
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              to="/programs"
-              className="px-8 py-3.5 bg-brand-purple hover:bg-brand-purpleLight text-white font-bold text-xs tracking-wider uppercase rounded-xl inline-flex items-center gap-2 shadow-card transition-colors"
-            >
-              VIEW ALL DETAILS <ArrowRight size={15} />
-            </Link>
+          {/* Bottom Academic Advising Bar */}
+          <div className="mt-12 p-6 rounded-2xl bg-brand-cream/50 border border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+              <h4 className="font-display font-bold text-lg text-brand-purple">
+                Need Help Choosing the Right Program?
+              </h4>
+              <p className="text-xs text-brand-textMuted font-sans mt-0.5">
+                Our academic counselors offer free 1-on-1 career guidance sessions to match your strengths.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              <Link
+                to="/programs"
+                className="px-5 py-2.5 bg-white border border-brand-border hover:border-brand-purple text-brand-purple rounded-xl text-xs font-bold uppercase tracking-wider transition-all"
+              >
+                Compare All Programs
+              </Link>
+              <Link
+                to="/contact"
+                className="px-5 py-2.5 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-card"
+              >
+                Talk to a Counselor
+              </Link>
+            </div>
           </div>
         </div>
       </section>
