@@ -169,7 +169,7 @@ const Footer = () => {
 
         {/* Institutional Statement Banner */}
         <div className="py-8 select-none border-b border-brand-border text-center">
-          <div className="font-display text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-brand-purple/20">
+          <div className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase text-brand-purple">
             CREATE EXPERIENCES. BUILD A CAREER.
           </div>
         </div>

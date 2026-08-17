@@ -508,59 +508,114 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-      SECTION 4 — LEARN BY DOING
+      SECTION 4 — INSTITUTIONAL TRAINING METHODOLOGY
       ================================================== */}
       <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
-            eyebrow="THE IIEM EXPERIENCE"
+            eyebrow="ACADEMIC METHODOLOGY"
             title="THE CLASSROOM IS ONLY THE BEGINNING."
+            supportingText="We believe event management cannot be mastered through textbooks alone. Our pedagogy balances structured academic theory with intense, on-ground production hours."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left side checklist */}
-            <div className="lg:col-span-5 order-2 lg:order-1">
-              <h3 className="font-display font-bold text-2xl text-brand-purple mb-4 tracking-tight">
-                WE BELIEVE IN ON-STAGE HOURS
-              </h3>
-              <p className="text-sm text-brand-textMuted font-sans mb-8 leading-relaxed">
-                We believe that classroom models are insufficient for live event planning. Our curriculum focuses directly on these functional sectors:
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  'Live Music & Concerts',
-                  'Production Planning',
-                  'Artist Coordination',
-                  'Venue Operations',
-                  'Brand Activations',
-                  'Weddings & Galas',
-                  'Exhibitions & Summits',
-                  'Corporate launches',
-                  'Backstage Operations'
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5 bg-white p-3 rounded-lg border border-brand-border shadow-subtle">
-                    <CheckCircle2 size={16} className="text-brand-teal shrink-0" />
-                    <span className="font-bold text-xs text-brand-textDark font-sans">{item}</span>
+          {/* 4 Core Institutional Training Pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {[
+              {
+                step: "01",
+                title: "80% Live Staging Hours",
+                badge: "On-Ground Training",
+                desc: "Students work backstage as active crew members across major concerts, high-profile weddings, and corporate summits across India."
+              },
+              {
+                step: "02",
+                title: "AV & Rigging Labs",
+                badge: "Technical Mastery",
+                desc: "Hands-on studio training with digital sound consoles, intelligent lighting rigs, LED screen mapping, and stage structural safety."
+              },
+              {
+                step: "03",
+                title: "Masterclasses by Directors",
+                badge: "Industry Mentorship",
+                desc: "Weekly masterclasses and case-study teardowns hosted by visiting agency founders, wedding planners, and festival technical leads."
+              },
+              {
+                step: "04",
+                title: "Agency Pitch Simulation",
+                badge: "Business & Bidding",
+                desc: "Students formulate 360-degree event briefs, budgets, floor plans, and pitch directly to corporate evaluators in boardroom trials."
+              }
+            ].map((pillar, idx) => (
+              <div 
+                key={idx} 
+                className="academic-card bg-white p-7 rounded-2xl border border-brand-border flex flex-col justify-between hover:border-brand-purple/40 hover:shadow-card-hover transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs font-bold text-brand-purple bg-brand-purpleMuted px-2.5 py-1 rounded-md">
+                      PHASE {pillar.step}
+                    </span>
+                    <span className="text-[10px] font-bold text-brand-purple uppercase tracking-wider bg-brand-purpleMuted px-2 py-0.5 rounded">
+                      {pillar.badge}
+                    </span>
                   </div>
-                ))}
+                  <h3 className="font-display font-bold text-xl text-brand-purple mb-3">
+                    {pillar.title}
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+                    {pillar.desc}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-textDark font-sans">
+                  <span className="font-semibold">Core Curriculum Metric</span>
+                  <CheckCircle2 size={15} className="text-brand-purple" />
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* Industry Functional Sectors Covered */}
+          <div className="mt-12 bg-white rounded-2xl p-8 border border-brand-border">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-brand-border/60 mb-6">
+              <div>
+                <h4 className="font-display font-bold text-xl text-brand-purple">
+                  Functional Event Verticals Covered in Training
+                </h4>
+                <p className="font-sans text-xs text-brand-textMuted mt-1">
+                  Students gain multi-disciplinary exposure across all 8 major event industry segments:
+                </p>
+              </div>
+              <span className="badge-pill bg-brand-purpleMuted text-brand-purple text-xs font-bold shrink-0 self-start md:self-auto">
+                Comprehensive Domain Coverage
+              </span>
             </div>
 
-            {/* Right side event image */}
-            <div className="lg:col-span-7 order-1 lg:order-2">
-              <div className="relative rounded-2xl overflow-hidden border border-brand-border bg-white shadow-card">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1000&q=80"
-                    alt="Live event production panel with mixer"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { label: 'Live Music & Concerts', desc: 'Stadium production & artist hospitality' },
+                { label: 'Luxury Destination Weddings', desc: 'Thematic decor, hospitality & rituals' },
+                { label: 'Corporate Summits & MICE', desc: 'B2B protocols & technical AV platforms' },
+                { label: 'Exhibitions & Trade Shows', desc: 'Stall fabrication & footfall logistics' },
+                { label: 'Sports League Operations', desc: 'Matchday management & crowd security' },
+                { label: 'Brand PR & Product Launches', desc: 'Experiential storytelling & media management' },
+                { label: 'Backstage & Technical Rigging', desc: 'Sound, lighting, power & truss rigging' },
+                { label: 'Venue & Banquet Management', desc: 'Layout planning, catering & client relations' }
+              ].map((sector, idx) => (
+                <div 
+                  key={idx} 
+                  className="p-4 rounded-xl bg-brand-cream/40 border border-brand-border/80 hover:border-brand-purple/30 transition-colors"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <CheckCircle2 size={14} className="text-brand-purple shrink-0" />
+                    <h5 className="font-display font-bold text-xs sm:text-sm text-brand-purple leading-snug">
+                      {sector.label}
+                    </h5>
+                  </div>
+                  <p className="text-[11px] text-brand-textMuted font-sans pl-5 leading-relaxed">
+                    {sector.desc}
+                  </p>
                 </div>
-                <div className="absolute bottom-4 left-4 bg-brand-purple/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-lg font-bold text-[11px] uppercase tracking-wider">
-                  PRODUCTION CONTROL DECK
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -1018,9 +1073,9 @@ const Home = () => {
       <section className="bg-brand-purple text-white py-16 lg:py-24 px-6 md:px-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative z-10 flex flex-col lg:flex-row justify-between items-center gap-10">
           <div className="max-w-2xl text-center lg:text-left">
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl leading-[1.05] tracking-tight mb-4">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-6xl leading-[1.05] tracking-tight mb-4 text-white uppercase">
               YOUR FIRST BIG EVENT?<br />
-              <span className="text-brand-teal">YOUR CAREER.</span>
+              YOUR CAREER.
             </h2>
             <p className="font-sans text-brand-cream/80 text-sm sm:text-base leading-relaxed">
               Take the first step toward a career built around creativity, leadership, and unforgettable live environments. Admissions are now open for the next cohort.
