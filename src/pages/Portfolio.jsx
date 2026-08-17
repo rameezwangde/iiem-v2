@@ -15,8 +15,8 @@ const Portfolio = () => {
               // EXPERIENTIAL ARCHIVE
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
-              THE WORK <span className="text-brand-teal">SPEAKS</span><br />
-              <span className="text-brand-textDark">FOR ITSELF.</span>
+              THE WORK SPEAKS<br />
+              FOR ITSELF.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
               Dive into our archive of successful live events, corporate activations, and capstone projects designed and executed entirely by our talented students.
@@ -237,7 +237,7 @@ const Portfolio = () => {
               </div>
               <div className="p-6">
                 <div className="text-[11px] font-bold tracking-wider text-brand-purple uppercase">Head of Operations</div>
-                <div className="font-display font-bold text-xl text-brand-teal mt-1">SNEHA M. (IIEM BATCH OF 2023)</div>
+                <div className="font-display font-bold text-xl text-brand-purple mt-1">SNEHA M. (IIEM BATCH OF 2023)</div>
               </div>
             </div>
           </div>

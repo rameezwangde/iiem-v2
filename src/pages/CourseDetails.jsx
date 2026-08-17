@@ -16,7 +16,7 @@ const CourseDetails = () => {
               // Master the Industry
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl leading-[1.0] tracking-tight mb-6 text-brand-purple uppercase">
-              BECOME A <span className="text-brand-teal">PROFESSIONAL</span><br />
+              BECOME A PROFESSIONAL<br />
               EVENT MANAGER.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg max-w-xl leading-relaxed">

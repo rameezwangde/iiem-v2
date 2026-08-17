@@ -18,8 +18,8 @@ const IndustryConnect = () => {
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
               CONNECTED TO <br />
-              <span className="text-brand-teal">THE REAL</span><br />
-              <span className="text-brand-textDark">EVENT WORLD.</span>
+              THE REAL<br />
+              EVENT WORLD.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
               IIEM bridges the gap between academics and the industry. We bring the biggest names in event management directly to our students for networking, mentoring, and recruitment.

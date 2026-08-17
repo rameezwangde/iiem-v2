@@ -37,8 +37,8 @@ const Programs = () => {
               // IIEM CURRICULUM
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
-              FIND YOUR <span className="text-brand-teal">PLACE IN</span><br />
-              <span className="text-brand-textDark">THE INDUSTRY.</span>
+              FIND YOUR PLACE IN<br />
+              THE INDUSTRY.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
               Explore specialized programs designed by active industry professionals. From live entertainment to technical stage production, your career starts here.

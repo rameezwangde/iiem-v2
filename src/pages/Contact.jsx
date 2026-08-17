@@ -47,8 +47,8 @@ const Contact = () => {
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
               LET’S TALK <br />
-              <span className="text-brand-teal">ABOUT YOUR</span><br />
-              <span className="text-brand-textDark">FUTURE.</span>
+              ABOUT YOUR<br />
+              FUTURE.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
               Whether you’re curious about our courses, looking for career guidance, or ready to submit your application, our counselling team is here to help you navigate your journey into event management.

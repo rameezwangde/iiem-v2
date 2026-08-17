@@ -17,8 +17,8 @@ const About = () => {
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
               MORE THAN AN INSTITUTE.<br />
-              <span className="text-brand-teal">A PLACE TO CREATE</span><br />
-              <span className="text-brand-textDark">EXPERIENCES.</span>
+              A PLACE TO CREATE<br />
+              EXPERIENCES.
             </h1>
             <p className="text-brand-textMuted font-sans text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
               We believe event management isn't just learned in a classroom; it's forged through hands-on experience, late-night planning, and real-world execution. Welcome to the future of event education.

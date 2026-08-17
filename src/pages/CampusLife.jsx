@@ -17,8 +17,8 @@ const CampusLife = () => {
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
               THIS IS WHERE <br />
-              <span className="text-brand-teal">IDEAS COME</span><br />
-              <span className="text-brand-textDark">ALIVE.</span>
+              IDEAS COME<br />
+              ALIVE.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
               Experience the energy of a campus built for creators. From hands-on workshops to vibrant student communities, every corner of IIEM is designed to inspire your next big event.

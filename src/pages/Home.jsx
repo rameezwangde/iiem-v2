@@ -66,8 +66,8 @@ const Home = () => {
                 transition={{ duration: 0.7 }}
                 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight uppercase text-brand-purple"
               >
-                WHERE <span className="text-brand-textDark">PASSION PLANS.</span><br />
-                EXPERIENCES <span className="text-brand-teal">TRANSFORM.</span>
+                WHERE PASSION PLANS.<br />
+                EXPERIENCES TRANSFORM.
               </motion.h1>
 
               {/* Sub-intro */}

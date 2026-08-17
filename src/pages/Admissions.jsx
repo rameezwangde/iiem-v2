@@ -35,7 +35,7 @@ const Admissions = () => {
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
               START YOUR <br />
-              <span className="text-brand-teal">CAREER</span> IN EVENT MANAGEMENT.
+              CAREER IN EVENT MANAGEMENT.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
               Admissions are now open for the upcoming batch at IIEM – Indian Institute of Event Management. Join a career-focused program designed for students who are passionate about events, weddings, corporate shows, live productions, exhibitions, and entertainment management.

@@ -18,8 +18,8 @@ const Placements = () => {
               // CAREER PATHWAYS
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
-              FROM <span className="text-brand-teal">CLASSROOM</span><br />
-              <span className="text-brand-textDark">TO CAREER.</span>
+              FROM CLASSROOM<br />
+              TO CAREER.
             </h1>
             <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
               Our dedicated placement cell ensures that your transition from academic training to industry professional is seamless. We connect you with top event management companies, agencies, and corporate houses across India.
@@ -55,7 +55,7 @@ const Placements = () => {
             <div className="text-xs text-brand-textMuted font-bold tracking-wider uppercase font-sans">ACTIVE AGENCY CONTACTS</div>
           </div>
           <div className="academic-card p-6 text-center bg-brand-cream/40">
-            <div className="font-display font-black text-4xl sm:text-5xl text-brand-teal mb-2">8 LPA</div>
+            <div className="font-display font-black text-4xl sm:text-5xl text-brand-purple mb-2">8 LPA</div>
             <div className="text-xs text-brand-textMuted font-bold tracking-wider uppercase font-sans">HIGHEST STARTING PACKAGE</div>
           </div>
           <div className="academic-card p-6 text-center bg-brand-cream/40">
