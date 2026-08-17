@@ -220,17 +220,17 @@ const Home = () => {
               <div className="space-y-4">
                 <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-brand-border bg-brand-stone shadow-sm group">
                   <img
-                    src="/images/about_fabrication_setup.png"
-                    alt="Students working on fabrication setup"
+                    src="/images/Audio focus live set up practical.jpg"
+                    alt="Audio focus live set up practical"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </div>
-              <div className="space-y-4 pt-8 sm:pt-12">
+              <div className="space-y-4">
                 <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-brand-border bg-brand-stone shadow-card group">
                   <img
-                    src="/images/about_soundcheck.png"
-                    alt="Student operating soundcheck rig"
+                    src="/images/console operator.png"
+                    alt="Console operator"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -637,27 +637,28 @@ const Home = () => {
             {[
               {
                 title: "Event Props Rent & Production",
-                img: "/images/course_props_production.png"
+                img: "/images/props.webp"
               },
               {
                 title: "Marketing",
-                img: "/images/course_marketing.png"
+                img: "/images/image.jfif"
               },
               {
                 title: "Vendor Management",
-                img: "/images/course_vendor_management.png"
+                img: "/images/Vendor Management.jpeg",
+                objectPos: "object-[center_15%]"
               },
               {
                 title: "Event B2B Business",
-                img: "/images/course_b2b_business.png"
+                img: "/images/Event B2B Business.jfif"
               }
             ].map((course, idx) => (
               <div key={idx} className="academic-card overflow-hidden group bg-white">
-                <div className="h-48 overflow-hidden relative bg-brand-stone">
+                <div className="h-64 overflow-hidden relative bg-brand-stone">
                   <img 
                     src={course.img} 
                     alt={course.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    className={`w-full h-full object-cover ${course.objectPos || 'object-top'} group-hover:scale-105 transition-transform duration-500`} 
                   />
                 </div>
                 <div className="p-5 text-center">
