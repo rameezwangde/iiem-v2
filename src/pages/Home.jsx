@@ -137,7 +137,7 @@ const Home = () => {
               >
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-brand-stone">
                   <img
-                    src="/images/hero_students_formal.png"
+                    src="/images/IIEM STUDENT COHORT.webp"
                     alt="IIEM Students at Campus in Formals"
                     className="w-full h-full object-cover object-top"
                   />
@@ -961,7 +961,7 @@ const Home = () => {
             <div className="academic-card overflow-hidden group bg-white">
               <div className="aspect-[4/3] overflow-hidden relative bg-brand-stone">
                 <img
-                  src="/images/campus_fabrication.png"
+                  src="/images/floral production fabrication.png"
                   alt="Students preparing decor layouts"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -973,7 +973,7 @@ const Home = () => {
             <div className="academic-card overflow-hidden group bg-white">
               <div className="aspect-[4/3] overflow-hidden relative bg-brand-stone">
                 <img
-                  src="/images/campus_soundcheck.png"
+                  src="/images/images.jpg"
                   alt="Rehearsals stage design"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
