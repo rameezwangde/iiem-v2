@@ -351,7 +351,7 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-      SECTION 3 — PROGRAMS (Text-Only Academic Course Prospectus)
+      SECTION 3 — PROGRAMS (Bold Academic Course Prospectus)
       ================================================== */}
       <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
@@ -361,20 +361,20 @@ const Home = () => {
             supportingText="Industry-aligned diploma and certification programs designed around technical skills, on-ground logistics, and real-world execution."
           />
 
-          {/* Text-Only Academic Prospectus 2x2 Grid */}
+          {/* Bold Academic Prospectus 2x2 Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
             {[
               {
                 ...programsData[0],
                 category: "Social & Luxury Events",
-                focus: "Destination Weddings, Theme Conceptualization & Vendor Curation",
-                careers: "Wedding Planner, Destination Wedding Consultant, Luxury Decor Stylist"
+                focus: "Destination Weddings, Theme Conceptualization & Luxury Styling",
+                careers: "Wedding Planner, Destination Consultant, Luxury Decor Stylist"
               },
               {
                 ...programsData[1],
                 category: "Corporate & MICE Management",
                 focus: "Conferences, Summits, Product Launches & Trade Show Logistics",
-                careers: "Corporate Event Planner, MICE Manager, Brand Activation Officer"
+                careers: "Corporate Event Planner, MICE Manager, Brand Activation Lead"
               },
               {
                 ...programsData[2],
@@ -385,74 +385,74 @@ const Home = () => {
               {
                 ...programsData[3],
                 category: "Technical Production & Operations",
-                focus: "AV Rigging, Sound Engineering, Power Distribution & Crowd Safety",
+                focus: "AV Rigging, Sound Engineering, Power Distribution & Stage Safety",
                 careers: "Event Production Head, Rigging Supervisor, Operations Manager"
               }
             ].map((prog) => (
               <div 
                 key={prog.id}
-                className="academic-card bg-brand-cream/30 border border-brand-border rounded-2xl p-8 flex flex-col justify-between group hover:border-brand-purple/40 hover:bg-white hover:shadow-card-hover transition-all duration-300"
+                className="academic-card bg-white border-2 border-brand-border rounded-2xl p-8 sm:p-10 flex flex-col justify-between group hover:border-brand-purple hover:shadow-card-hover transition-all duration-300"
               >
                 <div>
                   {/* Top Academic Badges */}
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-4 border-b border-brand-border/60">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs font-bold text-brand-purple bg-brand-purpleMuted px-2.5 py-1 rounded-md border border-brand-purple/20">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-5 border-b border-brand-border">
+                    <div className="flex items-center gap-2.5">
+                      <span className="font-mono text-xs font-extrabold text-white bg-brand-purple px-3 py-1.5 rounded-lg shadow-xs">
                         PROGRAM {prog.num}
                       </span>
-                      <span className="text-xs font-bold text-brand-purple tracking-wide">
+                      <span className="text-xs sm:text-sm font-extrabold text-brand-purple uppercase tracking-wider">
                         {prog.category}
                       </span>
                     </div>
-                    <span className="text-[11px] font-sans font-semibold text-brand-textMuted bg-white px-2.5 py-1 rounded-md border border-brand-border shadow-xs">
+                    <span className="text-xs font-bold text-brand-purple bg-brand-purpleMuted border border-brand-purple/20 px-3 py-1.5 rounded-lg">
                       ⏱ {prog.duration}
                     </span>
                   </div>
 
                   {/* Program Title */}
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-brand-purple mb-3">
+                  <h3 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-brand-purple mb-4 leading-snug">
                     {prog.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-xs sm:text-sm text-brand-textMuted leading-relaxed mb-6">
+                  <p className="font-sans text-sm sm:text-base font-medium text-brand-textDark/90 leading-relaxed mb-6">
                     {prog.overview}
                   </p>
 
-                  {/* Institutional Specs Table */}
-                  <div className="bg-white p-5 rounded-xl border border-brand-border space-y-3 mb-6">
+                  {/* Institutional Specs Box */}
+                  <div className="bg-brand-cream/70 p-6 rounded-xl border border-brand-border space-y-4 mb-6">
                     <div>
-                      <div className="text-[11px] font-bold text-brand-purple uppercase tracking-wider mb-1">
+                      <div className="text-xs font-extrabold text-brand-purple uppercase tracking-wider mb-1">
                         Curriculum Focus
                       </div>
-                      <div className="text-xs text-brand-textDark font-sans leading-relaxed">
+                      <div className="text-sm font-bold text-brand-textDark font-sans leading-relaxed">
                         {prog.focus}
                       </div>
                     </div>
-                    <div className="pt-2.5 border-t border-brand-border/60">
-                      <div className="text-[11px] font-bold text-brand-purple uppercase tracking-wider mb-1">
+                    <div className="pt-3 border-t border-brand-border">
+                      <div className="text-xs font-extrabold text-brand-purple uppercase tracking-wider mb-1">
                         Career Pathways
                       </div>
-                      <div className="text-xs text-brand-textDark font-sans leading-relaxed">
+                      <div className="text-sm font-bold text-brand-textDark font-sans leading-relaxed">
                         {prog.careers}
                       </div>
                     </div>
-                    <div className="pt-2.5 border-t border-brand-border/60 flex items-center justify-between text-xs font-sans">
-                      <span className="text-brand-textMuted">Eligibility:</span>
-                      <span className="font-bold text-brand-textDark text-[11px]">{prog.eligibility.split('.')[0]}</span>
+                    <div className="pt-3 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs sm:text-sm font-sans">
+                      <span className="text-brand-textMuted font-bold uppercase tracking-wider text-xs">Eligibility:</span>
+                      <span className="font-extrabold text-brand-textDark">{prog.eligibility.split('.')[0]}</span>
                     </div>
                   </div>
 
                   {/* Core Syllabus Modules Checklist */}
                   <div className="mb-6">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-brand-purple mb-2.5">
+                    <div className="text-xs font-extrabold uppercase tracking-wider text-brand-purple mb-3">
                       Key Syllabus Modules:
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {prog.curriculum.slice(0, 4).map((mod, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs font-sans text-brand-textMuted">
-                          <CheckCircle2 size={13} className="text-brand-purple shrink-0 mt-0.5" />
-                          <span className="line-clamp-1">{mod}</span>
+                        <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-brand-textDark font-sans">
+                          <CheckCircle2 size={16} className="text-brand-purple shrink-0" />
+                          <span>{mod}</span>
                         </div>
                       ))}
                     </div>
@@ -460,17 +460,18 @@ const Home = () => {
                 </div>
 
                 {/* Footer Actions */}
-                <div className="pt-4 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-6 border-t border-brand-border flex flex-wrap items-center justify-between gap-4 mt-2">
                   <Link
                     to={`/programs#${prog.id}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:underline transition-all"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-brand-purple hover:text-brand-purpleLight transition-colors"
                   >
-                    View Full Syllabus & Modules <ArrowRight size={13} />
+                    <span>View Full Syllabus & Modules</span>
+                    <ArrowRight size={15} />
                   </Link>
 
                   <Link
                     to="/admissions"
-                    className="px-4 py-2 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-lg text-xs font-bold uppercase tracking-wider transition-colors shadow-subtle"
+                    className="px-6 py-3 bg-brand-purple hover:bg-brand-purpleLight text-white rounded-xl text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-colors shadow-card"
                   >
                     Apply for Batch
                   </Link>
