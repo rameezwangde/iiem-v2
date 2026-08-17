@@ -14,7 +14,7 @@ const Portfolio = () => {
             <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
               // EXPERIENTIAL ARCHIVE
             </span>
-            <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl leading-[1.0] tracking-tight uppercase text-brand-purple mb-6">
+            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
               THE WORK SPEAKS<br />
               FOR ITSELF.
             </h1>

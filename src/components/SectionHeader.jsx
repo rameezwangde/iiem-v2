@@ -33,7 +33,7 @@ const SectionHeader = ({ eyebrow, title, darkBg = false, align = 'left', support
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.5, delay: 0.05 }}
-        className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] uppercase ${
+        className={`font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] uppercase ${
           darkBg ? 'text-white' : 'text-brand-purple'
         }`}
       >

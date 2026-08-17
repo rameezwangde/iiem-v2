@@ -23,8 +23,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: Outfit, 'Plus Jakarta Sans', sans-serif;
-    letter-spacing: -0.025em;
+    font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+    letter-spacing: -0.015em;
+    font-weight: 700;
     color: #4A0A45;
   }
 
