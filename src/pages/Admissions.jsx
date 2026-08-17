@@ -46,7 +46,7 @@ const Admissions = () => {
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border shadow-card bg-white p-3 group">
               <div className="w-full h-full rounded-xl overflow-hidden relative bg-brand-stone">
                 <img 
-                  src="/images/join_the_next_batch.jfif" 
+                  src="/images/join_the_next_batch_upscaled.jpg" 
                   alt="Indian Students at IIEM Admissions" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

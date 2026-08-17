@@ -61,7 +61,7 @@ const About = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-brand-border bg-white shadow-card p-3">
               <img
-                src="/images/event_planning_logistics_2.jpg"
+                src="/images/event_planning_logistics_2_upscaled.jpg"
                 alt="Professionals reviewing event plans and logistics"
                 className="w-full h-auto rounded-xl object-cover"
               />
