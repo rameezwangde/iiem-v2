@@ -96,3 +96,25 @@
   scrollbar-width: none;
 }
 
+/* Seamless Free-Flowing Testimonial & Partner Marquee Animations */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-freeflow {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-freeflow:hover {
+  animation-play-state: paused;
+}
+
+

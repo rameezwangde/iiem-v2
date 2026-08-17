@@ -46,6 +46,8 @@ export default {
       animation: {
         'marquee': 'marquee 35s linear infinite',
         'marquee-reverse': 'marquee-reverse 35s linear infinite',
+        'marquee-slow': 'marquee 50s linear infinite',
+        'marquee-slow-reverse': 'marquee-reverse 50s linear infinite',
       },
       keyframes: {
         marquee: {

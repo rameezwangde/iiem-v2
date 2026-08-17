@@ -342,6 +342,30 @@ export const testimonialsData = [
     program: "Corporate Event Management",
     batch: "Class of 2024",
     image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id: 4,
+    quote: "From rigging safety certifications to digital audio console workshops, the technical depth at IIEM sets you apart. Recruiters were amazed by my practical knowledge during campus hiring.",
+    studentName: "Rohan Nair",
+    program: "Event Production & Operations",
+    batch: "Class of 2023",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id: 5,
+    quote: "The mentorship by visiting directors gave me direct backstage access to major music festivals in Mumbai and Bangalore. IIEM turned my dream into a high-paying leadership role.",
+    studentName: "Tanvi Saxena",
+    program: "Live Events & Entertainment",
+    batch: "Class of 2024",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id: 6,
+    quote: "The pitch simulation labs gave us real-world confidence. We learned to formulate budgets, floor plans, and artist riders under strict deadlines just like a real event agency.",
+    studentName: "Karan Mehta",
+    program: "Corporate Event Management",
+    batch: "Class of 2023",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80"
   }
 ];
 

@@ -994,75 +994,58 @@ const Home = () => {
       </section>
 
       {/* ==================================================
-      SECTION 10 — TESTIMONIALS (Light Theme)
+      SECTION 10 — TESTIMONIALS (Free-Flowing Motion)
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border relative">
-        <div className="max-w-[1000px] mx-auto relative z-10">
-          <div className="text-center mb-8">
-            <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-[11px] font-bold">
-              // STUDENT VOICES
-            </span>
-          </div>
+      <section className="bg-brand-cream py-20 lg:py-28 border-b border-brand-border relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-10">
+          <SectionHeader
+            eyebrow="STUDENT VOICES"
+            title="STORIES FROM THE FIELD."
+            supportingText="Hear directly from our graduates on how on-ground event management training transformed their careers."
+            align="center"
+          />
+        </div>
 
-          {/* Testimonial Quote slider */}
-          <div className="academic-card p-8 md:p-12 bg-white shadow-card">
-            <div className="min-h-[200px] flex flex-col justify-between">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentTestimonial}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.35 }}
-                  className="space-y-6"
-                >
-                  {/* Big quote */}
-                  <blockquote className="font-display font-medium text-xl sm:text-2xl md:text-3xl leading-relaxed text-brand-purple text-center">
-                    “{testimonialsData[currentTestimonial].quote}”
-                  </blockquote>
+        {/* Free-Flowing Infinite Marquee Stream */}
+        <div className="relative w-full overflow-hidden flex select-none no-scrollbar group py-2">
+          <div className="animate-freeflow items-stretch gap-6 py-4 px-3">
+            {[...testimonialsData, ...testimonialsData, ...testimonialsData].map((item, idx) => (
+              <div
+                key={idx}
+                className="w-[340px] sm:w-[400px] md:w-[440px] shrink-0 whitespace-normal academic-card p-7 md:p-8 bg-white border border-brand-border rounded-2xl shadow-card flex flex-col justify-between hover:border-brand-purple/40 hover:shadow-card-hover transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-display font-black text-4xl text-brand-purple/30 leading-none">“</span>
+                    <span className="badge-pill bg-brand-purpleMuted text-brand-purple text-[10px] font-bold">
+                      {item.batch}
+                    </span>
+                  </div>
 
-                  {/* Profile detail */}
-                  <div className="flex flex-col items-center justify-center gap-3 pt-4 border-t border-brand-border/60">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-brand-purple bg-brand-stone shadow-sm">
-                      <img
-                        src={testimonialsData[currentTestimonial].image}
-                        alt={testimonialsData[currentTestimonial].studentName}
-                        className="w-full h-full object-cover"
-                      />
+                  <p className="font-sans text-xs sm:text-sm text-brand-textDark leading-relaxed italic mb-6">
+                    "{item.quote}"
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3.5 pt-4 border-t border-brand-border/60 mt-auto">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-purple shrink-0 bg-brand-stone shadow-xs">
+                    <img
+                      src={item.image}
+                      alt={item.studentName}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-display font-bold text-base text-brand-purple leading-snug">
+                      {item.studentName}
                     </div>
-                    <div className="text-center">
-                      <div className="font-display font-bold text-lg text-brand-purple">
-                        {testimonialsData[currentTestimonial].studentName}
-                      </div>
-                      <div className="text-xs text-brand-textMuted font-sans mt-0.5">
-                        {testimonialsData[currentTestimonial].program} • {testimonialsData[currentTestimonial].batch}
-                      </div>
+                    <div className="text-xs text-brand-textMuted font-sans font-medium">
+                      {item.program}
                     </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Slider navigation controls */}
-              <div className="flex justify-center items-center gap-6 mt-8">
-                <button
-                  onClick={prevTestimonial}
-                  className="w-10 h-10 rounded-full border border-brand-border bg-brand-cream/60 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition-colors"
-                  aria-label="Previous testimonial"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <div className="font-mono text-sm font-bold text-brand-purple">
-                  {currentTestimonial + 1} / {testimonialsData.length}
                 </div>
-                <button
-                  onClick={nextTestimonial}
-                  className="w-10 h-10 rounded-full border border-brand-border bg-brand-cream/60 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition-colors"
-                  aria-label="Next testimonial"
-                >
-                  <ChevronRight size={20} />
-                </button>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
