@@ -132,8 +132,8 @@ const Portfolio = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
             {[
-              { img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80", label: "Backstage Logistics" },
-              { img: "https://images.unsplash.com/photo-1520242739010-44e95bde329e?auto=format&fit=crop&w=600&q=80", label: "Sound Engineering" },
+              { img: "/images/backstage (2).jpeg", label: "Backstage Logistics" },
+              { img: "/images/sound.jpg.jpeg", label: "Sound Engineering" },
               { img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80", label: "VIP Management" },
               { img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80", label: "Live Crowd Control" }
             ].map((item, idx) => (
