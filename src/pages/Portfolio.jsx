@@ -109,7 +109,7 @@ const Portfolio = () => {
                   </div>
                   <div className="aspect-[4/3] rounded-xl overflow-hidden border border-brand-border bg-white relative">
                     <img 
-                      src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" 
+                      src="/images/for_flower_decoration_upscaled.jpg" 
                       alt="Wedding Setup" 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
                     />

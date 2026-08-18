@@ -212,7 +212,7 @@ const CampusLife = () => {
               { img: '/images/campus_fabrication.png', label: 'Live Events' },
               { img: '/images/course_props_production.png', label: 'Workshops' },
               { img: '/images/about_fabrication_setup.png', label: 'Backstage Operations' },
-              { img: '/images/campus_soundcheck.png', label: 'Tech Rehearsals' },
+              { img: '/images/floral.jpeg', label: 'Tech Rehearsals' },
               { img: '/images/campus_brainstorming.png', label: 'Peer Networking' }
             ].map((item, idx) => (
               <div key={idx} className="academic-card overflow-hidden group bg-white">
