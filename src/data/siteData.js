@@ -261,7 +261,7 @@ export const portfolioData = [
     num: "01",
     title: "Elysian Bloom: Destination Wedding",
     category: "Weddings",
-    image: "https://koala.sh/api/image/v2-9ln6q-vlm73.jpg?width=1216&height=832&dream",
+    image: "/images/destination wedding.bmp",
     description: "A three-day luxury destination wedding in Udaipur, managed from venue layout design to artist coordination and setup by IIEM students.",
     year: "2025",
     role: "Decor Layout, Artist Relations, On-ground Operations Support"
@@ -281,7 +281,7 @@ export const portfolioData = [
     num: "03",
     title: "FutureTech Summit 2026",
     category: "Corporate Events",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/FutureTech Summit.bmp",
     description: "A premier B2B technology exhibition and conference for global enterprises, featuring interactive product demonstration pavilions.",
     year: "2026",
     role: "Registration Logistics, Exhibition Stall Mapping, Speaker Coordination"

@@ -650,7 +650,7 @@ const Home = () => {
               },
               {
                 title: "Event B2B Business",
-                img: "/images/Event B2B Business.jfif"
+                img: "/images/B2B PANEL ORGANIZATION SUPPORT.bmp"
               }
             ].map((course, idx) => (
               <div key={idx} className="academic-card overflow-hidden group bg-white">
