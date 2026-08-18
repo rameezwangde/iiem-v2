@@ -210,7 +210,7 @@ const CampusLife = () => {
             {[
               { img: '/images/about_mentor_office.png', label: 'Creative Planning' },
               { img: '/images/campus_fabrication.png', label: 'Live Events' },
-              { img: '/images/course_props_production.png', label: 'Workshops' },
+              { img: '/images/backstage.jpeg', label: 'Workshops' },
               { img: '/images/about_fabrication_setup.png', label: 'Backstage Operations' },
               { img: '/images/floral.jpeg', label: 'Tech Rehearsals' },
               { img: '/images/campus_brainstorming.png', label: 'Peer Networking' }
