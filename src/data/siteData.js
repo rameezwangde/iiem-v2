@@ -261,7 +261,7 @@ export const portfolioData = [
     num: "01",
     title: "Elysian Bloom: Destination Wedding",
     category: "Weddings",
-    image: "/images/destination wedding.bmp",
+    image: "https://koala.sh/api/image/v2-9ln6q-vlm73.jpg?width=1216&height=832&dream",
     description: "A three-day luxury destination wedding in Udaipur, managed from venue layout design to artist coordination and setup by IIEM students.",
     year: "2025",
     role: "Decor Layout, Artist Relations, On-ground Operations Support"
