@@ -25,7 +25,7 @@ const CampusLife = () => {
       </section>
 
       {/* The Foundation Grid */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="THE FOUNDATION"
@@ -37,7 +37,7 @@ const CampusLife = () => {
             {/* Campus Environment */}
             <div className="academic-card p-8 group bg-brand-cream/40">
               <div className="w-12 h-12 rounded-xl bg-brand-purpleMuted text-brand-purple flex items-center justify-center mb-6">
-                <MapPin size={24} className="group-hover:scale-110 transition-transform" />
+                <Users size={24} className="group-hover:scale-110 transition-transform" fill="currentColor" />
               </div>
               <h3 className="font-display font-bold text-xl text-brand-purple mb-3 uppercase">Campus Environment</h3>
               <p className="font-sans text-xs sm:text-sm text-brand-textMuted leading-relaxed">
@@ -48,7 +48,7 @@ const CampusLife = () => {
             {/* Facilities */}
             <div className="academic-card p-8 group bg-brand-cream/40">
               <div className="w-12 h-12 rounded-xl bg-brand-tealLight text-brand-teal flex items-center justify-center mb-6">
-                <Building size={24} className="group-hover:scale-110 transition-transform" />
+                <Camera size={24} className="group-hover:scale-110 transition-transform" fill="currentColor" />
               </div>
               <h3 className="font-display font-bold text-xl text-brand-purple mb-3 uppercase">Facilities</h3>
               <p className="font-sans text-xs sm:text-sm text-brand-textMuted leading-relaxed">
@@ -59,7 +59,7 @@ const CampusLife = () => {
             {/* Learning & Training */}
             <div className="academic-card p-8 group bg-brand-cream/40">
               <div className="w-12 h-12 rounded-xl bg-brand-purpleMuted text-brand-purple flex items-center justify-center mb-6">
-                <BookOpen size={24} className="group-hover:scale-110 transition-transform" />
+                <Lightbulb size={24} className="group-hover:scale-110 transition-transform" fill="currentColor" />
               </div>
               <h3 className="font-display font-bold text-xl text-brand-purple mb-3 uppercase">Learning & Training</h3>
               <p className="font-sans text-xs sm:text-sm text-brand-textMuted leading-relaxed">
@@ -71,7 +71,7 @@ const CampusLife = () => {
       </section>
 
       {/* The Action Section (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto relative z-10">
           <SectionHeader
             eyebrow="THE ACTION"
@@ -83,7 +83,7 @@ const CampusLife = () => {
             {/* Student Activities */}
             <div className="academic-card p-8 bg-white flex gap-5 items-start">
               <div className="w-12 h-12 rounded-xl bg-brand-tealLight text-brand-teal flex items-center justify-center shrink-0">
-                <Users size={24} />
+                <Users size={24} fill="currentColor" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl text-brand-purple mb-2 uppercase">Student Activities</h3>
@@ -96,7 +96,7 @@ const CampusLife = () => {
             {/* Projects & Innovation */}
             <div className="academic-card p-8 bg-white flex gap-5 items-start">
               <div className="w-12 h-12 rounded-xl bg-brand-purpleMuted text-brand-purple flex items-center justify-center shrink-0">
-                <Lightbulb size={24} />
+                <Lightbulb size={24} fill="currentColor" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl text-brand-purple mb-2 uppercase">Projects & Innovation</h3>
@@ -109,7 +109,7 @@ const CampusLife = () => {
             {/* Events & Celebrations */}
             <div className="academic-card p-8 bg-white flex gap-5 items-start">
               <div className="w-12 h-12 rounded-xl bg-brand-purpleMuted text-brand-purple flex items-center justify-center shrink-0">
-                <PartyPopper size={24} />
+                <PartyPopper size={24} fill="currentColor" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl text-brand-purple mb-2 uppercase">Events & Celebrations</h3>
@@ -122,7 +122,7 @@ const CampusLife = () => {
             {/* Industry Exposure */}
             <div className="academic-card p-8 bg-white flex gap-5 items-start">
               <div className="w-12 h-12 rounded-xl bg-brand-tealLight text-brand-teal flex items-center justify-center shrink-0">
-                <Briefcase size={24} />
+                <Briefcase size={24} fill="currentColor" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl text-brand-purple mb-2 uppercase">Industry Exposure</h3>
@@ -136,51 +136,45 @@ const CampusLife = () => {
       </section>
 
       {/* The Network & Voices */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
+        <div className="max-w-[1400px] mx-auto">
+          <SectionHeader
+            eyebrow="THE NETWORK & TESTIMONIALS"
+            title="STUDENT COMMUNITY & VOICES."
+          />
           
-          {/* Student Community */}
-          <div>
-            <SectionHeader
-              eyebrow="THE NETWORK"
-              title="STUDENT COMMUNITY."
-            />
-            <div className="academic-card p-8 bg-brand-cream/40 border-l-4 border-l-brand-purple shadow-subtle mt-6">
-              <p className="font-sans text-base sm:text-lg text-brand-textDark leading-relaxed italic">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
+            {/* Box 1: Community */}
+            <div className="academic-card p-6 md:p-8 bg-brand-cream/40 border-l-4 border-l-brand-purple shadow-subtle flex flex-col justify-between h-full">
+              <p className="font-sans text-sm sm:text-base text-brand-textDark leading-relaxed italic">
                 "Our community thrives on teamwork, peer learning, deep networking, and seamless collaboration. When you join IIEM, you aren't just joining a class—you are joining a lifelong network of future event leaders."
               </p>
+              <div className="font-display font-bold text-brand-purple text-base tracking-wide mt-6">— IIEM Philosophy</div>
+            </div>
+
+            {/* Box 2: Voice 1 */}
+            <div className="academic-card p-6 md:p-8 bg-brand-cream/40 relative shadow-subtle flex flex-col justify-between h-full">
+              <MessageSquare size={22} className="text-brand-purple/20 absolute top-6 right-6" />
+              <p className="font-sans text-sm sm:text-base text-brand-textMuted italic mb-4 pr-8 leading-relaxed">
+                "The hands-on practical sessions and the constant hum of creativity on campus made every day exciting. I felt like I was already working in an agency!"
+              </p>
+              <div className="font-display font-bold text-brand-purple text-base tracking-wide mt-6">— Final Year Student</div>
+            </div>
+
+            {/* Box 3: Voice 2 */}
+            <div className="academic-card p-6 md:p-8 bg-brand-cream/40 relative shadow-subtle flex flex-col justify-between h-full">
+              <MessageSquare size={22} className="text-brand-teal/20 absolute top-6 right-6" />
+              <p className="font-sans text-sm sm:text-base text-brand-textMuted italic mb-4 pr-8 leading-relaxed">
+                "From organizing our own cultural fests to interning at massive corporate shows, the exposure here is unmatched."
+              </p>
+              <div className="font-display font-bold text-brand-purple text-base tracking-wide mt-6">— Event Operations Alumnus</div>
             </div>
           </div>
-
-          {/* Student Voices */}
-          <div>
-            <SectionHeader
-              eyebrow="TESTIMONIALS"
-              title="STUDENT VOICES."
-            />
-            <div className="grid gap-4 mt-6">
-              <div className="academic-card p-6 bg-brand-cream/40 relative">
-                <MessageSquare size={22} className="text-brand-purple/20 absolute top-6 right-6" />
-                <p className="font-sans text-xs sm:text-sm text-brand-textMuted italic mb-4 pr-8 leading-relaxed">
-                  "The hands-on practical sessions and the constant hum of creativity on campus made every day exciting. I felt like I was already working in an agency!"
-                </p>
-                <div className="font-display font-bold text-brand-purple text-base tracking-wide">— Final Year Student</div>
-              </div>
-              <div className="academic-card p-6 bg-brand-cream/40 relative">
-                <MessageSquare size={22} className="text-brand-teal/20 absolute top-6 right-6" />
-                <p className="font-sans text-xs sm:text-sm text-brand-textMuted italic mb-4 pr-8 leading-relaxed">
-                  "From organizing our own cultural fests to interning at massive corporate shows, the exposure here is unmatched."
-                </p>
-                <div className="font-display font-bold text-brand-purple text-base tracking-wide">— Event Operations Alumnus</div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
       {/* Gallery Showcase */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="MEMORIES & HIGHLIGHTS"
@@ -190,25 +184,20 @@ const CampusLife = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {[
-              { img: '/images/about_mentor_office.png', label: 'Creative Planning' },
-              { img: '/images/campus_fabrication.png', label: 'Live Events' },
-              { img: '/images/backstage.jpeg', label: 'Workshops' },
-              { img: '/images/about_fabrication_setup.png', label: 'Backstage Operations' },
-              { img: '/images/floral.jpeg', label: 'Tech Rehearsals' },
-              { img: '/images/campus_brainstorming.png', label: 'Peer Networking' }
-            ].map((item, idx) => (
-              <div key={idx} className="academic-card overflow-hidden group bg-white">
-                <div className="relative overflow-hidden aspect-[4/3] bg-brand-stone">
+              '/images/campus_life/cover 1.jpg',
+              '/images/campus_life/IIEM STUDENT COHORT.png',
+              '/images/campus_life/FutureTech Summit.bmp',
+              '/images/campus_life/networking events.webp',
+              '/images/campus_life/JOIN THE NEXT BATCH.jfif',
+              '/images/campus_life/vip mgt.webp'
+            ].map((img, idx) => (
+              <div key={idx} className="academic-card overflow-hidden bg-brand-stone">
+                <div className="relative overflow-hidden aspect-video">
                   <img
-                    src={item.img}
-                    alt={item.label}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                    src={img}
+                    alt={`Campus Moment ${idx + 1}`}
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                    <span className="font-display font-bold text-lg text-white flex items-center gap-2">
-                      <Camera size={18} className="text-brand-teal" /> {item.label}
-                    </span>
-                  </div>
                 </div>
               </div>
             ))}

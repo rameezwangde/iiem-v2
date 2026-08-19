@@ -180,82 +180,12 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* 4. Alumni Hall of Fame */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
-        <div className="max-w-[1400px] mx-auto">
-          <SectionHeader
-            eyebrow="PLACEMENT SUCCESS"
-            title="ALUMNI HALL OF FAME."
-            supportingText="Showcasing incredible events currently being managed by IIEM graduates who are leading the industry."
-          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-            <div className="academic-card overflow-hidden group bg-white">
-              <div className="aspect-[16/10] bg-brand-stone overflow-hidden relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80" 
-                  alt="Concert" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-brand-textDark px-3 py-1 rounded-md font-bold text-xs flex items-center gap-1.5 shadow-sm">
-                  <Star size={13} className="text-brand-purple fill-brand-purple" /> THE 2025 AUTO EXPO
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="text-[11px] font-bold tracking-wider text-brand-purple uppercase">Lead Production Manager</div>
-                <div className="font-display font-bold text-xl text-brand-purple mt-1">RAHUL T. (IIEM BATCH OF 2022)</div>
-              </div>
-            </div>
 
-            <div className="academic-card overflow-hidden group bg-white">
-              <div className="aspect-[16/10] bg-brand-stone overflow-hidden relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" 
-                  alt="Corporate Event" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-brand-textDark px-3 py-1 rounded-md font-bold text-xs flex items-center gap-1.5 shadow-sm">
-                  <Star size={13} className="text-brand-teal fill-brand-teal" /> GLOBAL TECH SUMMIT
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="text-[11px] font-bold tracking-wider text-brand-purple uppercase">Head of Operations</div>
-                <div className="font-display font-bold text-xl text-brand-purple mt-1">SNEHA M. (IIEM BATCH OF 2023)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 5. Campus Fests & In-House */}
-      <section className="bg-brand-purple text-white py-20 lg:py-28 px-6 md:px-12 text-center relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <SectionHeader
-            eyebrow="IN-HOUSE PRODUCTIONS"
-            title="CAMPUS FESTIVALS."
-            darkBg={true}
-            align="center"
-          />
-          <p className="max-w-2xl mx-auto text-brand-cream/80 font-sans mt-2 mb-10 text-sm sm:text-base leading-relaxed">
-            IIEM students practice event management every day by throwing the best campus events in the city. From high-energy Freshers' parties to massive cultural fests.
-          </p>
-          
-          <div className="inline-block p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md text-left max-w-xl shadow-card">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-9 h-9 rounded-lg bg-brand-teal text-white flex items-center justify-center">
-                <Play size={18} />
-              </div>
-              <h3 className="font-display font-bold text-xl text-white">THE SYNERGY FEST 2025</h3>
-            </div>
-            <p className="font-sans text-xs text-brand-cream/80 leading-relaxed">
-              100% Planned, Budgeted, Marketed, and Executed by the 1st Year Cohort.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* 6. Masterclasses */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="INDUSTRY TIES"
@@ -287,7 +217,7 @@ const Portfolio = () => {
       </section>
 
       {/* 7. Trophy Cabinet (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto text-center">
           <div className="w-14 h-14 rounded-2xl bg-brand-tealLight text-brand-teal flex items-center justify-center mx-auto mb-4">
             <Trophy size={28} />
