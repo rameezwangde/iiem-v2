@@ -132,7 +132,7 @@ const Portfolio = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
             {[
-              { img: "/images/backstage (2).jpeg", label: "Backstage Logistics" },
+              { img: "/images/BACKSTAGE SOUNDCHECK MONITORING.bmp", label: "Backstage Logistics" },
               { img: "/images/sound.jpg.jpeg", label: "Sound Engineering" },
               { img: "/images/vip mgt.webp", label: "VIP Management" },
               { img: "/images/live crowd.jpg", label: "Live Crowd Control" }
