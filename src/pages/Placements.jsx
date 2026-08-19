@@ -84,42 +84,23 @@ const Placements = () => {
             supportingText="A rigorous training framework equipping candidates for executive interviews and technical audits."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12 items-center">
-            {/* Left description list */}
-            <div className="lg:col-span-7 space-y-4">
-              {[
-                { icon: <Trophy className="text-brand-purple shrink-0" size={22} />, title: 'Portfolio Development Labs', desc: 'Every student defends a final portfolio of live events they coordinated. Recruiters review these digital assets directly during recruitment.' },
-                { icon: <Briefcase className="text-brand-teal shrink-0" size={22} />, title: 'Simulated Agency Pitch Competitions', desc: 'Students are placed in client bid scenarios, pitching concepts, AV layouts, and budgets to visiting industry directors.' },
-                { icon: <Users className="text-brand-purple shrink-0" size={22} />, title: 'Mock Technical Operations Audits', desc: 'Operational mock runs test candidate management safety speed, crisis rigging, and licensing procedures.' },
-                { icon: <Flame className="text-brand-teal shrink-0" size={22} />, title: 'Direct Mentor Placement Channels', desc: 'Top students are recommended directly to partner agencies for senior internships and full-time hiring.' }
-              ].map((item, idx) => (
-                <div key={idx} className="academic-card p-6 flex gap-4 items-start bg-brand-cream/40">
-                  <div className="p-2.5 rounded-xl bg-brand-purpleMuted shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-lg text-brand-purple mb-1">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-brand-textMuted font-sans leading-relaxed">{item.desc}</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            {[
+              { icon: <Trophy className="text-brand-purple shrink-0" size={24} />, title: 'Portfolio Development Labs', desc: 'Every student defends a final portfolio of live events they coordinated. Recruiters review these digital assets directly during recruitment.' },
+              { icon: <Briefcase className="text-brand-teal shrink-0" size={24} />, title: 'Simulated Agency Pitch Competitions', desc: 'Students are placed in client bid scenarios, pitching concepts, AV layouts, and budgets to visiting industry directors.' },
+              { icon: <Users className="text-brand-purple shrink-0" size={24} />, title: 'Mock Technical Operations Audits', desc: 'Operational mock runs test candidate management safety speed, crisis rigging, and licensing procedures.' },
+              { icon: <Flame className="text-brand-teal shrink-0" size={24} />, title: 'Direct Mentor Placement Channels', desc: 'Top students are recommended directly to partner agencies for senior internships and full-time hiring.' }
+            ].map((item, idx) => (
+              <div key={idx} className="academic-card p-8 flex flex-col gap-4 bg-brand-cream/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+                <div className="p-3 rounded-xl bg-brand-purpleMuted w-fit">
+                  {item.icon}
                 </div>
-              ))}
-            </div>
-
-            {/* Right side image */}
-            <div className="lg:col-span-5">
-              <div className="academic-card p-3 shadow-card bg-white">
-                <div className="aspect-[4/5] overflow-hidden rounded-xl bg-brand-stone relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=600&q=80"
-                    alt="IIEM alumni placement talk"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider">
-                    Executive Placement Cell
-                  </div>
+                <div>
+                  <h3 className="font-display font-bold text-xl text-brand-purple mb-2">{item.title}</h3>
+                  <p className="text-sm text-brand-textMuted font-sans leading-relaxed">{item.desc}</p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
