@@ -15,7 +15,7 @@ const CourseDetails = () => {
             <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
               // Master the Industry
             </span>
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl leading-[1.0] tracking-tight mb-6 text-brand-purple uppercase">
+            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] text-brand-purple tracking-tight uppercase mb-6 max-w-4xl mx-auto">
               BECOME A PROFESSIONAL<br />
               EVENT MANAGER.
             </h1>

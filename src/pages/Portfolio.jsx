@@ -14,7 +14,7 @@ const Portfolio = () => {
             <span className="text-brand-teal">//</span> EXPERIENTIAL ARCHIVE
           </div>
           
-          <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.95] text-brand-purple tracking-tight uppercase max-w-4xl mx-auto">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] text-brand-purple tracking-tight uppercase max-w-4xl mx-auto">
             THE WORK SPEAKS FOR ITSELF.
           </h1>
           <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">

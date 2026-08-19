@@ -15,7 +15,7 @@ const CampusLife = () => {
             <span className="text-brand-teal">//</span> ON CAMPUS STORY
           </div>
           
-          <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.95] text-brand-purple tracking-tight uppercase max-w-4xl mx-auto">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] text-brand-purple tracking-tight uppercase max-w-4xl mx-auto">
             THIS IS WHERE IDEAS COME ALIVE.
           </h1>
           <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
@@ -188,7 +188,7 @@ const CampusLife = () => {
               '/images/campus_life/IIEM STUDENT COHORT.png',
               '/images/campus_life/FutureTech Summit.bmp',
               '/images/campus_life/networking events.webp',
-              '/images/campus_life/JOIN THE NEXT BATCH.jfif',
+              '/images/join_the_next_batch_upscaled.jpg',
               '/images/campus_life/vip mgt.webp'
             ].map((img, idx) => (
               <div key={idx} className="academic-card overflow-hidden bg-brand-stone">

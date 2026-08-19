@@ -9,37 +9,20 @@ const Placements = () => {
   return (
     <div className="w-full bg-brand-cream">
       {/* Hero Header (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
+      <section className="bg-brand-cream pt-16 pb-8 px-6 md:px-12 relative overflow-hidden border-b border-brand-border text-center">
         <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          <div className="lg:col-span-7">
-            <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
-              // CAREER PATHWAYS
-            </span>
-            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
-              FROM CLASSROOM<br />
-              TO CAREER.
-            </h1>
-            <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
-              Our dedicated placement cell ensures that your transition from academic training to industry professional is seamless. We connect you with top event management companies, agencies, and corporate houses across India.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5">
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border shadow-card bg-white p-3 group">
-              <div className="w-full h-full rounded-xl overflow-hidden relative bg-brand-stone">
-                <img 
-                  src="/images/hero_students_formal.png" 
-                  alt="Indian Students ready for careers in formal attire" 
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute bottom-3 left-3 bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider">
-                  Industry Ready
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-[800px] mx-auto w-full flex flex-col items-center justify-center relative z-10">
+          <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
+            // CAREER PATHWAYS
+          </span>
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
+            FROM CLASSROOM<br />
+            TO CAREER.
+          </h1>
+          <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed">
+            Our dedicated placement cell ensures that your transition from academic training to industry professional is seamless. We connect you with top event management companies, agencies, and corporate houses across India.
+          </p>
         </div>
       </section>
 
