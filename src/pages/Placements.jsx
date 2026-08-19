@@ -59,7 +59,7 @@ const Placements = () => {
       </section>
 
       {/* Placement Process & Support */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="CAREER ASSISTANCE"
@@ -89,7 +89,7 @@ const Placements = () => {
       </section>
 
       {/* Career Support Highlights */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="SUPPORT INFRASTRUCTURE"
@@ -130,7 +130,7 @@ const Placements = () => {
       </section>
 
       {/* Career Pathways (Light) */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Career Opportunities */}
@@ -192,44 +192,6 @@ const Placements = () => {
         </div>
       </section>
 
-      {/* Alumni Profiles */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
-        <div className="max-w-[1400px] mx-auto">
-          <SectionHeader
-            eyebrow="SUCCESS PORTRAITS"
-            title="ALUMNI IN ACTION."
-            supportingText="Real alumni testimonials and career transitions in leading event houses."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {testimonialsData.map((alumnus) => (
-              <div key={alumnus.id} className="academic-card overflow-hidden flex flex-col justify-between bg-white">
-                <div className="aspect-[16/10] overflow-hidden relative bg-brand-stone">
-                  <img
-                    src={alumnus.image}
-                    alt={alumnus.studentName}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-brand-purple/90 backdrop-blur-sm text-white px-2.5 py-1 rounded font-mono text-[10px] font-bold">
-                    {alumnus.batch}
-                  </div>
-                </div>
-                <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
-                  <blockquote className="font-sans text-xs text-brand-textMuted leading-relaxed italic">
-                    “{alumnus.quote.slice(0, 160)}...”
-                  </blockquote>
-                  <div className="pt-3 border-t border-brand-border/60">
-                    <h3 className="font-display font-bold text-lg text-brand-purple">{alumnus.studentName}</h3>
-                    <div className="text-[11px] text-brand-teal font-semibold font-sans">
-                      {alumnus.program}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="bg-brand-purple text-white py-20 px-6 md:px-12 text-center relative overflow-hidden">

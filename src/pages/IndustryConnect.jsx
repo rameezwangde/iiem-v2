@@ -26,7 +26,7 @@ const IndustryConnect = () => {
       </section>
 
       {/* 2. Our Industry Partners */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="NETWORK"
@@ -48,7 +48,7 @@ const IndustryConnect = () => {
       </section>
 
       {/* 3. Expert Sessions & Interaction */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="KNOWLEDGE TRANSFER"
@@ -77,7 +77,7 @@ const IndustryConnect = () => {
       </section>
 
       {/* 4 & 5. Industrial Visits & Live Projects (Light) */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           
           {/* Industrial Visits */}
@@ -128,7 +128,7 @@ const IndustryConnect = () => {
       </section>
 
       {/* 6 & 7. Internships & Placements */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border relative overflow-hidden">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto relative z-10">
           <SectionHeader
             eyebrow="CAREER PATHWAYS"
@@ -171,7 +171,7 @@ const IndustryConnect = () => {
       </section>
 
       {/* 8. Extra Details: Skills, Networking, Achievements */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="academic-card p-8 bg-brand-cream/40">
             <h4 className="font-display font-bold text-xl text-brand-purple mb-3 uppercase">SKILL DEVELOPMENT</h4>
@@ -189,7 +189,7 @@ const IndustryConnect = () => {
       </section>
 
       {/* 9. Industry Testimonials */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="INDUSTRY VOICES"
