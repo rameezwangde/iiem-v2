@@ -7,43 +7,26 @@ const About = () => {
   return (
     <div className="w-full bg-brand-cream">
       {/* Hero Header (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
+      <section className="bg-brand-cream pt-16 pb-8 px-6 md:px-12 relative overflow-hidden border-b border-brand-border text-center">
         <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
         
-        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          <div className="lg:col-span-7">
-            <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
-              // MEET IIEM
-            </span>
-            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
-              MORE THAN AN INSTITUTE.<br />
-              A PLACE TO CREATE<br />
-              EXPERIENCES.
-            </h1>
-            <p className="text-brand-textMuted font-sans text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
-              We believe event management isn't just learned in a classroom; it's forged through hands-on experience, late-night planning, and real-world execution. Welcome to the future of event education.
-            </p>
-          </div>
-          
-          <div className="lg:col-span-5">
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border shadow-card bg-white p-3 group">
-              <div className="w-full h-full rounded-xl overflow-hidden relative bg-brand-stone">
-                <img 
-                  src="/images/about_hero.png" 
-                  alt="IIEM Campus Experience" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute bottom-3 left-3 bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider">
-                  Active Training Lab
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-[800px] mx-auto w-full flex flex-col items-center justify-center relative z-10">
+          <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
+            // MEET IIEM
+          </span>
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
+            MORE THAN AN INSTITUTE.<br />
+            A PLACE TO CREATE<br />
+            EXPERIENCES.
+          </h1>
+          <p className="text-brand-textMuted font-sans text-base sm:text-lg md:text-xl leading-relaxed">
+            We believe event management isn't just learned in a classroom; it's forged through hands-on experience, late-night planning, and real-world execution. Welcome to the future of event education.
+          </p>
         </div>
       </section>
 
       {/* Panel 1 — Who We Are & Our Story */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <SectionHeader
@@ -74,7 +57,7 @@ const About = () => {
       </section>
 
       {/* Panel 2 — Vision, Mission & Philosophy (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold mb-4">
@@ -129,7 +112,7 @@ const About = () => {
       </section>
 
       {/* Core Commitments Checklist */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="OUR COMMITMENT"
@@ -172,46 +155,31 @@ const About = () => {
       </section>
 
       {/* Panel 4 — Why Choose IIEM (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-8">
-            <SectionHeader
-              eyebrow="THE ADVANTAGE"
-              title="WHY IIEM STANDS ALONE."
-              supportingText="Uncompromising practical immersion designed for fast-track careers."
-            />
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
+        <div className="max-w-[1400px] mx-auto">
+          <SectionHeader
+            eyebrow="THE ADVANTAGE"
+            title="WHY IIEM STANDS ALONE."
+            supportingText="Uncompromising practical immersion designed for fast-track careers."
+          />
 
-            <div className="space-y-4">
-              {[
-                { title: '80% Practical Staging Focus', desc: 'No dry worksheets. Students learn rigging, stage lighting, fabrication, and client management in real-world environments.' },
-                { title: 'Supervised Placement Cell', desc: 'Active internship channels and final employment drives with India’s leading event management and production houses.' },
-                { title: 'Industry Masterclass Access', desc: 'Weekly guest modules led by visiting concert curators, wedding organizers, and technical engineers.' },
-                { title: 'Real Budget Allocations', desc: 'Students are given actual budgets to plan, negotiate, and execute mini-campaigns and campus projects.' }
-              ].map((adv, idx) => (
-                <div key={idx} className="academic-card p-5 flex gap-4 items-start bg-white">
-                  <CheckCircle size={18} className="text-brand-teal shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-display font-bold text-lg text-brand-purple">{adv.title}</h4>
-                    <p className="text-xs text-brand-textMuted font-sans mt-1 leading-relaxed">{adv.desc}</p>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {[
+              { title: '80% Practical Staging Focus', desc: 'No dry worksheets. Students learn rigging, stage lighting, fabrication, and client management in real-world environments.' },
+              { title: 'Supervised Placement Cell', desc: 'Active internship channels and final employment drives with India’s leading event management and production houses.' },
+              { title: 'Industry Masterclass Access', desc: 'Weekly guest modules led by visiting concert curators, wedding organizers, and technical engineers.' },
+              { title: 'Real Budget Allocations', desc: 'Students are given actual budgets to plan, negotiate, and execute mini-campaigns and campus projects.' }
+            ].map((adv, idx) => (
+              <div key={idx} className="academic-card p-6 md:p-8 flex flex-col gap-5 bg-white border-t-4 border-t-brand-purple shadow-subtle hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-xl bg-brand-tealLight text-brand-teal flex items-center justify-center shrink-0">
+                  <CheckCircle2 size={24} fill="currentColor" />
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="lg:col-span-5 relative">
-            <div className="academic-card p-3 shadow-card bg-white">
-              <div className="aspect-[4/5] rounded-xl relative overflow-hidden bg-brand-stone">
-                <img
-                  src="/images/Audio focus live set up practical.jpg"
-                  alt="Audio focus live set up practical"
-                  className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
-                />
-                <div className="absolute bottom-4 right-4 bg-brand-purple/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider">
-                  IPL BACKSTAGE CREW
+                <div>
+                  <h4 className="font-display font-bold text-lg text-brand-purple leading-tight mb-3">{adv.title}</h4>
+                  <p className="text-xs sm:text-sm text-brand-textDark/85 font-sans leading-relaxed">{adv.desc}</p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
