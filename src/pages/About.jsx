@@ -9,7 +9,7 @@ const About = () => {
       {/* Hero Header (Light) */}
       <section className="bg-brand-cream pt-16 pb-8 px-6 md:px-12 relative overflow-hidden border-b border-brand-border text-center">
         <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
-        
+
         <div className="max-w-[800px] mx-auto w-full flex flex-col items-center justify-center relative z-10">
           <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
             // MEET IIEM
@@ -119,7 +119,7 @@ const About = () => {
             title="THE IIEM STANDARD."
             supportingText="Our foundational guarantees for quality training and industry integration."
           />
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-10">
             {/* Column 1 */}
             <div className="space-y-4">
