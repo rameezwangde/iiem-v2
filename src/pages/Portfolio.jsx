@@ -134,8 +134,8 @@ const Portfolio = () => {
             {[
               { img: "/images/backstage (2).jpeg", label: "Backstage Logistics" },
               { img: "/images/sound.jpg.jpeg", label: "Sound Engineering" },
-              { img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80", label: "VIP Management" },
-              { img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80", label: "Live Crowd Control" }
+              { img: "/images/vip mgt.webp", label: "VIP Management" },
+              { img: "/images/live crowd.jpg", label: "Live Crowd Control" }
             ].map((item, idx) => (
               <div key={idx} className="academic-card overflow-hidden p-2.5 bg-white group shadow-subtle">
                 <div className="relative rounded-xl overflow-hidden aspect-square bg-brand-stone">
