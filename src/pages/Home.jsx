@@ -154,7 +154,7 @@ const Home = () => {
                   <p className="text-xs text-brand-textMuted leading-relaxed font-sans mb-4">
                     Join certified professional diploma and fast-track programs in Weddings, Corporate, Live Entertainment, and Production.
                   </p>
-                  
+
                   <div className="grid grid-cols-2 gap-2 text-xs mb-4">
                     <div className="bg-white p-2.5 rounded-lg border border-brand-border">
                       <span className="text-[10px] text-brand-textMuted uppercase block">Practical Ratio</span>
@@ -182,7 +182,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 2 — ABOUT / BRAND STATEMENT
       ================================================== */}
-      <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-white px-6 md:px-12 pt-12 pb-8 lg:pt-16 lg:pb-10 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="ABOUT IIEM"
@@ -220,7 +220,7 @@ const Home = () => {
               <div className="space-y-4">
                 <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-brand-border bg-brand-stone shadow-sm group">
                   <img
-                    src="/images/Audio focus live set up practical.jpg"
+                    src="/images/new.png"
                     alt="Audio focus live set up practical"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -243,14 +243,14 @@ const Home = () => {
       {/* ==================================================
       SECTION 2.5 — SPECIALIZED TRAINING
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 pt-12 pb-8 lg:pt-16 lg:pb-10 border-b border-brand-border">
+      <section className="bg-brand-cream px-6 md:px-12 pt-8 pb-12 lg:pt-10 lg:pb-16 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="SPECIALIZED TRAINING"
             title="MASTER YOUR NICHE."
             supportingText="Targeted executive and creative modules crafted to develop specific operational skills demanded by top agencies."
           />
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-12">
             {/* Item 1 */}
             <div className="academic-card p-6 flex flex-col items-start bg-white">
@@ -263,14 +263,14 @@ const Home = () => {
               <p className="font-sans text-brand-textMuted text-xs mb-8 leading-relaxed">
                 Hands-on Execution, Strategic Theory
               </p>
-              <Link 
-                to="/course-details" 
+              <Link
+                to="/course-details"
                 className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:text-brand-magenta transition-colors"
               >
                 VIEW DETAILS <ArrowRight size={13} />
               </Link>
             </div>
-            
+
             {/* Item 2 */}
             <div className="academic-card p-6 flex flex-col items-start bg-white">
               <div className="badge-pill bg-brand-purpleMuted text-brand-purple text-[10px] mb-4">
@@ -282,8 +282,8 @@ const Home = () => {
               <p className="font-sans text-brand-textMuted text-xs mb-8 leading-relaxed">
                 Creative Workshops, Design Principles
               </p>
-              <Link 
-                to="/course-details" 
+              <Link
+                to="/course-details"
                 className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:text-brand-magenta transition-colors"
               >
                 VIEW DETAILS <ArrowRight size={13} />
@@ -301,8 +301,8 @@ const Home = () => {
               <p className="font-sans text-brand-textMuted text-xs mb-8 leading-relaxed">
                 Practical Installations, Floral Theory
               </p>
-              <Link 
-                to="/course-details" 
+              <Link
+                to="/course-details"
                 className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:text-brand-magenta transition-colors"
               >
                 VIEW DETAILS <ArrowRight size={13} />
@@ -320,8 +320,8 @@ const Home = () => {
               <p className="font-sans text-brand-textMuted text-xs mb-8 leading-relaxed">
                 Site Logistics, Contract Negotiation
               </p>
-              <Link 
-                to="/course-details" 
+              <Link
+                to="/course-details"
                 className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:text-brand-magenta transition-colors"
               >
                 VIEW DETAILS <ArrowRight size={13} />
@@ -339,8 +339,8 @@ const Home = () => {
               <p className="font-sans text-brand-textMuted text-xs mb-8 leading-relaxed">
                 Festival Planning, Brand Activations
               </p>
-              <Link 
-                to="/course-details" 
+              <Link
+                to="/course-details"
                 className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-purple hover:text-brand-magenta transition-colors"
               >
                 VIEW DETAILS <ArrowRight size={13} />
@@ -389,7 +389,7 @@ const Home = () => {
                 careers: "Event Production Head, Rigging Supervisor, Operations Manager"
               }
             ].map((prog) => (
-              <div 
+              <div
                 key={prog.id}
                 className="academic-card bg-white border-2 border-brand-border rounded-2xl p-8 sm:p-10 flex flex-col justify-between group hover:border-brand-purple hover:shadow-card-hover transition-all duration-300"
               >
@@ -547,8 +547,8 @@ const Home = () => {
                 desc: "Students formulate 360-degree event briefs, budgets, floor plans, and pitch directly to corporate evaluators in boardroom trials."
               }
             ].map((pillar, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="academic-card bg-white p-7 rounded-2xl border border-brand-border flex flex-col justify-between hover:border-brand-purple/40 hover:shadow-card-hover transition-all duration-300"
               >
                 <div>
@@ -602,8 +602,8 @@ const Home = () => {
                 { label: 'Backstage & Technical Rigging', desc: 'Sound, lighting, power & truss rigging' },
                 { label: 'Venue & Banquet Management', desc: 'Layout planning, catering & client relations' }
               ].map((sector, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="p-4 rounded-xl bg-brand-cream/40 border border-brand-border/80 hover:border-brand-purple/30 transition-colors"
                 >
                   <div className="flex items-center gap-2 mb-1">
@@ -632,7 +632,7 @@ const Home = () => {
             title="POPULAR COURSES"
             supportingText="Essential skill-oriented modules that students frequently take to accelerate on-ground careers."
           />
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {[
               {
@@ -655,10 +655,10 @@ const Home = () => {
             ].map((course, idx) => (
               <div key={idx} className="academic-card overflow-hidden group bg-white">
                 <div className="h-64 overflow-hidden relative bg-brand-stone">
-                  <img 
-                    src={course.img} 
-                    alt={course.title} 
-                    className={`w-full h-full object-cover ${course.objectPos || 'object-top'} group-hover:scale-105 transition-transform duration-500`} 
+                  <img
+                    src={course.img}
+                    alt={course.title}
+                    className={`w-full h-full object-cover ${course.objectPos || 'object-top'} group-hover:scale-105 transition-transform duration-500`}
                   />
                 </div>
                 <div className="p-5 text-center">
@@ -682,7 +682,7 @@ const Home = () => {
               supportingText="Proven academic and field outcomes across our certified event management cohorts."
             />
           </div>
-          
+
           <div className="lg:col-span-4">
             <div className="bg-white border border-brand-border p-8 rounded-2xl text-center shadow-card">
               <h3 className="font-display font-bold text-xl text-brand-purple mb-3">
@@ -691,8 +691,8 @@ const Home = () => {
               <p className="font-sans text-xs sm:text-sm text-brand-textMuted mb-6 leading-relaxed">
                 We have a team of student advisers & officers to answer any questions:
               </p>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="w-full inline-flex items-center justify-center px-6 py-3 bg-brand-purple hover:bg-brand-purpleLight text-white font-bold text-xs tracking-wider uppercase rounded-xl transition-colors"
               >
                 Click here →
