@@ -25,52 +25,35 @@ const Admissions = () => {
   return (
     <div className="w-full bg-brand-cream">
       {/* Hero Header (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
+      <section className="bg-brand-cream pt-16 pb-8 px-6 md:px-12 relative overflow-hidden border-b border-brand-border text-center">
         <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          <div className="lg:col-span-7">
-            <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
-              // IIEM ADMISSIONS OPEN
-            </span>
-            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
-              START YOUR <br />
-              CAREER IN EVENT MANAGEMENT.
-            </h1>
-            <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
-              Admissions are now open for the upcoming batch at IIEM – Indian Institute of Event Management. Join a career-focused program designed for students who are passionate about events, weddings, corporate shows, live productions, exhibitions, and entertainment management.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5">
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border shadow-card bg-white p-3 group">
-              <div className="w-full h-full rounded-xl overflow-hidden relative bg-brand-stone">
-                <img 
-                  src="/images/join_the_next_batch_upscaled.jpg" 
-                  alt="Indian Students at IIEM Admissions" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute bottom-3 left-3 bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider">
-                  Join The Next Batch
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-[800px] mx-auto w-full flex flex-col items-center justify-center relative z-10">
+          <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
+            // IIEM ADMISSIONS OPEN
+          </span>
+          <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
+            START YOUR <br />
+            CAREER IN EVENT MANAGEMENT.
+          </h1>
+          <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed">
+            Admissions are now open for the upcoming batch at IIEM – Indian Institute of Event Management. Join a career-focused program designed for students who are passionate about events, weddings, corporate shows, live productions, exhibitions, and entertainment management.
+          </p>
         </div>
       </section>
 
       {/* Programs Offered & Why Choose Us */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Programs Offered */}
-          <div className="academic-card p-8 bg-brand-cream/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-brand-purpleMuted text-brand-purple flex items-center justify-center">
-                <GraduationCap size={22} />
+          <div className="academic-card p-8 md:p-12 bg-brand-cream/30 border-l-4 border-l-brand-purple shadow-subtle">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-brand-purpleMuted text-brand-purple flex items-center justify-center shrink-0">
+                <GraduationCap size={24} fill="currentColor" />
               </div>
               <h2 className="font-display font-bold text-2xl tracking-tight text-brand-purple uppercase">PROGRAMS OFFERED</h2>
             </div>
-            <ul className="space-y-3 font-sans text-xs sm:text-sm text-brand-textDark/85">
+            <ul className="flex flex-col text-brand-textDark">
               {[
                 "Advanced Diploma in Event Management",
                 "Wedding & Social Event Management",
@@ -79,23 +62,23 @@ const Admissions = () => {
                 "Event Production & Operations",
                 "Exhibition & Trade Show Management"
               ].map((item, idx) => (
-                <li key={idx} className="flex gap-3 items-center bg-white p-3 rounded-lg border border-brand-border shadow-subtle">
-                  <ArrowRight size={15} className="text-brand-purple shrink-0" />
-                  <span className="font-medium">{item}</span>
+                <li key={idx} className="flex gap-4 items-center py-4 border-b border-brand-border/60 last:border-0">
+                  <ArrowRight size={20} className="text-brand-purple shrink-0" />
+                  <span className="font-medium text-sm sm:text-base">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Why Choose IIEM */}
-          <div className="academic-card p-8 bg-brand-cream/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-brand-tealLight text-brand-teal flex items-center justify-center">
-                <CheckCircle2 size={22} />
+          <div className="academic-card p-8 md:p-12 bg-brand-cream/30 border-l-4 border-l-brand-teal shadow-subtle">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-brand-tealLight text-brand-teal flex items-center justify-center shrink-0">
+                <CheckCircle2 size={24} fill="currentColor" />
               </div>
               <h2 className="font-display font-bold text-2xl tracking-tight text-brand-purple uppercase">WHY CHOOSE IIEM?</h2>
             </div>
-            <ul className="space-y-3 font-sans text-xs sm:text-sm text-brand-textDark/85">
+            <ul className="flex flex-col text-brand-textDark">
               {[
                 "Industry-oriented training",
                 "Practical event exposure",
@@ -105,9 +88,9 @@ const Admissions = () => {
                 "Placement assistance",
                 "Personality & communication development"
               ].map((item, idx) => (
-                <li key={idx} className="flex gap-3 items-center bg-white p-3 rounded-lg border border-brand-border shadow-subtle">
-                  <div className="w-2 h-2 rounded-full bg-brand-teal shrink-0"></div>
-                  <span className="font-medium">{item}</span>
+                <li key={idx} className="flex gap-4 items-center py-[13px] border-b border-brand-border/60 last:border-0">
+                  <CheckCircle2 size={18} className="text-brand-teal shrink-0" fill="currentColor" />
+                  <span className="font-medium text-sm sm:text-base">{item}</span>
                 </li>
               ))}
             </ul>
@@ -116,7 +99,7 @@ const Admissions = () => {
       </section>
 
       {/* Process Timeline */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-brand-cream py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="ADMISSION PROCESS"
@@ -124,33 +107,86 @@ const Admissions = () => {
             supportingText="A clear, structured enrollment roadmap from application to confirmation."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mt-10">
-            {[
-              "Submit the admission enquiry form",
-              "Attend counselling / course guidance",
-              "Select your preferred program",
-              "Complete document verification",
-              "Pay the registration fee",
-              "Confirm your admission"
-            ].map((step, idx) => (
-              <div 
-                key={idx} 
-                className="academic-card p-6 flex flex-col justify-between text-center group bg-white"
-              >
-                <div className="font-mono font-black text-3xl text-brand-purple/40 group-hover:text-brand-purple transition-colors mb-4">
-                  0{idx + 1}
+          {/* Desktop Horizontal Timeline */}
+          <div className="hidden lg:block relative mt-24 mb-12">
+            {/* Horizontal Line */}
+            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-brand-border -translate-y-1/2"></div>
+            
+            <div className="grid grid-cols-6 gap-4 relative z-10">
+              {[
+                "Submit the admission enquiry form",
+                "Attend counselling / course guidance",
+                "Select your preferred program",
+                "Complete document verification",
+                "Pay the registration fee",
+                "Confirm your admission"
+              ].map((step, idx) => {
+                const isTop = idx % 2 === 0;
+                return (
+                  <div key={idx} className="relative grid grid-rows-[120px_auto_120px] justify-items-center gap-4">
+                    {/* Top Content */}
+                    <div className={`flex items-end pb-4 text-center ${!isTop ? 'invisible' : ''}`}>
+                      <div className="academic-card bg-white p-4 shadow-subtle border-b-4 border-b-brand-purple">
+                        <h3 className="font-bold text-brand-textDark text-[11px] xl:text-xs uppercase tracking-wider">
+                          {step}
+                        </h3>
+                      </div>
+                    </div>
+
+                    {/* Circle on line */}
+                    <div className="w-12 h-12 rounded-full bg-brand-cream border-[3px] border-brand-purple flex items-center justify-center font-display font-bold text-brand-purple z-20 relative shadow-[0_0_0_8px_#f9f8f6]">
+                      0{idx + 1}
+                    </div>
+
+                    {/* Bottom Content */}
+                    <div className={`flex items-start pt-4 text-center ${isTop ? 'invisible' : ''}`}>
+                      <div className="academic-card bg-white p-4 shadow-subtle border-t-4 border-t-brand-purple">
+                        <h3 className="font-bold text-brand-textDark text-[11px] xl:text-xs uppercase tracking-wider">
+                          {step}
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Mobile Vertical Timeline */}
+          <div className="lg:hidden relative mt-12 pl-6 py-4">
+            {/* Vertical Line */}
+            <div className="absolute top-0 left-[23px] w-[2px] h-full bg-brand-border"></div>
+            
+            <div className="flex flex-col gap-10 relative z-10">
+              {[
+                "Submit the admission enquiry form",
+                "Attend counselling / course guidance",
+                "Select your preferred program",
+                "Complete document verification",
+                "Pay the registration fee",
+                "Confirm your admission"
+              ].map((step, idx) => (
+                <div key={idx} className="relative flex items-center gap-6">
+                  {/* Circle on line */}
+                  <div className="w-12 h-12 rounded-full bg-brand-cream border-[3px] border-brand-purple flex items-center justify-center font-display font-bold text-brand-purple shrink-0 shadow-[0_0_0_8px_#f9f8f6]">
+                    0{idx + 1}
+                  </div>
+
+                  {/* Content */}
+                  <div className="academic-card bg-white p-4 shadow-subtle border-l-4 border-l-brand-purple flex-1">
+                    <h3 className="font-bold text-brand-textDark text-xs uppercase tracking-wider">
+                      {step}
+                    </h3>
+                  </div>
                 </div>
-                <p className="font-sans text-xs font-bold text-brand-textDark leading-snug uppercase">
-                  {step}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Eligibility & Documents */}
-      <section className="bg-white py-20 lg:py-28 px-6 md:px-12 border-b border-brand-border">
+      <section className="bg-white py-12 lg:py-16 px-6 md:px-12 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Eligibility Panel */}
           <div className="academic-card p-8 bg-white">
