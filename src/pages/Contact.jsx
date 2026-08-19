@@ -37,38 +37,18 @@ const Contact = () => {
   return (
     <div className="w-full bg-brand-cream">
       {/* 1. Hero Header (Light) */}
-      <section className="bg-brand-cream py-20 lg:py-28 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
-        <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
-
-        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          <div className="lg:col-span-7">
-            <span className="badge-pill bg-brand-purpleMuted text-brand-purple border border-brand-purple/20 text-xs font-bold py-1 px-3.5 mb-6">
-              // REACH OUT
-            </span>
-            <h1 className="font-display font-bold text-3xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tight uppercase text-brand-purple mb-6">
-              LET’S TALK <br />
-              ABOUT YOUR<br />
-              FUTURE.
-            </h1>
-            <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
-              Whether you’re curious about our courses, looking for career guidance, or ready to submit your application, our counselling team is here to help you navigate your journey into event management.
-            </p>
+      <section className="bg-white pt-24 pb-12 px-6 md:px-12 border-b border-brand-border">
+        <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center space-y-6">
+          <div className="badge-pill bg-brand-cream border border-brand-border text-[10px] sm:text-[11px] font-bold text-brand-purple inline-flex items-center gap-2">
+            <span className="text-brand-teal">//</span> REACH OUT
           </div>
-
-          <div className="lg:col-span-5">
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border shadow-card bg-white p-3 group">
-              <div className="w-full h-full rounded-xl overflow-hidden relative bg-brand-stone">
-                <img 
-                  src="/images/contact_hero.png" 
-                  alt="Friendly IIEM Counsellor"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute bottom-3 left-3 bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider">
-                  Admissions Desk
-                </div>
-              </div>
-            </div>
-          </div>
+          
+          <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] leading-[0.95] text-brand-purple tracking-tight uppercase max-w-4xl mx-auto">
+            LET’S TALK ABOUT YOUR FUTURE.
+          </h1>
+          <p className="font-sans text-brand-textMuted text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            Whether you’re curious about our courses, looking for career guidance, or ready to submit your application, our counselling team is here to help you navigate your journey into event management.
+          </p>
         </div>
       </section>
 
