@@ -36,7 +36,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 1 — HERO (Clean Light Theme)
       ================================================== */}
-      <section className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center bg-brand-cream overflow-hidden px-6 md:px-12 py-16 lg:py-24 border-b border-brand-border">
+      <section className="relative bg-brand-cream overflow-hidden px-6 md:px-12 pt-6 pb-16 lg:pt-10 lg:pb-24 border-b border-brand-border">
         {/* Soft Background Texture */}
         <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
