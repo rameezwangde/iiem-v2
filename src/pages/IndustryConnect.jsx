@@ -8,10 +8,10 @@ const IndustryConnect = () => {
   return (
     <div className="w-full bg-brand-cream">
       {/* 1. Hero Header (Light) */}
-      <section className="bg-brand-cream pt-24 pb-12 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
+      <section className="bg-brand-cream pt-16 pb-8 px-6 md:px-12 relative overflow-hidden border-b border-brand-border">
         <div className="absolute inset-0 bg-[radial-gradient(#4A0A45_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-        <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center space-y-6 relative z-10">
+        <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center space-y-4 relative z-10">
           <div className="badge-pill bg-white border border-brand-border text-[10px] sm:text-[11px] font-bold text-brand-purple inline-flex items-center gap-2">
             <span className="text-brand-teal">//</span> RECRUITER & PARTNER INTERACTION
           </div>
