@@ -243,7 +243,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 2.5 — SPECIALIZED TRAINING
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-brand-cream px-6 md:px-12 pt-12 pb-8 lg:pt-16 lg:pb-10 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="SPECIALIZED TRAINING"
@@ -353,7 +353,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 3 — PROGRAMS (Bold Academic Course Prospectus)
       ================================================== */}
-      <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-white px-6 md:px-12 pt-8 pb-12 lg:pt-10 lg:pb-16 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="ACADEMIC PROGRAMS"
@@ -511,7 +511,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 4 — INSTITUTIONAL TRAINING METHODOLOGY
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-brand-cream px-6 md:px-12 py-12 lg:py-16 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="ACADEMIC METHODOLOGY"
@@ -625,7 +625,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 4.5 — POPULAR COURSES
       ================================================== */}
-      <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-white px-6 md:px-12 pt-12 pb-8 lg:pt-16 lg:pb-10 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="STUDENT FAVORITES"
@@ -673,7 +673,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 5 — WHY CHOOSE US / AT A GLANCE
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-brand-cream px-6 md:px-12 pt-8 pb-8 lg:pt-10 lg:pb-10 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-8">
             <SectionHeader
@@ -713,7 +713,7 @@ const Home = () => {
         </div>
 
         {/* Horizontal Text Banner */}
-        <div className="max-w-[1400px] mx-auto mt-16 py-6 border-t border-b border-brand-border text-center overflow-hidden bg-white/50 rounded-xl shadow-subtle">
+        <div className="max-w-[1400px] mx-auto mt-10 py-6 border-t border-b border-brand-border text-center overflow-hidden bg-white/50 rounded-xl shadow-subtle">
           <div className="font-display font-bold text-xl sm:text-3xl tracking-widest text-brand-purple flex justify-center items-center gap-6 flex-wrap leading-none uppercase">
             <span>REAL LEARNING</span>
             <span className="text-brand-magenta">•</span>
@@ -727,7 +727,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 6 — PORTFOLIO / SHOWCASE
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-brand-cream px-6 md:px-12 pt-10 pb-12 lg:pt-12 lg:pb-16 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="STUDENT WORK"
@@ -819,7 +819,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 7 — INDUSTRY CONNECT (Light Theme)
       ================================================== */}
-      <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-white px-6 md:px-12 py-12 lg:py-16 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="INDUSTRY CONNECT"
@@ -864,7 +864,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 8 — PLACEMENTS & CAREERS
       ================================================== */}
-      <section className="bg-brand-cream px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border relative overflow-hidden">
+      <section className="bg-brand-cream px-6 md:px-12 py-12 lg:py-16 border-b border-brand-border relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto relative z-10">
           <SectionHeader
             eyebrow="YOUR FUTURE"
@@ -909,7 +909,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 9 — CAMPUS LIFE
       ================================================== */}
-      <section className="bg-white px-6 md:px-12 py-20 lg:py-28 border-b border-brand-border">
+      <section className="bg-white px-6 md:px-12 py-12 lg:py-16 border-b border-brand-border">
         <div className="max-w-[1400px] mx-auto">
           <SectionHeader
             eyebrow="CAMPUS LIFE"
@@ -970,7 +970,7 @@ const Home = () => {
       {/* ==================================================
       SECTION 10 — TESTIMONIALS (Free-Flowing Motion)
       ================================================== */}
-      <section className="bg-brand-cream py-20 lg:py-28 border-b border-brand-border relative overflow-hidden">
+      <section className="bg-brand-cream py-12 lg:py-16 border-b border-brand-border relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-10">
           <SectionHeader
             eyebrow="STUDENT VOICES"
